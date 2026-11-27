@@ -1,0 +1,20 @@
+{
+  "split": "seen",
+  "errors_target": 8,
+  "normals_target": 4,
+  "max_steps": 25,
+  "seed": 20261127,
+  "all_games": false,
+  "model_config": {
+    "base_url": "http://127.0.0.1:18080",
+    "context_size": 16384,
+    "n_predict": 128,
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "top_k": 40,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "cache_prompt": true
+  },
+  "selection": "first eligible error per game; disjoint normal games"
+}

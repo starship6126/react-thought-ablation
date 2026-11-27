@@ -1,0 +1,3538 @@
+{
+  "game_id": "valid_seen/pick_and_place_simple-Watch-None-SideTable-222/trial_T20190909_051813_197569/game.tw-pddl",
+  "seed": 20261136,
+  "normal_candidate_designated": false,
+  "initial": {
+    "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a armchair 1, a coffeetable 1, a drawer 7, a drawer 6, a drawer 5, a drawer 4, a drawer 3, a drawer 2, a drawer 1, a garbagecan 1, a sidetable 3, a sidetable 2, a sidetable 1, a sofa 2, a sofa 1, and a tvstand 1.\n\nYour task is to: put some watch on sidetable.",
+    "state_hash": "a472a1f72f6704d2b8b8a0fd7839084af6251b4d5e4d0088c4886224939e200d",
+    "facts": [
+      "atlocation(agent1 : agent, loc 2: location)",
+      "cancontain(armchairtype : rtype, boxtype : otype)",
+      "cancontain(armchairtype : rtype, creditcardtype : otype)",
+      "cancontain(armchairtype : rtype, keychaintype : otype)",
+      "cancontain(armchairtype : rtype, laptoptype : otype)",
+      "cancontain(armchairtype : rtype, newspapertype : otype)",
+      "cancontain(armchairtype : rtype, pillowtype : otype)",
+      "cancontain(armchairtype : rtype, remotecontroltype : otype)",
+      "cancontain(coffeetabletype : rtype, boxtype : otype)",
+      "cancontain(coffeetabletype : rtype, creditcardtype : otype)",
+      "cancontain(coffeetabletype : rtype, keychaintype : otype)",
+      "cancontain(coffeetabletype : rtype, laptoptype : otype)",
+      "cancontain(coffeetabletype : rtype, newspapertype : otype)",
+      "cancontain(coffeetabletype : rtype, remotecontroltype : otype)",
+      "cancontain(coffeetabletype : rtype, statuetype : otype)",
+      "cancontain(coffeetabletype : rtype, watchtype : otype)",
+      "cancontain(drawertype : rtype, creditcardtype : otype)",
+      "cancontain(drawertype : rtype, keychaintype : otype)",
+      "cancontain(drawertype : rtype, newspapertype : otype)",
+      "cancontain(drawertype : rtype, remotecontroltype : otype)",
+      "cancontain(drawertype : rtype, watchtype : otype)",
+      "cancontain(garbagecantype : rtype, newspapertype : otype)",
+      "cancontain(sidetabletype : rtype, boxtype : otype)",
+      "cancontain(sidetabletype : rtype, creditcardtype : otype)",
+      "cancontain(sidetabletype : rtype, keychaintype : otype)",
+      "cancontain(sidetabletype : rtype, laptoptype : otype)",
+      "cancontain(sidetabletype : rtype, newspapertype : otype)",
+      "cancontain(sidetabletype : rtype, remotecontroltype : otype)",
+      "cancontain(sidetabletype : rtype, statuetype : otype)",
+      "cancontain(sidetabletype : rtype, watchtype : otype)",
+      "cancontain(sofatype : rtype, boxtype : otype)",
+      "cancontain(sofatype : rtype, creditcardtype : otype)",
+      "cancontain(sofatype : rtype, keychaintype : otype)",
+      "cancontain(sofatype : rtype, laptoptype : otype)",
+      "cancontain(sofatype : rtype, newspapertype : otype)",
+      "cancontain(sofatype : rtype, pillowtype : otype)",
+      "cancontain(sofatype : rtype, remotecontroltype : otype)",
+      "inreceptacle(box 1: object, sofa 1: receptacle)",
+      "inreceptacle(creditcard 1: object, sidetable 2: receptacle)",
+      "inreceptacle(creditcard 2: object, armchair 1: receptacle)",
+      "inreceptacle(creditcard 3: object, sidetable 3: receptacle)",
+      "inreceptacle(keychain 1: object, sofa 1: receptacle)",
+      "inreceptacle(laptop 1: object, coffeetable 1: receptacle)",
+      "inreceptacle(newspaper 1: object, sidetable 1: receptacle)",
+      "inreceptacle(newspaper 2: object, armchair 1: receptacle)",
+      "inreceptacle(pillow 1: object, sofa 2: receptacle)",
+      "inreceptacle(remotecontrol 1: object, sofa 1: receptacle)",
+      "inreceptacle(remotecontrol 2: object, sidetable 2: receptacle)",
+      "inreceptacle(remotecontrol 3: object, tvstand 1: receptacle)",
+      "inreceptacle(statue 1: object, tvstand 1: receptacle)",
+      "inreceptacle(statue 2: object, tvstand 1: receptacle)",
+      "inreceptacle(television 1: object, tvstand 1: receptacle)",
+      "inreceptacle(watch 1: object, coffeetable 1: receptacle)",
+      "inreceptacle(watch 2: object, coffeetable 1: receptacle)",
+      "isreceptacleobject(box 1: object)",
+      "objectatlocation(box 1: object, loc 12: location)",
+      "objectatlocation(creditcard 1: object, loc 11: location)",
+      "objectatlocation(creditcard 2: object, loc 21: location)",
+      "objectatlocation(creditcard 3: object, loc 6: location)",
+      "objectatlocation(curtains 1: object, loc 17: location)",
+      "objectatlocation(floorlamp 1: object, loc 3: location)",
+      "objectatlocation(houseplant 1: object, loc 13: location)",
+      "objectatlocation(keychain 1: object, loc 12: location)",
+      "objectatlocation(laptop 1: object, loc 19: location)",
+      "objectatlocation(lightswitch 1: object, loc 1: location)",
+      "objectatlocation(newspaper 1: object, loc 10: location)",
+      "objectatlocation(newspaper 2: object, loc 21: location)",
+      "objectatlocation(painting 1: object, loc 9: location)",
+      "objectatlocation(painting 2: object, loc 7: location)",
+      "objectatlocation(pillow 1: object, loc 8: location)",
+      "objectatlocation(remotecontrol 1: object, loc 12: location)",
+      "objectatlocation(remotecontrol 2: object, loc 11: location)",
+      "objectatlocation(remotecontrol 3: object, loc 20: location)",
+      "objectatlocation(statue 1: object, loc 20: location)",
+      "objectatlocation(statue 2: object, loc 20: location)",
+      "objectatlocation(television 1: object, loc 20: location)",
+      "objectatlocation(watch 1: object, loc 19: location)",
+      "objectatlocation(watch 2: object, loc 19: location)",
+      "objectatlocation(window 1: object, loc 18: location)",
+      "objecttype(box 1: object, boxtype : otype)",
+      "objecttype(creditcard 1: object, creditcardtype : otype)",
+      "objecttype(creditcard 2: object, creditcardtype : otype)",
+      "objecttype(creditcard 3: object, creditcardtype : otype)",
+      "objecttype(curtains 1: object, curtainstype : otype)",
+      "objecttype(floorlamp 1: object, floorlamptype : otype)",
+      "objecttype(houseplant 1: object, houseplanttype : otype)",
+      "objecttype(keychain 1: object, keychaintype : otype)",
+      "objecttype(laptop 1: object, laptoptype : otype)",
+      "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+      "objecttype(newspaper 1: object, newspapertype : otype)",
+      "objecttype(newspaper 2: object, newspapertype : otype)",
+      "objecttype(painting 1: object, paintingtype : otype)",
+      "objecttype(painting 2: object, paintingtype : otype)",
+      "objecttype(pillow 1: object, pillowtype : otype)",
+      "objecttype(remotecontrol 1: object, remotecontroltype : otype)",
+      "objecttype(remotecontrol 2: object, remotecontroltype : otype)",
+      "objecttype(remotecontrol 3: object, remotecontroltype : otype)",
+      "objecttype(statue 1: object, statuetype : otype)",
+      "objecttype(statue 2: object, statuetype : otype)",
+      "objecttype(television 1: object, televisiontype : otype)",
+      "objecttype(watch 1: object, watchtype : otype)",
+      "objecttype(watch 2: object, watchtype : otype)",
+      "objecttype(window 1: object, windowtype : otype)",
+      "openable(drawer 1: receptacle)",
+      "openable(drawer 2: receptacle)",
+      "openable(drawer 3: receptacle)",
+      "openable(drawer 4: receptacle)",
+      "openable(drawer 5: receptacle)",
+      "openable(drawer 6: receptacle)",
+      "openable(drawer 7: receptacle)",
+      "pickupable(box 1: object)",
+      "pickupable(creditcard 1: object)",
+      "pickupable(creditcard 2: object)",
+      "pickupable(creditcard 3: object)",
+      "pickupable(keychain 1: object)",
+      "pickupable(laptop 1: object)",
+      "pickupable(newspaper 1: object)",
+      "pickupable(newspaper 2: object)",
+      "pickupable(pillow 1: object)",
+      "pickupable(remotecontrol 1: object)",
+      "pickupable(remotecontrol 2: object)",
+      "pickupable(remotecontrol 3: object)",
+      "pickupable(statue 1: object)",
+      "pickupable(statue 2: object)",
+      "pickupable(watch 1: object)",
+      "pickupable(watch 2: object)",
+      "receptacleatlocation(armchair 1: receptacle, loc 21: location)",
+      "receptacleatlocation(coffeetable 1: receptacle, loc 19: location)",
+      "receptacleatlocation(drawer 1: receptacle, loc 16: location)",
+      "receptacleatlocation(drawer 2: receptacle, loc 15: location)",
+      "receptacleatlocation(drawer 3: receptacle, loc 14: location)",
+      "receptacleatlocation(drawer 4: receptacle, loc 14: location)",
+      "receptacleatlocation(drawer 5: receptacle, loc 5: location)",
+      "receptacleatlocation(drawer 6: receptacle, loc 5: location)",
+      "receptacleatlocation(drawer 7: receptacle, loc 4: location)",
+      "receptacleatlocation(garbagecan 1: receptacle, loc 17: location)",
+      "receptacleatlocation(sidetable 1: receptacle, loc 10: location)",
+      "receptacleatlocation(sidetable 2: receptacle, loc 11: location)",
+      "receptacleatlocation(sidetable 3: receptacle, loc 6: location)",
+      "receptacleatlocation(sofa 1: receptacle, loc 12: location)",
+      "receptacleatlocation(sofa 2: receptacle, loc 8: location)",
+      "receptacleatlocation(tvstand 1: receptacle, loc 20: location)",
+      "receptacletype(armchair 1: receptacle, armchairtype : rtype)",
+      "receptacletype(coffeetable 1: receptacle, coffeetabletype : rtype)",
+      "receptacletype(drawer 1: receptacle, drawertype : rtype)",
+      "receptacletype(drawer 2: receptacle, drawertype : rtype)",
+      "receptacletype(drawer 3: receptacle, drawertype : rtype)",
+      "receptacletype(drawer 4: receptacle, drawertype : rtype)",
+      "receptacletype(drawer 5: receptacle, drawertype : rtype)",
+      "receptacletype(drawer 6: receptacle, drawertype : rtype)",
+      "receptacletype(drawer 7: receptacle, drawertype : rtype)",
+      "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+      "receptacletype(sidetable 1: receptacle, sidetabletype : rtype)",
+      "receptacletype(sidetable 2: receptacle, sidetabletype : rtype)",
+      "receptacletype(sidetable 3: receptacle, sidetabletype : rtype)",
+      "receptacletype(sofa 1: receptacle, sofatype : rtype)",
+      "receptacletype(sofa 2: receptacle, sofatype : rtype)",
+      "receptacletype(tvstand 1: receptacle, tvstandtype : rtype)",
+      "toggleable(floorlamp 1: object)"
+    ],
+    "fact_records": [
+      {
+        "predicate": "atlocation",
+        "arguments": [
+          {
+            "name": "agent1 ",
+            "type": "agent"
+          },
+          {
+            "name": "loc 2",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "armchair 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "armchair 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 21",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          },
+          {
+            "name": "boxtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          },
+          {
+            "name": "keychaintype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          },
+          {
+            "name": "laptoptype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          },
+          {
+            "name": "pillowtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "armchairtype ",
+            "type": "rtype"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "box 1",
+            "type": "object"
+          },
+          {
+            "name": "boxtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "box 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 12",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "box 1",
+            "type": "object"
+          },
+          {
+            "name": "sofa 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "isreceptacleobject",
+        "arguments": [
+          {
+            "name": "box 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "box 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "coffeetable 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "coffeetable 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 19",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "boxtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "keychaintype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "laptoptype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "statuetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "coffeetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "watchtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "creditcard 1",
+            "type": "object"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "creditcard 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 11",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "creditcard 1",
+            "type": "object"
+          },
+          {
+            "name": "sidetable 2",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "creditcard 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "creditcard 2",
+            "type": "object"
+          },
+          {
+            "name": "armchair 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "creditcard 2",
+            "type": "object"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "creditcard 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 21",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "creditcard 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "creditcard 3",
+            "type": "object"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "creditcard 3",
+            "type": "object"
+          },
+          {
+            "name": "loc 6",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "creditcard 3",
+            "type": "object"
+          },
+          {
+            "name": "sidetable 3",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "creditcard 3",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "curtains 1",
+            "type": "object"
+          },
+          {
+            "name": "curtainstype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "curtains 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 17",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "drawer 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "drawer 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 16",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "drawer 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "drawer 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "drawer 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 15",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "drawer 2",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "drawer 3",
+            "type": "receptacle"
+          },
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "drawer 3",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 14",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "drawer 3",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "drawer 4",
+            "type": "receptacle"
+          },
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "drawer 4",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 14",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "drawer 4",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "drawer 5",
+            "type": "receptacle"
+          },
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "drawer 5",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 5",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "drawer 5",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "drawer 6",
+            "type": "receptacle"
+          },
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "drawer 6",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 5",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "drawer 6",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "drawer 7",
+            "type": "receptacle"
+          },
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "drawer 7",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 4",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "drawer 7",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "keychaintype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "drawertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "watchtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "floorlamp 1",
+            "type": "object"
+          },
+          {
+            "name": "floorlamptype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "floorlamp 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 3",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "toggleable",
+        "arguments": [
+          {
+            "name": "floorlamp 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "garbagecan 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "garbagecan 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 17",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "houseplant 1",
+            "type": "object"
+          },
+          {
+            "name": "houseplanttype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "houseplant 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 13",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "keychain 1",
+            "type": "object"
+          },
+          {
+            "name": "keychaintype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "keychain 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 12",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "keychain 1",
+            "type": "object"
+          },
+          {
+            "name": "sofa 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "keychain 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "laptop 1",
+            "type": "object"
+          },
+          {
+            "name": "coffeetable 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "laptop 1",
+            "type": "object"
+          },
+          {
+            "name": "laptoptype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "laptop 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 19",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "laptop 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "lightswitch 1",
+            "type": "object"
+          },
+          {
+            "name": "lightswitchtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "lightswitch 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 1",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "newspaper 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 10",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "newspaper 1",
+            "type": "object"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "newspaper 1",
+            "type": "object"
+          },
+          {
+            "name": "sidetable 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "newspaper 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "newspaper 2",
+            "type": "object"
+          },
+          {
+            "name": "armchair 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "newspaper 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 21",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "newspaper 2",
+            "type": "object"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "newspaper 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "painting 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 9",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "painting 1",
+            "type": "object"
+          },
+          {
+            "name": "paintingtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "painting 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 7",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "painting 2",
+            "type": "object"
+          },
+          {
+            "name": "paintingtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "pillow 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 8",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "pillow 1",
+            "type": "object"
+          },
+          {
+            "name": "pillowtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "pillow 1",
+            "type": "object"
+          },
+          {
+            "name": "sofa 2",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "pillow 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "remotecontrol 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 12",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "remotecontrol 1",
+            "type": "object"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "remotecontrol 1",
+            "type": "object"
+          },
+          {
+            "name": "sofa 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "remotecontrol 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "remotecontrol 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 11",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "remotecontrol 2",
+            "type": "object"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "remotecontrol 2",
+            "type": "object"
+          },
+          {
+            "name": "sidetable 2",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "remotecontrol 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "remotecontrol 3",
+            "type": "object"
+          },
+          {
+            "name": "loc 20",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "remotecontrol 3",
+            "type": "object"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "remotecontrol 3",
+            "type": "object"
+          },
+          {
+            "name": "tvstand 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "remotecontrol 3",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "sidetable 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 10",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "sidetable 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "sidetable 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 11",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "sidetable 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "sidetable 3",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 6",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "sidetable 3",
+            "type": "receptacle"
+          },
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "boxtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "keychaintype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "laptoptype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "statuetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sidetabletype ",
+            "type": "rtype"
+          },
+          {
+            "name": "watchtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "sofa 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 12",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "sofa 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "sofa 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 8",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "sofa 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          },
+          {
+            "name": "boxtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          },
+          {
+            "name": "creditcardtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          },
+          {
+            "name": "keychaintype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          },
+          {
+            "name": "laptoptype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          },
+          {
+            "name": "newspapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          },
+          {
+            "name": "pillowtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sofatype ",
+            "type": "rtype"
+          },
+          {
+            "name": "remotecontroltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "statue 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 20",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "statue 1",
+            "type": "object"
+          },
+          {
+            "name": "statuetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "statue 1",
+            "type": "object"
+          },
+          {
+            "name": "tvstand 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "statue 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "statue 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 20",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "statue 2",
+            "type": "object"
+          },
+          {
+            "name": "statuetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "statue 2",
+            "type": "object"
+          },
+          {
+            "name": "tvstand 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "statue 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "television 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 20",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "television 1",
+            "type": "object"
+          },
+          {
+            "name": "televisiontype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "television 1",
+            "type": "object"
+          },
+          {
+            "name": "tvstand 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "tvstand 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 20",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "tvstand 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "tvstandtype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "watch 1",
+            "type": "object"
+          },
+          {
+            "name": "coffeetable 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "watch 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 19",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "watch 1",
+            "type": "object"
+          },
+          {
+            "name": "watchtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "watch 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "watch 2",
+            "type": "object"
+          },
+          {
+            "name": "coffeetable 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "watch 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 19",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "watch 2",
+            "type": "object"
+          },
+          {
+            "name": "watchtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "watch 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "window 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 18",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "window 1",
+            "type": "object"
+          },
+          {
+            "name": "windowtype ",
+            "type": "otype"
+          }
+        ]
+      }
+    ],
+    "admissible_commands": [
+      "go to armchair 1",
+      "go to coffeetable 1",
+      "go to drawer 1",
+      "go to drawer 2",
+      "go to drawer 3",
+      "go to drawer 4",
+      "go to drawer 5",
+      "go to drawer 6",
+      "go to drawer 7",
+      "go to garbagecan 1",
+      "go to sidetable 1",
+      "go to sidetable 2",
+      "go to sidetable 3",
+      "go to sofa 1",
+      "go to sofa 2",
+      "go to tvstand 1",
+      "help",
+      "inventory",
+      "look"
+    ],
+    "entities": {
+      "agent1": {
+        "name": "agent1 ",
+        "type": "agent"
+      },
+      "armchair_bar__plus_00_dot_22_bar__plus_00_dot_01_bar__minus_01_dot_73": {
+        "name": "armchair 1",
+        "type": "receptacle"
+      },
+      "armchairtype": {
+        "name": "armchairtype ",
+        "type": "rtype"
+      },
+      "box_bar__plus_02_dot_74_bar__plus_00_dot_64_bar__minus_00_dot_15": {
+        "name": "box 1",
+        "type": "object"
+      },
+      "boxtype": {
+        "name": "boxtype ",
+        "type": "otype"
+      },
+      "coffeetable_bar__plus_00_dot_23_bar__plus_00_dot_01_bar__minus_00_dot_17": {
+        "name": "coffeetable 1",
+        "type": "receptacle"
+      },
+      "coffeetabletype": {
+        "name": "coffeetabletype ",
+        "type": "rtype"
+      },
+      "creditcard_bar__minus_00_dot_86_bar__plus_00_dot_60_bar__minus_01_dot_48": {
+        "name": "creditcard 3",
+        "type": "object"
+      },
+      "creditcard_bar__plus_00_dot_50_bar__plus_00_dot_48_bar__minus_01_dot_74": {
+        "name": "creditcard 2",
+        "type": "object"
+      },
+      "creditcard_bar__plus_02_dot_23_bar__plus_00_dot_87_bar__plus_01_dot_79": {
+        "name": "creditcard 1",
+        "type": "object"
+      },
+      "creditcardtype": {
+        "name": "creditcardtype ",
+        "type": "otype"
+      },
+      "curtains_bar__plus_01_dot_20_bar__plus_00_dot_00_bar__minus_02_dot_44": {
+        "name": "curtains 1",
+        "type": "object"
+      },
+      "curtainstype": {
+        "name": "curtainstype ",
+        "type": "otype"
+      },
+      "drawer_bar__plus_00_dot_10_bar__plus_00_dot_05_bar__minus_00_dot_17": {
+        "name": "drawer 7",
+        "type": "receptacle"
+      },
+      "drawer_bar__plus_00_dot_10_bar__plus_00_dot_15_bar__minus_00_dot_17": {
+        "name": "drawer 6",
+        "type": "receptacle"
+      },
+      "drawer_bar__plus_00_dot_10_bar__plus_00_dot_26_bar__minus_00_dot_17": {
+        "name": "drawer 5",
+        "type": "receptacle"
+      },
+      "drawer_bar__plus_00_dot_35_bar__plus_00_dot_05_bar__minus_00_dot_17": {
+        "name": "drawer 4",
+        "type": "receptacle"
+      },
+      "drawer_bar__plus_00_dot_35_bar__plus_00_dot_15_bar__minus_00_dot_17": {
+        "name": "drawer 3",
+        "type": "receptacle"
+      },
+      "drawer_bar__plus_00_dot_35_bar__plus_00_dot_26_bar__minus_00_dot_17": {
+        "name": "drawer 2",
+        "type": "receptacle"
+      },
+      "drawer_bar__plus_02_dot_00_bar__plus_00_dot_77_bar__plus_01_dot_70": {
+        "name": "drawer 1",
+        "type": "receptacle"
+      },
+      "drawertype": {
+        "name": "drawertype ",
+        "type": "rtype"
+      },
+      "floorlamp_bar__minus_01_dot_16_bar__plus_00_dot_00_bar__plus_01_dot_04": {
+        "name": "floorlamp 1",
+        "type": "object"
+      },
+      "floorlamptype": {
+        "name": "floorlamptype ",
+        "type": "otype"
+      },
+      "garbagecan_bar__plus_01_dot_30_bar__plus_00_dot_00_bar__minus_02_dot_19": {
+        "name": "garbagecan 1",
+        "type": "receptacle"
+      },
+      "garbagecantype": {
+        "name": "garbagecantype ",
+        "type": "rtype"
+      },
+      "houseplant_bar__plus_01_dot_92_bar__plus_01_dot_72_bar__minus_02_dot_19": {
+        "name": "houseplant 1",
+        "type": "object"
+      },
+      "houseplanttype": {
+        "name": "houseplanttype ",
+        "type": "otype"
+      },
+      "keychain_bar__plus_02_dot_66_bar__plus_00_dot_46_bar__plus_00_dot_45": {
+        "name": "keychain 1",
+        "type": "object"
+      },
+      "keychaintype": {
+        "name": "keychaintype ",
+        "type": "otype"
+      },
+      "laptop_bar__plus_00_dot_23_bar__plus_00_dot_36_bar__minus_00_dot_31": {
+        "name": "laptop 1",
+        "type": "object"
+      },
+      "laptoptype": {
+        "name": "laptoptype ",
+        "type": "otype"
+      },
+      "lightswitch_bar__minus_01_dot_01_bar__plus_01_dot_29_bar__plus_01_dot_95": {
+        "name": "lightswitch 1",
+        "type": "object"
+      },
+      "lightswitchtype": {
+        "name": "lightswitchtype ",
+        "type": "otype"
+      },
+      "loc_bar_1_bar__minus_4_bar_2_bar_60": {
+        "name": "loc 21",
+        "type": "location"
+      },
+      "loc_bar_3_bar_2_bar_0_bar_60": {
+        "name": "loc 20",
+        "type": "location"
+      },
+      "loc_bar_3_bar_4_bar_2_bar_60": {
+        "name": "loc 19",
+        "type": "location"
+      },
+      "loc_bar_4_bar__minus_7_bar_2_bar_15": {
+        "name": "loc 18",
+        "type": "location"
+      },
+      "loc_bar_5_bar__minus_7_bar_2_bar_60": {
+        "name": "loc 17",
+        "type": "location"
+      },
+      "loc_bar_6_bar_2_bar_0_bar_30": {
+        "name": "loc 16",
+        "type": "location"
+      },
+      "loc_bar_6_bar__minus_3_bar_3_bar_45": {
+        "name": "loc 15",
+        "type": "location"
+      },
+      "loc_bar_6_bar__minus_3_bar_3_bar_60": {
+        "name": "loc 14",
+        "type": "location"
+      },
+      "loc_bar_6_bar__minus_7_bar_2_bar__minus_15": {
+        "name": "loc 13",
+        "type": "location"
+      },
+      "loc_bar_7_bar_1_bar_1_bar_60": {
+        "name": "loc 12",
+        "type": "location"
+      },
+      "loc_bar_7_bar_4_bar_0_bar_60": {
+        "name": "loc 11",
+        "type": "location"
+      },
+      "loc_bar_8_bar_5_bar_1_bar_60": {
+        "name": "loc 10",
+        "type": "location"
+      },
+      "loc_bar_9_bar__minus_1_bar_1_bar_0": {
+        "name": "loc 9",
+        "type": "location"
+      },
+      "loc_bar__minus_1_bar_0_bar_3_bar_60": {
+        "name": "loc 8",
+        "type": "location"
+      },
+      "loc_bar__minus_1_bar__minus_1_bar_3_bar_0": {
+        "name": "loc 7",
+        "type": "location"
+      },
+      "loc_bar__minus_1_bar__minus_3_bar_2_bar_60": {
+        "name": "loc 6",
+        "type": "location"
+      },
+      "loc_bar__minus_2_bar_4_bar_2_bar_45": {
+        "name": "loc 5",
+        "type": "location"
+      },
+      "loc_bar__minus_2_bar_4_bar_2_bar_60": {
+        "name": "loc 4",
+        "type": "location"
+      },
+      "loc_bar__minus_2_bar_4_bar_3_bar_60": {
+        "name": "loc 3",
+        "type": "location"
+      },
+      "loc_bar__minus_2_bar_6_bar_0_bar_30": {
+        "name": "loc 2",
+        "type": "location"
+      },
+      "loc_bar__minus_2_bar_6_bar_3_bar_30": {
+        "name": "loc 1",
+        "type": "location"
+      },
+      "newspaper_bar__plus_00_dot_22_bar__plus_00_dot_52_bar__minus_01_dot_57": {
+        "name": "newspaper 2",
+        "type": "object"
+      },
+      "newspaper_bar__plus_02_dot_96_bar__plus_00_dot_61_bar__plus_01_dot_63": {
+        "name": "newspaper 1",
+        "type": "object"
+      },
+      "newspapertype": {
+        "name": "newspapertype ",
+        "type": "otype"
+      },
+      "painting_bar__minus_01_dot_45_bar__plus_01_dot_79_bar__minus_00_dot_34": {
+        "name": "painting 2",
+        "type": "object"
+      },
+      "painting_bar__plus_03_dot_42_bar__plus_01_dot_71_bar__minus_00_dot_16": {
+        "name": "painting 1",
+        "type": "object"
+      },
+      "paintingtype": {
+        "name": "paintingtype ",
+        "type": "otype"
+      },
+      "pillow_bar__minus_00_dot_88_bar__plus_00_dot_58_bar__minus_00_dot_80": {
+        "name": "pillow 1",
+        "type": "object"
+      },
+      "pillowtype": {
+        "name": "pillowtype ",
+        "type": "otype"
+      },
+      "remotecontrol_bar__plus_01_dot_30_bar__plus_00_dot_41_bar__plus_01_dot_53": {
+        "name": "remotecontrol 3",
+        "type": "object"
+      },
+      "remotecontrol_bar__plus_01_dot_92_bar__plus_00_dot_87_bar__plus_01_dot_75": {
+        "name": "remotecontrol 2",
+        "type": "object"
+      },
+      "remotecontrol_bar__plus_02_dot_89_bar__plus_00_dot_45_bar__plus_00_dot_85": {
+        "name": "remotecontrol 1",
+        "type": "object"
+      },
+      "remotecontroltype": {
+        "name": "remotecontroltype ",
+        "type": "otype"
+      },
+      "sidetable_bar__minus_00_dot_68_bar__plus_00_dot_00_bar__minus_01_dot_60": {
+        "name": "sidetable 3",
+        "type": "receptacle"
+      },
+      "sidetable_bar__plus_02_dot_00_bar__plus_00_dot_00_bar__plus_01_dot_75": {
+        "name": "sidetable 2",
+        "type": "receptacle"
+      },
+      "sidetable_bar__plus_02_dot_96_bar__plus_00_dot_00_bar__plus_01_dot_57": {
+        "name": "sidetable 1",
+        "type": "receptacle"
+      },
+      "sidetabletype": {
+        "name": "sidetabletype ",
+        "type": "rtype"
+      },
+      "sofa_bar__minus_01_dot_07_bar_00_dot_00_bar__minus_00_dot_20": {
+        "name": "sofa 2",
+        "type": "receptacle"
+      },
+      "sofa_bar__plus_02_dot_87_bar_00_dot_00_bar__plus_00_dot_25": {
+        "name": "sofa 1",
+        "type": "receptacle"
+      },
+      "sofatype": {
+        "name": "sofatype ",
+        "type": "rtype"
+      },
+      "statue_bar__plus_00_dot_68_bar__plus_00_dot_42_bar__plus_01_dot_47": {
+        "name": "statue 2",
+        "type": "object"
+      },
+      "statue_bar__plus_01_dot_15_bar__plus_00_dot_42_bar__plus_01_dot_47": {
+        "name": "statue 1",
+        "type": "object"
+      },
+      "statuetype": {
+        "name": "statuetype ",
+        "type": "otype"
+      },
+      "television_bar__plus_00_dot_86_bar__plus_00_dot_90_bar__plus_01_dot_73": {
+        "name": "television 1",
+        "type": "object"
+      },
+      "televisiontype": {
+        "name": "televisiontype ",
+        "type": "otype"
+      },
+      "tvstand_bar__plus_00_dot_84_bar_00_dot_00_bar__plus_01_dot_58": {
+        "name": "tvstand 1",
+        "type": "receptacle"
+      },
+      "tvstandtype": {
+        "name": "tvstandtype ",
+        "type": "rtype"
+      },
+      "watch_bar__plus_00_dot_11_bar__plus_00_dot_37_bar__plus_00_dot_13": {
+        "name": "watch 2",
+        "type": "object"
+      },
+      "watch_bar__plus_00_dot_23_bar__plus_00_dot_37_bar__plus_00_dot_13": {
+        "name": "watch 1",
+        "type": "object"
+      },
+      "watchtype": {
+        "name": "watchtype ",
+        "type": "otype"
+      },
+      "window_bar__plus_00_dot_65_bar__plus_01_dot_55_bar__minus_02_dot_47": {
+        "name": "window 1",
+        "type": "object"
+      },
+      "windowtype": {
+        "name": "windowtype ",
+        "type": "otype"
+      }
+    },
+    "won": false,
+    "done": false,
+    "reward": 0.0,
+    "moves": 0
+  },
+  "history": [
+    {
+      "observation": "You arrive at sofa 1. On the sofa 1, you see a box 1, a keychain 1, and a remotecontrol 1.",
+      "state_hash": "690dc885fe20fddd5d0efdf744923af58b732baebb0deb42cce4108f75ad5d16",
+      "facts": [
+        "atlocation(agent1 : agent, loc 12: location)",
+        "cancontain(armchairtype : rtype, boxtype : otype)",
+        "cancontain(armchairtype : rtype, creditcardtype : otype)",
+        "cancontain(armchairtype : rtype, keychaintype : otype)",
+        "cancontain(armchairtype : rtype, laptoptype : otype)",
+        "cancontain(armchairtype : rtype, newspapertype : otype)",
+        "cancontain(armchairtype : rtype, pillowtype : otype)",
+        "cancontain(armchairtype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, boxtype : otype)",
+        "cancontain(coffeetabletype : rtype, creditcardtype : otype)",
+        "cancontain(coffeetabletype : rtype, keychaintype : otype)",
+        "cancontain(coffeetabletype : rtype, laptoptype : otype)",
+        "cancontain(coffeetabletype : rtype, newspapertype : otype)",
+        "cancontain(coffeetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, statuetype : otype)",
+        "cancontain(coffeetabletype : rtype, watchtype : otype)",
+        "cancontain(drawertype : rtype, creditcardtype : otype)",
+        "cancontain(drawertype : rtype, keychaintype : otype)",
+        "cancontain(drawertype : rtype, newspapertype : otype)",
+        "cancontain(drawertype : rtype, remotecontroltype : otype)",
+        "cancontain(drawertype : rtype, watchtype : otype)",
+        "cancontain(garbagecantype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, boxtype : otype)",
+        "cancontain(sidetabletype : rtype, creditcardtype : otype)",
+        "cancontain(sidetabletype : rtype, keychaintype : otype)",
+        "cancontain(sidetabletype : rtype, laptoptype : otype)",
+        "cancontain(sidetabletype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(sidetabletype : rtype, statuetype : otype)",
+        "cancontain(sidetabletype : rtype, watchtype : otype)",
+        "cancontain(sofatype : rtype, boxtype : otype)",
+        "cancontain(sofatype : rtype, creditcardtype : otype)",
+        "cancontain(sofatype : rtype, keychaintype : otype)",
+        "cancontain(sofatype : rtype, laptoptype : otype)",
+        "cancontain(sofatype : rtype, newspapertype : otype)",
+        "cancontain(sofatype : rtype, pillowtype : otype)",
+        "cancontain(sofatype : rtype, remotecontroltype : otype)",
+        "inreceptacle(box 1: object, sofa 1: receptacle)",
+        "inreceptacle(creditcard 1: object, sidetable 2: receptacle)",
+        "inreceptacle(creditcard 2: object, armchair 1: receptacle)",
+        "inreceptacle(creditcard 3: object, sidetable 3: receptacle)",
+        "inreceptacle(keychain 1: object, sofa 1: receptacle)",
+        "inreceptacle(laptop 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(newspaper 1: object, sidetable 1: receptacle)",
+        "inreceptacle(newspaper 2: object, armchair 1: receptacle)",
+        "inreceptacle(pillow 1: object, sofa 2: receptacle)",
+        "inreceptacle(remotecontrol 1: object, sofa 1: receptacle)",
+        "inreceptacle(remotecontrol 2: object, sidetable 2: receptacle)",
+        "inreceptacle(remotecontrol 3: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 1: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 2: object, tvstand 1: receptacle)",
+        "inreceptacle(television 1: object, tvstand 1: receptacle)",
+        "inreceptacle(watch 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(watch 2: object, coffeetable 1: receptacle)",
+        "isreceptacleobject(box 1: object)",
+        "not_atlocation(agent1 : agent, loc 2: location)",
+        "objectatlocation(box 1: object, loc 12: location)",
+        "objectatlocation(creditcard 1: object, loc 11: location)",
+        "objectatlocation(creditcard 2: object, loc 21: location)",
+        "objectatlocation(creditcard 3: object, loc 6: location)",
+        "objectatlocation(curtains 1: object, loc 17: location)",
+        "objectatlocation(floorlamp 1: object, loc 3: location)",
+        "objectatlocation(houseplant 1: object, loc 13: location)",
+        "objectatlocation(keychain 1: object, loc 12: location)",
+        "objectatlocation(laptop 1: object, loc 19: location)",
+        "objectatlocation(lightswitch 1: object, loc 1: location)",
+        "objectatlocation(newspaper 1: object, loc 10: location)",
+        "objectatlocation(newspaper 2: object, loc 21: location)",
+        "objectatlocation(painting 1: object, loc 9: location)",
+        "objectatlocation(painting 2: object, loc 7: location)",
+        "objectatlocation(pillow 1: object, loc 8: location)",
+        "objectatlocation(remotecontrol 1: object, loc 12: location)",
+        "objectatlocation(remotecontrol 2: object, loc 11: location)",
+        "objectatlocation(remotecontrol 3: object, loc 20: location)",
+        "objectatlocation(statue 1: object, loc 20: location)",
+        "objectatlocation(statue 2: object, loc 20: location)",
+        "objectatlocation(television 1: object, loc 20: location)",
+        "objectatlocation(watch 1: object, loc 19: location)",
+        "objectatlocation(watch 2: object, loc 19: location)",
+        "objectatlocation(window 1: object, loc 18: location)",
+        "objecttype(box 1: object, boxtype : otype)",
+        "objecttype(creditcard 1: object, creditcardtype : otype)",
+        "objecttype(creditcard 2: object, creditcardtype : otype)",
+        "objecttype(creditcard 3: object, creditcardtype : otype)",
+        "objecttype(curtains 1: object, curtainstype : otype)",
+        "objecttype(floorlamp 1: object, floorlamptype : otype)",
+        "objecttype(houseplant 1: object, houseplanttype : otype)",
+        "objecttype(keychain 1: object, keychaintype : otype)",
+        "objecttype(laptop 1: object, laptoptype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(newspaper 1: object, newspapertype : otype)",
+        "objecttype(newspaper 2: object, newspapertype : otype)",
+        "objecttype(painting 1: object, paintingtype : otype)",
+        "objecttype(painting 2: object, paintingtype : otype)",
+        "objecttype(pillow 1: object, pillowtype : otype)",
+        "objecttype(remotecontrol 1: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 2: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 3: object, remotecontroltype : otype)",
+        "objecttype(statue 1: object, statuetype : otype)",
+        "objecttype(statue 2: object, statuetype : otype)",
+        "objecttype(television 1: object, televisiontype : otype)",
+        "objecttype(watch 1: object, watchtype : otype)",
+        "objecttype(watch 2: object, watchtype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "openable(drawer 1: receptacle)",
+        "openable(drawer 2: receptacle)",
+        "openable(drawer 3: receptacle)",
+        "openable(drawer 4: receptacle)",
+        "openable(drawer 5: receptacle)",
+        "openable(drawer 6: receptacle)",
+        "openable(drawer 7: receptacle)",
+        "pickupable(box 1: object)",
+        "pickupable(creditcard 1: object)",
+        "pickupable(creditcard 2: object)",
+        "pickupable(creditcard 3: object)",
+        "pickupable(keychain 1: object)",
+        "pickupable(laptop 1: object)",
+        "pickupable(newspaper 1: object)",
+        "pickupable(newspaper 2: object)",
+        "pickupable(pillow 1: object)",
+        "pickupable(remotecontrol 1: object)",
+        "pickupable(remotecontrol 2: object)",
+        "pickupable(remotecontrol 3: object)",
+        "pickupable(statue 1: object)",
+        "pickupable(statue 2: object)",
+        "pickupable(watch 1: object)",
+        "pickupable(watch 2: object)",
+        "receptacleatlocation(armchair 1: receptacle, loc 21: location)",
+        "receptacleatlocation(coffeetable 1: receptacle, loc 19: location)",
+        "receptacleatlocation(drawer 1: receptacle, loc 16: location)",
+        "receptacleatlocation(drawer 2: receptacle, loc 15: location)",
+        "receptacleatlocation(drawer 3: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 4: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 5: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 6: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 7: receptacle, loc 4: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 17: location)",
+        "receptacleatlocation(sidetable 1: receptacle, loc 10: location)",
+        "receptacleatlocation(sidetable 2: receptacle, loc 11: location)",
+        "receptacleatlocation(sidetable 3: receptacle, loc 6: location)",
+        "receptacleatlocation(sofa 1: receptacle, loc 12: location)",
+        "receptacleatlocation(sofa 2: receptacle, loc 8: location)",
+        "receptacleatlocation(tvstand 1: receptacle, loc 20: location)",
+        "receptacletype(armchair 1: receptacle, armchairtype : rtype)",
+        "receptacletype(coffeetable 1: receptacle, coffeetabletype : rtype)",
+        "receptacletype(drawer 1: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 2: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 3: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 4: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 5: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 6: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 7: receptacle, drawertype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(sidetable 1: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 2: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 3: receptacle, sidetabletype : rtype)",
+        "receptacletype(sofa 1: receptacle, sofatype : rtype)",
+        "receptacletype(sofa 2: receptacle, sofatype : rtype)",
+        "receptacletype(tvstand 1: receptacle, tvstandtype : rtype)",
+        "toggleable(floorlamp 1: object)"
+      ],
+      "admissible_commands": [
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from sofa 1",
+        "take keychain 1 from sofa 1",
+        "take remotecontrol 1 from sofa 1"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 1,
+      "thought": "I need to find a watch and put it on the sidetable.",
+      "action": "go to sofa 1",
+      "parse_ok": true,
+      "thought_word_count": 12,
+      "raw_response": "Thought: I need to find a watch and put it on the sidetable.\nAction: go to sofa 1\n",
+      "model": {
+        "latency_seconds": 4.249265136999384,
+        "prompt_tokens": 397,
+        "prompt_sha256": "a9e6b55a42e4bf02665e3e6372e36c2a8259234f0c2aeb3b20881fdd4521d2f2",
+        "seed": 20262136,
+        "truncated": false,
+        "tokens_predicted": 25,
+        "tokens_evaluated": 397,
+        "cached_tokens": 0,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 397,
+          "prompt_ms": 3052.117,
+          "prompt_per_token_ms": 7.687952141057935,
+          "prompt_per_second": 130.07365051864002,
+          "predicted_n": 25,
+          "predicted_ms": 1191.776,
+          "predicted_per_token_ms": 49.657333333333334,
+          "predicted_per_second": 20.138012512418438
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "a472a1f72f6704d2b8b8a0fd7839084af6251b4d5e4d0088c4886224939e200d",
+      "admissible_before": [
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "recorded_utc": "2026-11-27T09:45:02.347091+00:00"
+    },
+    {
+      "observation": "You arrive at sofa 2. On the sofa 2, you see a pillow 1.",
+      "state_hash": "87b5bcd00cfafb8ad273148f2a8603d95aa6be79245c397b96f041014c5c3d70",
+      "facts": [
+        "atlocation(agent1 : agent, loc 8: location)",
+        "cancontain(armchairtype : rtype, boxtype : otype)",
+        "cancontain(armchairtype : rtype, creditcardtype : otype)",
+        "cancontain(armchairtype : rtype, keychaintype : otype)",
+        "cancontain(armchairtype : rtype, laptoptype : otype)",
+        "cancontain(armchairtype : rtype, newspapertype : otype)",
+        "cancontain(armchairtype : rtype, pillowtype : otype)",
+        "cancontain(armchairtype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, boxtype : otype)",
+        "cancontain(coffeetabletype : rtype, creditcardtype : otype)",
+        "cancontain(coffeetabletype : rtype, keychaintype : otype)",
+        "cancontain(coffeetabletype : rtype, laptoptype : otype)",
+        "cancontain(coffeetabletype : rtype, newspapertype : otype)",
+        "cancontain(coffeetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, statuetype : otype)",
+        "cancontain(coffeetabletype : rtype, watchtype : otype)",
+        "cancontain(drawertype : rtype, creditcardtype : otype)",
+        "cancontain(drawertype : rtype, keychaintype : otype)",
+        "cancontain(drawertype : rtype, newspapertype : otype)",
+        "cancontain(drawertype : rtype, remotecontroltype : otype)",
+        "cancontain(drawertype : rtype, watchtype : otype)",
+        "cancontain(garbagecantype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, boxtype : otype)",
+        "cancontain(sidetabletype : rtype, creditcardtype : otype)",
+        "cancontain(sidetabletype : rtype, keychaintype : otype)",
+        "cancontain(sidetabletype : rtype, laptoptype : otype)",
+        "cancontain(sidetabletype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(sidetabletype : rtype, statuetype : otype)",
+        "cancontain(sidetabletype : rtype, watchtype : otype)",
+        "cancontain(sofatype : rtype, boxtype : otype)",
+        "cancontain(sofatype : rtype, creditcardtype : otype)",
+        "cancontain(sofatype : rtype, keychaintype : otype)",
+        "cancontain(sofatype : rtype, laptoptype : otype)",
+        "cancontain(sofatype : rtype, newspapertype : otype)",
+        "cancontain(sofatype : rtype, pillowtype : otype)",
+        "cancontain(sofatype : rtype, remotecontroltype : otype)",
+        "inreceptacle(box 1: object, sofa 1: receptacle)",
+        "inreceptacle(creditcard 1: object, sidetable 2: receptacle)",
+        "inreceptacle(creditcard 2: object, armchair 1: receptacle)",
+        "inreceptacle(creditcard 3: object, sidetable 3: receptacle)",
+        "inreceptacle(keychain 1: object, sofa 1: receptacle)",
+        "inreceptacle(laptop 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(newspaper 1: object, sidetable 1: receptacle)",
+        "inreceptacle(newspaper 2: object, armchair 1: receptacle)",
+        "inreceptacle(pillow 1: object, sofa 2: receptacle)",
+        "inreceptacle(remotecontrol 1: object, sofa 1: receptacle)",
+        "inreceptacle(remotecontrol 2: object, sidetable 2: receptacle)",
+        "inreceptacle(remotecontrol 3: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 1: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 2: object, tvstand 1: receptacle)",
+        "inreceptacle(television 1: object, tvstand 1: receptacle)",
+        "inreceptacle(watch 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(watch 2: object, coffeetable 1: receptacle)",
+        "isreceptacleobject(box 1: object)",
+        "not_atlocation(agent1 : agent, loc 12: location)",
+        "not_atlocation(agent1 : agent, loc 2: location)",
+        "objectatlocation(box 1: object, loc 12: location)",
+        "objectatlocation(creditcard 1: object, loc 11: location)",
+        "objectatlocation(creditcard 2: object, loc 21: location)",
+        "objectatlocation(creditcard 3: object, loc 6: location)",
+        "objectatlocation(curtains 1: object, loc 17: location)",
+        "objectatlocation(floorlamp 1: object, loc 3: location)",
+        "objectatlocation(houseplant 1: object, loc 13: location)",
+        "objectatlocation(keychain 1: object, loc 12: location)",
+        "objectatlocation(laptop 1: object, loc 19: location)",
+        "objectatlocation(lightswitch 1: object, loc 1: location)",
+        "objectatlocation(newspaper 1: object, loc 10: location)",
+        "objectatlocation(newspaper 2: object, loc 21: location)",
+        "objectatlocation(painting 1: object, loc 9: location)",
+        "objectatlocation(painting 2: object, loc 7: location)",
+        "objectatlocation(pillow 1: object, loc 8: location)",
+        "objectatlocation(remotecontrol 1: object, loc 12: location)",
+        "objectatlocation(remotecontrol 2: object, loc 11: location)",
+        "objectatlocation(remotecontrol 3: object, loc 20: location)",
+        "objectatlocation(statue 1: object, loc 20: location)",
+        "objectatlocation(statue 2: object, loc 20: location)",
+        "objectatlocation(television 1: object, loc 20: location)",
+        "objectatlocation(watch 1: object, loc 19: location)",
+        "objectatlocation(watch 2: object, loc 19: location)",
+        "objectatlocation(window 1: object, loc 18: location)",
+        "objecttype(box 1: object, boxtype : otype)",
+        "objecttype(creditcard 1: object, creditcardtype : otype)",
+        "objecttype(creditcard 2: object, creditcardtype : otype)",
+        "objecttype(creditcard 3: object, creditcardtype : otype)",
+        "objecttype(curtains 1: object, curtainstype : otype)",
+        "objecttype(floorlamp 1: object, floorlamptype : otype)",
+        "objecttype(houseplant 1: object, houseplanttype : otype)",
+        "objecttype(keychain 1: object, keychaintype : otype)",
+        "objecttype(laptop 1: object, laptoptype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(newspaper 1: object, newspapertype : otype)",
+        "objecttype(newspaper 2: object, newspapertype : otype)",
+        "objecttype(painting 1: object, paintingtype : otype)",
+        "objecttype(painting 2: object, paintingtype : otype)",
+        "objecttype(pillow 1: object, pillowtype : otype)",
+        "objecttype(remotecontrol 1: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 2: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 3: object, remotecontroltype : otype)",
+        "objecttype(statue 1: object, statuetype : otype)",
+        "objecttype(statue 2: object, statuetype : otype)",
+        "objecttype(television 1: object, televisiontype : otype)",
+        "objecttype(watch 1: object, watchtype : otype)",
+        "objecttype(watch 2: object, watchtype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "openable(drawer 1: receptacle)",
+        "openable(drawer 2: receptacle)",
+        "openable(drawer 3: receptacle)",
+        "openable(drawer 4: receptacle)",
+        "openable(drawer 5: receptacle)",
+        "openable(drawer 6: receptacle)",
+        "openable(drawer 7: receptacle)",
+        "pickupable(box 1: object)",
+        "pickupable(creditcard 1: object)",
+        "pickupable(creditcard 2: object)",
+        "pickupable(creditcard 3: object)",
+        "pickupable(keychain 1: object)",
+        "pickupable(laptop 1: object)",
+        "pickupable(newspaper 1: object)",
+        "pickupable(newspaper 2: object)",
+        "pickupable(pillow 1: object)",
+        "pickupable(remotecontrol 1: object)",
+        "pickupable(remotecontrol 2: object)",
+        "pickupable(remotecontrol 3: object)",
+        "pickupable(statue 1: object)",
+        "pickupable(statue 2: object)",
+        "pickupable(watch 1: object)",
+        "pickupable(watch 2: object)",
+        "receptacleatlocation(armchair 1: receptacle, loc 21: location)",
+        "receptacleatlocation(coffeetable 1: receptacle, loc 19: location)",
+        "receptacleatlocation(drawer 1: receptacle, loc 16: location)",
+        "receptacleatlocation(drawer 2: receptacle, loc 15: location)",
+        "receptacleatlocation(drawer 3: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 4: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 5: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 6: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 7: receptacle, loc 4: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 17: location)",
+        "receptacleatlocation(sidetable 1: receptacle, loc 10: location)",
+        "receptacleatlocation(sidetable 2: receptacle, loc 11: location)",
+        "receptacleatlocation(sidetable 3: receptacle, loc 6: location)",
+        "receptacleatlocation(sofa 1: receptacle, loc 12: location)",
+        "receptacleatlocation(sofa 2: receptacle, loc 8: location)",
+        "receptacleatlocation(tvstand 1: receptacle, loc 20: location)",
+        "receptacletype(armchair 1: receptacle, armchairtype : rtype)",
+        "receptacletype(coffeetable 1: receptacle, coffeetabletype : rtype)",
+        "receptacletype(drawer 1: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 2: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 3: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 4: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 5: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 6: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 7: receptacle, drawertype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(sidetable 1: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 2: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 3: receptacle, sidetabletype : rtype)",
+        "receptacletype(sofa 1: receptacle, sofatype : rtype)",
+        "receptacletype(sofa 2: receptacle, sofatype : rtype)",
+        "receptacletype(tvstand 1: receptacle, tvstandtype : rtype)",
+        "toggleable(floorlamp 1: object)"
+      ],
+      "admissible_commands": [
+        "examine sofa 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take pillow 1 from sofa 2"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 2,
+      "thought": "I need to find a watch in the sofa.",
+      "action": "go to sofa 2",
+      "parse_ok": true,
+      "thought_word_count": 9,
+      "raw_response": "Thought: I need to find a watch in the sofa.\nAction: go to sofa 2\n",
+      "model": {
+        "latency_seconds": 1.9496688639992499,
+        "prompt_tokens": 461,
+        "prompt_sha256": "2f330c4ad47e474c81272e7ffd54d9b324e362f0fae5d4ac25b69f7a87a62c05",
+        "seed": 20262137,
+        "truncated": false,
+        "tokens_predicted": 21,
+        "tokens_evaluated": 461,
+        "cached_tokens": 382,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 382,
+          "prompt_n": 79,
+          "prompt_ms": 933.062,
+          "prompt_per_token_ms": 11.810911392405064,
+          "prompt_per_second": 84.66747118626628,
+          "predicted_n": 21,
+          "predicted_ms": 1013.351,
+          "predicted_per_token_ms": 50.66755,
+          "predicted_per_second": 19.73649801500171
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "690dc885fe20fddd5d0efdf744923af58b732baebb0deb42cce4108f75ad5d16",
+      "admissible_before": [
+        "examine sofa 1",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take box 1 from sofa 1",
+        "take keychain 1 from sofa 1",
+        "take remotecontrol 1 from sofa 1"
+      ],
+      "recorded_utc": "2026-11-27T09:45:04.356358+00:00"
+    },
+    {
+      "observation": "You arrive at coffeetable 1. On the coffeetable 1, you see a laptop 1, a watch 2, and a watch 1.",
+      "state_hash": "fc158d0720729112fc04eb63ebb4fc04e4b9cc83969da084b3ea1a4fc2b57683",
+      "facts": [
+        "atlocation(agent1 : agent, loc 19: location)",
+        "cancontain(armchairtype : rtype, boxtype : otype)",
+        "cancontain(armchairtype : rtype, creditcardtype : otype)",
+        "cancontain(armchairtype : rtype, keychaintype : otype)",
+        "cancontain(armchairtype : rtype, laptoptype : otype)",
+        "cancontain(armchairtype : rtype, newspapertype : otype)",
+        "cancontain(armchairtype : rtype, pillowtype : otype)",
+        "cancontain(armchairtype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, boxtype : otype)",
+        "cancontain(coffeetabletype : rtype, creditcardtype : otype)",
+        "cancontain(coffeetabletype : rtype, keychaintype : otype)",
+        "cancontain(coffeetabletype : rtype, laptoptype : otype)",
+        "cancontain(coffeetabletype : rtype, newspapertype : otype)",
+        "cancontain(coffeetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, statuetype : otype)",
+        "cancontain(coffeetabletype : rtype, watchtype : otype)",
+        "cancontain(drawertype : rtype, creditcardtype : otype)",
+        "cancontain(drawertype : rtype, keychaintype : otype)",
+        "cancontain(drawertype : rtype, newspapertype : otype)",
+        "cancontain(drawertype : rtype, remotecontroltype : otype)",
+        "cancontain(drawertype : rtype, watchtype : otype)",
+        "cancontain(garbagecantype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, boxtype : otype)",
+        "cancontain(sidetabletype : rtype, creditcardtype : otype)",
+        "cancontain(sidetabletype : rtype, keychaintype : otype)",
+        "cancontain(sidetabletype : rtype, laptoptype : otype)",
+        "cancontain(sidetabletype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(sidetabletype : rtype, statuetype : otype)",
+        "cancontain(sidetabletype : rtype, watchtype : otype)",
+        "cancontain(sofatype : rtype, boxtype : otype)",
+        "cancontain(sofatype : rtype, creditcardtype : otype)",
+        "cancontain(sofatype : rtype, keychaintype : otype)",
+        "cancontain(sofatype : rtype, laptoptype : otype)",
+        "cancontain(sofatype : rtype, newspapertype : otype)",
+        "cancontain(sofatype : rtype, pillowtype : otype)",
+        "cancontain(sofatype : rtype, remotecontroltype : otype)",
+        "inreceptacle(box 1: object, sofa 1: receptacle)",
+        "inreceptacle(creditcard 1: object, sidetable 2: receptacle)",
+        "inreceptacle(creditcard 2: object, armchair 1: receptacle)",
+        "inreceptacle(creditcard 3: object, sidetable 3: receptacle)",
+        "inreceptacle(keychain 1: object, sofa 1: receptacle)",
+        "inreceptacle(laptop 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(newspaper 1: object, sidetable 1: receptacle)",
+        "inreceptacle(newspaper 2: object, armchair 1: receptacle)",
+        "inreceptacle(pillow 1: object, sofa 2: receptacle)",
+        "inreceptacle(remotecontrol 1: object, sofa 1: receptacle)",
+        "inreceptacle(remotecontrol 2: object, sidetable 2: receptacle)",
+        "inreceptacle(remotecontrol 3: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 1: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 2: object, tvstand 1: receptacle)",
+        "inreceptacle(television 1: object, tvstand 1: receptacle)",
+        "inreceptacle(watch 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(watch 2: object, coffeetable 1: receptacle)",
+        "isreceptacleobject(box 1: object)",
+        "not_atlocation(agent1 : agent, loc 12: location)",
+        "not_atlocation(agent1 : agent, loc 2: location)",
+        "not_atlocation(agent1 : agent, loc 8: location)",
+        "objectatlocation(box 1: object, loc 12: location)",
+        "objectatlocation(creditcard 1: object, loc 11: location)",
+        "objectatlocation(creditcard 2: object, loc 21: location)",
+        "objectatlocation(creditcard 3: object, loc 6: location)",
+        "objectatlocation(curtains 1: object, loc 17: location)",
+        "objectatlocation(floorlamp 1: object, loc 3: location)",
+        "objectatlocation(houseplant 1: object, loc 13: location)",
+        "objectatlocation(keychain 1: object, loc 12: location)",
+        "objectatlocation(laptop 1: object, loc 19: location)",
+        "objectatlocation(lightswitch 1: object, loc 1: location)",
+        "objectatlocation(newspaper 1: object, loc 10: location)",
+        "objectatlocation(newspaper 2: object, loc 21: location)",
+        "objectatlocation(painting 1: object, loc 9: location)",
+        "objectatlocation(painting 2: object, loc 7: location)",
+        "objectatlocation(pillow 1: object, loc 8: location)",
+        "objectatlocation(remotecontrol 1: object, loc 12: location)",
+        "objectatlocation(remotecontrol 2: object, loc 11: location)",
+        "objectatlocation(remotecontrol 3: object, loc 20: location)",
+        "objectatlocation(statue 1: object, loc 20: location)",
+        "objectatlocation(statue 2: object, loc 20: location)",
+        "objectatlocation(television 1: object, loc 20: location)",
+        "objectatlocation(watch 1: object, loc 19: location)",
+        "objectatlocation(watch 2: object, loc 19: location)",
+        "objectatlocation(window 1: object, loc 18: location)",
+        "objecttype(box 1: object, boxtype : otype)",
+        "objecttype(creditcard 1: object, creditcardtype : otype)",
+        "objecttype(creditcard 2: object, creditcardtype : otype)",
+        "objecttype(creditcard 3: object, creditcardtype : otype)",
+        "objecttype(curtains 1: object, curtainstype : otype)",
+        "objecttype(floorlamp 1: object, floorlamptype : otype)",
+        "objecttype(houseplant 1: object, houseplanttype : otype)",
+        "objecttype(keychain 1: object, keychaintype : otype)",
+        "objecttype(laptop 1: object, laptoptype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(newspaper 1: object, newspapertype : otype)",
+        "objecttype(newspaper 2: object, newspapertype : otype)",
+        "objecttype(painting 1: object, paintingtype : otype)",
+        "objecttype(painting 2: object, paintingtype : otype)",
+        "objecttype(pillow 1: object, pillowtype : otype)",
+        "objecttype(remotecontrol 1: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 2: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 3: object, remotecontroltype : otype)",
+        "objecttype(statue 1: object, statuetype : otype)",
+        "objecttype(statue 2: object, statuetype : otype)",
+        "objecttype(television 1: object, televisiontype : otype)",
+        "objecttype(watch 1: object, watchtype : otype)",
+        "objecttype(watch 2: object, watchtype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "openable(drawer 1: receptacle)",
+        "openable(drawer 2: receptacle)",
+        "openable(drawer 3: receptacle)",
+        "openable(drawer 4: receptacle)",
+        "openable(drawer 5: receptacle)",
+        "openable(drawer 6: receptacle)",
+        "openable(drawer 7: receptacle)",
+        "pickupable(box 1: object)",
+        "pickupable(creditcard 1: object)",
+        "pickupable(creditcard 2: object)",
+        "pickupable(creditcard 3: object)",
+        "pickupable(keychain 1: object)",
+        "pickupable(laptop 1: object)",
+        "pickupable(newspaper 1: object)",
+        "pickupable(newspaper 2: object)",
+        "pickupable(pillow 1: object)",
+        "pickupable(remotecontrol 1: object)",
+        "pickupable(remotecontrol 2: object)",
+        "pickupable(remotecontrol 3: object)",
+        "pickupable(statue 1: object)",
+        "pickupable(statue 2: object)",
+        "pickupable(watch 1: object)",
+        "pickupable(watch 2: object)",
+        "receptacleatlocation(armchair 1: receptacle, loc 21: location)",
+        "receptacleatlocation(coffeetable 1: receptacle, loc 19: location)",
+        "receptacleatlocation(drawer 1: receptacle, loc 16: location)",
+        "receptacleatlocation(drawer 2: receptacle, loc 15: location)",
+        "receptacleatlocation(drawer 3: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 4: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 5: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 6: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 7: receptacle, loc 4: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 17: location)",
+        "receptacleatlocation(sidetable 1: receptacle, loc 10: location)",
+        "receptacleatlocation(sidetable 2: receptacle, loc 11: location)",
+        "receptacleatlocation(sidetable 3: receptacle, loc 6: location)",
+        "receptacleatlocation(sofa 1: receptacle, loc 12: location)",
+        "receptacleatlocation(sofa 2: receptacle, loc 8: location)",
+        "receptacleatlocation(tvstand 1: receptacle, loc 20: location)",
+        "receptacletype(armchair 1: receptacle, armchairtype : rtype)",
+        "receptacletype(coffeetable 1: receptacle, coffeetabletype : rtype)",
+        "receptacletype(drawer 1: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 2: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 3: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 4: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 5: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 6: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 7: receptacle, drawertype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(sidetable 1: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 2: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 3: receptacle, sidetabletype : rtype)",
+        "receptacletype(sofa 1: receptacle, sofatype : rtype)",
+        "receptacletype(sofa 2: receptacle, sofatype : rtype)",
+        "receptacletype(tvstand 1: receptacle, tvstandtype : rtype)",
+        "toggleable(floorlamp 1: object)"
+      ],
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take watch 1 from coffeetable 1",
+        "take watch 2 from coffeetable 1"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 3,
+      "thought": "The watch is not on the sofa, so I will check the coffeetable.",
+      "action": "go to coffeetable 1",
+      "parse_ok": true,
+      "thought_word_count": 13,
+      "raw_response": "Thought: The watch is not on the sofa, so I will check the coffeetable.\nAction: go to coffeetable 1\n",
+      "model": {
+        "latency_seconds": 2.1929795920004835,
+        "prompt_tokens": 508,
+        "prompt_sha256": "c43f59725c0638708ab07ba5779b3ab83829d81a2cfa6a79e8e252c6d6335a89",
+        "seed": 20262138,
+        "truncated": false,
+        "tokens_predicted": 30,
+        "tokens_evaluated": 508,
+        "cached_tokens": 446,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 446,
+          "prompt_n": 62,
+          "prompt_ms": 663.135,
+          "prompt_per_token_ms": 10.695725806451613,
+          "prompt_per_second": 93.49529130569191,
+          "predicted_n": 30,
+          "predicted_ms": 1526.715,
+          "predicted_per_token_ms": 52.64534482758621,
+          "predicted_per_second": 18.995031816678296
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "87b5bcd00cfafb8ad273148f2a8603d95aa6be79245c397b96f041014c5c3d70",
+      "admissible_before": [
+        "examine sofa 2",
+        "go to armchair 1",
+        "go to coffeetable 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take pillow 1 from sofa 2"
+      ],
+      "recorded_utc": "2026-11-27T09:45:06.614172+00:00"
+    },
+    {
+      "observation": "Nothing happens.",
+      "state_hash": "fc158d0720729112fc04eb63ebb4fc04e4b9cc83969da084b3ea1a4fc2b57683",
+      "facts": [
+        "atlocation(agent1 : agent, loc 19: location)",
+        "cancontain(armchairtype : rtype, boxtype : otype)",
+        "cancontain(armchairtype : rtype, creditcardtype : otype)",
+        "cancontain(armchairtype : rtype, keychaintype : otype)",
+        "cancontain(armchairtype : rtype, laptoptype : otype)",
+        "cancontain(armchairtype : rtype, newspapertype : otype)",
+        "cancontain(armchairtype : rtype, pillowtype : otype)",
+        "cancontain(armchairtype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, boxtype : otype)",
+        "cancontain(coffeetabletype : rtype, creditcardtype : otype)",
+        "cancontain(coffeetabletype : rtype, keychaintype : otype)",
+        "cancontain(coffeetabletype : rtype, laptoptype : otype)",
+        "cancontain(coffeetabletype : rtype, newspapertype : otype)",
+        "cancontain(coffeetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(coffeetabletype : rtype, statuetype : otype)",
+        "cancontain(coffeetabletype : rtype, watchtype : otype)",
+        "cancontain(drawertype : rtype, creditcardtype : otype)",
+        "cancontain(drawertype : rtype, keychaintype : otype)",
+        "cancontain(drawertype : rtype, newspapertype : otype)",
+        "cancontain(drawertype : rtype, remotecontroltype : otype)",
+        "cancontain(drawertype : rtype, watchtype : otype)",
+        "cancontain(garbagecantype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, boxtype : otype)",
+        "cancontain(sidetabletype : rtype, creditcardtype : otype)",
+        "cancontain(sidetabletype : rtype, keychaintype : otype)",
+        "cancontain(sidetabletype : rtype, laptoptype : otype)",
+        "cancontain(sidetabletype : rtype, newspapertype : otype)",
+        "cancontain(sidetabletype : rtype, remotecontroltype : otype)",
+        "cancontain(sidetabletype : rtype, statuetype : otype)",
+        "cancontain(sidetabletype : rtype, watchtype : otype)",
+        "cancontain(sofatype : rtype, boxtype : otype)",
+        "cancontain(sofatype : rtype, creditcardtype : otype)",
+        "cancontain(sofatype : rtype, keychaintype : otype)",
+        "cancontain(sofatype : rtype, laptoptype : otype)",
+        "cancontain(sofatype : rtype, newspapertype : otype)",
+        "cancontain(sofatype : rtype, pillowtype : otype)",
+        "cancontain(sofatype : rtype, remotecontroltype : otype)",
+        "inreceptacle(box 1: object, sofa 1: receptacle)",
+        "inreceptacle(creditcard 1: object, sidetable 2: receptacle)",
+        "inreceptacle(creditcard 2: object, armchair 1: receptacle)",
+        "inreceptacle(creditcard 3: object, sidetable 3: receptacle)",
+        "inreceptacle(keychain 1: object, sofa 1: receptacle)",
+        "inreceptacle(laptop 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(newspaper 1: object, sidetable 1: receptacle)",
+        "inreceptacle(newspaper 2: object, armchair 1: receptacle)",
+        "inreceptacle(pillow 1: object, sofa 2: receptacle)",
+        "inreceptacle(remotecontrol 1: object, sofa 1: receptacle)",
+        "inreceptacle(remotecontrol 2: object, sidetable 2: receptacle)",
+        "inreceptacle(remotecontrol 3: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 1: object, tvstand 1: receptacle)",
+        "inreceptacle(statue 2: object, tvstand 1: receptacle)",
+        "inreceptacle(television 1: object, tvstand 1: receptacle)",
+        "inreceptacle(watch 1: object, coffeetable 1: receptacle)",
+        "inreceptacle(watch 2: object, coffeetable 1: receptacle)",
+        "isreceptacleobject(box 1: object)",
+        "not_atlocation(agent1 : agent, loc 12: location)",
+        "not_atlocation(agent1 : agent, loc 2: location)",
+        "not_atlocation(agent1 : agent, loc 8: location)",
+        "objectatlocation(box 1: object, loc 12: location)",
+        "objectatlocation(creditcard 1: object, loc 11: location)",
+        "objectatlocation(creditcard 2: object, loc 21: location)",
+        "objectatlocation(creditcard 3: object, loc 6: location)",
+        "objectatlocation(curtains 1: object, loc 17: location)",
+        "objectatlocation(floorlamp 1: object, loc 3: location)",
+        "objectatlocation(houseplant 1: object, loc 13: location)",
+        "objectatlocation(keychain 1: object, loc 12: location)",
+        "objectatlocation(laptop 1: object, loc 19: location)",
+        "objectatlocation(lightswitch 1: object, loc 1: location)",
+        "objectatlocation(newspaper 1: object, loc 10: location)",
+        "objectatlocation(newspaper 2: object, loc 21: location)",
+        "objectatlocation(painting 1: object, loc 9: location)",
+        "objectatlocation(painting 2: object, loc 7: location)",
+        "objectatlocation(pillow 1: object, loc 8: location)",
+        "objectatlocation(remotecontrol 1: object, loc 12: location)",
+        "objectatlocation(remotecontrol 2: object, loc 11: location)",
+        "objectatlocation(remotecontrol 3: object, loc 20: location)",
+        "objectatlocation(statue 1: object, loc 20: location)",
+        "objectatlocation(statue 2: object, loc 20: location)",
+        "objectatlocation(television 1: object, loc 20: location)",
+        "objectatlocation(watch 1: object, loc 19: location)",
+        "objectatlocation(watch 2: object, loc 19: location)",
+        "objectatlocation(window 1: object, loc 18: location)",
+        "objecttype(box 1: object, boxtype : otype)",
+        "objecttype(creditcard 1: object, creditcardtype : otype)",
+        "objecttype(creditcard 2: object, creditcardtype : otype)",
+        "objecttype(creditcard 3: object, creditcardtype : otype)",
+        "objecttype(curtains 1: object, curtainstype : otype)",
+        "objecttype(floorlamp 1: object, floorlamptype : otype)",
+        "objecttype(houseplant 1: object, houseplanttype : otype)",
+        "objecttype(keychain 1: object, keychaintype : otype)",
+        "objecttype(laptop 1: object, laptoptype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(newspaper 1: object, newspapertype : otype)",
+        "objecttype(newspaper 2: object, newspapertype : otype)",
+        "objecttype(painting 1: object, paintingtype : otype)",
+        "objecttype(painting 2: object, paintingtype : otype)",
+        "objecttype(pillow 1: object, pillowtype : otype)",
+        "objecttype(remotecontrol 1: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 2: object, remotecontroltype : otype)",
+        "objecttype(remotecontrol 3: object, remotecontroltype : otype)",
+        "objecttype(statue 1: object, statuetype : otype)",
+        "objecttype(statue 2: object, statuetype : otype)",
+        "objecttype(television 1: object, televisiontype : otype)",
+        "objecttype(watch 1: object, watchtype : otype)",
+        "objecttype(watch 2: object, watchtype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "openable(drawer 1: receptacle)",
+        "openable(drawer 2: receptacle)",
+        "openable(drawer 3: receptacle)",
+        "openable(drawer 4: receptacle)",
+        "openable(drawer 5: receptacle)",
+        "openable(drawer 6: receptacle)",
+        "openable(drawer 7: receptacle)",
+        "pickupable(box 1: object)",
+        "pickupable(creditcard 1: object)",
+        "pickupable(creditcard 2: object)",
+        "pickupable(creditcard 3: object)",
+        "pickupable(keychain 1: object)",
+        "pickupable(laptop 1: object)",
+        "pickupable(newspaper 1: object)",
+        "pickupable(newspaper 2: object)",
+        "pickupable(pillow 1: object)",
+        "pickupable(remotecontrol 1: object)",
+        "pickupable(remotecontrol 2: object)",
+        "pickupable(remotecontrol 3: object)",
+        "pickupable(statue 1: object)",
+        "pickupable(statue 2: object)",
+        "pickupable(watch 1: object)",
+        "pickupable(watch 2: object)",
+        "receptacleatlocation(armchair 1: receptacle, loc 21: location)",
+        "receptacleatlocation(coffeetable 1: receptacle, loc 19: location)",
+        "receptacleatlocation(drawer 1: receptacle, loc 16: location)",
+        "receptacleatlocation(drawer 2: receptacle, loc 15: location)",
+        "receptacleatlocation(drawer 3: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 4: receptacle, loc 14: location)",
+        "receptacleatlocation(drawer 5: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 6: receptacle, loc 5: location)",
+        "receptacleatlocation(drawer 7: receptacle, loc 4: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 17: location)",
+        "receptacleatlocation(sidetable 1: receptacle, loc 10: location)",
+        "receptacleatlocation(sidetable 2: receptacle, loc 11: location)",
+        "receptacleatlocation(sidetable 3: receptacle, loc 6: location)",
+        "receptacleatlocation(sofa 1: receptacle, loc 12: location)",
+        "receptacleatlocation(sofa 2: receptacle, loc 8: location)",
+        "receptacleatlocation(tvstand 1: receptacle, loc 20: location)",
+        "receptacletype(armchair 1: receptacle, armchairtype : rtype)",
+        "receptacletype(coffeetable 1: receptacle, coffeetabletype : rtype)",
+        "receptacletype(drawer 1: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 2: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 3: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 4: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 5: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 6: receptacle, drawertype : rtype)",
+        "receptacletype(drawer 7: receptacle, drawertype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(sidetable 1: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 2: receptacle, sidetabletype : rtype)",
+        "receptacletype(sidetable 3: receptacle, sidetabletype : rtype)",
+        "receptacletype(sofa 1: receptacle, sofatype : rtype)",
+        "receptacletype(sofa 2: receptacle, sofatype : rtype)",
+        "receptacletype(tvstand 1: receptacle, tvstandtype : rtype)",
+        "toggleable(floorlamp 1: object)"
+      ],
+      "admissible_commands": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take watch 1 from coffeetable 1",
+        "take watch 2 from coffeetable 1"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 3,
+      "thought": "I need to find the watch on the coffeetable.",
+      "action": "go to coffeetable 1",
+      "parse_ok": true,
+      "thought_word_count": 9,
+      "raw_response": "Thought: I need to find the watch on the coffeetable.\nAction: go to coffeetable 1\n",
+      "model": {
+        "latency_seconds": 2.024485203999575,
+        "prompt_tokens": 579,
+        "prompt_sha256": "d6939fdee3dfaf6d46ef48de111db425f8ff49f1b130c393aaddd95710eec2bd",
+        "seed": 20262139,
+        "truncated": false,
+        "tokens_predicted": 25,
+        "tokens_evaluated": 579,
+        "cached_tokens": 493,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 493,
+          "prompt_n": 86,
+          "prompt_ms": 808.454,
+          "prompt_per_token_ms": 9.400627906976744,
+          "prompt_per_second": 106.37587296246912,
+          "predicted_n": 25,
+          "predicted_ms": 1212.74,
+          "predicted_per_token_ms": 50.530833333333334,
+          "predicted_per_second": 19.789897257450072
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "fc158d0720729112fc04eb63ebb4fc04e4b9cc83969da084b3ea1a4fc2b57683",
+      "admissible_before": [
+        "examine coffeetable 1",
+        "go to armchair 1",
+        "go to drawer 1",
+        "go to drawer 2",
+        "go to drawer 3",
+        "go to drawer 4",
+        "go to drawer 5",
+        "go to drawer 6",
+        "go to drawer 7",
+        "go to garbagecan 1",
+        "go to sidetable 1",
+        "go to sidetable 2",
+        "go to sidetable 3",
+        "go to sofa 1",
+        "go to sofa 2",
+        "go to tvstand 1",
+        "help",
+        "inventory",
+        "look",
+        "take laptop 1 from coffeetable 1",
+        "take watch 1 from coffeetable 1",
+        "take watch 2 from coffeetable 1"
+      ],
+      "recorded_utc": "2026-11-27T09:45:08.697615+00:00"
+    }
+  ]
+}

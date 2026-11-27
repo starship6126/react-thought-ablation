@@ -1,0 +1,45 @@
+{
+  "status": "verified",
+  "run_id": "pilot_20261127T093800Z_7f31",
+  "folder_url": "https://drive.google.com/drive/folders/1y_byNrEmv9yddr2wKN3KoCVVPHcmuZM4",
+  "file_count": 5,
+  "files": [
+    {
+      "name": "checkpoints.jsonl",
+      "id": "1Rw07I9ckcsxy5AD9P6SFwB6cKS-0pnAK",
+      "bytes": 1286176,
+      "url": "https://drive.google.com/file/d/1Rw07I9ckcsxy5AD9P6SFwB6cKS-0pnAK/view?usp=drivesdk",
+      "sha256": "e38762cf049e82909776c5053d7ec7f544b002e015ef1df0b6804881a3199f92"
+    },
+    {
+      "name": "runs.jsonl",
+      "id": "1il6f2bDuSYd-hiy8b0egSdrqwbmq3rDy",
+      "bytes": 9563513,
+      "url": "https://drive.google.com/file/d/1il6f2bDuSYd-hiy8b0egSdrqwbmq3rDy/view?usp=drivesdk",
+      "sha256": "873965474337fe2c6f7d3616c3de731e504391fa61e919cf39da45df58572c49"
+    },
+    {
+      "name": "report.md",
+      "id": "1B8UKhGUjrn_8h98OX_kUNOYc7NZQx0EF",
+      "bytes": 9971,
+      "url": "https://docs.google.com/document/d/1B8UKhGUjrn_8h98OX_kUNOYc7NZQx0EF/edit?usp=drivesdk&ouid=105331807499188956411&rtpof=true&sd=true",
+      "sha256": "8ee3d4bceca9c9b62ac45951dfcf0e2d224bb2baf7bac1a5d82f222873e378ad"
+    },
+    {
+      "name": "report.csv",
+      "id": "16Sfzp_4FByVe-HBqngEK__Lu1SIxb7AM",
+      "bytes": 784,
+      "url": "https://drive.google.com/file/d/16Sfzp_4FByVe-HBqngEK__Lu1SIxb7AM/view?usp=drivesdk",
+      "sha256": "a782909e2279ecb1a88f9f8473b41c8c713473f6e1088e614a703cb1eb8898bb"
+    },
+    {
+      "name": "blind_review.csv",
+      "id": "1tEINc7569bfKupwLDDz1pnms1p4jhwXg",
+      "bytes": 37565,
+      "url": "https://drive.google.com/file/d/1tEINc7569bfKupwLDDz1pnms1p4jhwXg/view?usp=drivesdk",
+      "sha256": "c0ea3ffc333e2f0893bcde9f53f49274f46b4efed1f08d76e71df97180d955a2"
+    }
+  ],
+  "verification": "Connected Google Drive folder readback: exact five names and local byte sizes match.",
+  "verified_utc": "2026-11-27T10:12:16.580532+00:00"
+}

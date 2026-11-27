@@ -1,0 +1,122 @@
+[
+  {
+    "review_id": "953f91bb84a3fc17d630",
+    "checkpoint_id": "57a28f2c543c1f16",
+    "condition": "A"
+  },
+  {
+    "review_id": "2b5e84b9069b12eae62b",
+    "checkpoint_id": "57a28f2c543c1f16",
+    "condition": "B"
+  },
+  {
+    "review_id": "3d1a0b7d902dd5cae7b1",
+    "checkpoint_id": "21eca2b4ff5ce5e8",
+    "condition": "A"
+  },
+  {
+    "review_id": "bad3cb20dc02427a00e1",
+    "checkpoint_id": "21eca2b4ff5ce5e8",
+    "condition": "B"
+  },
+  {
+    "review_id": "46d8034def292a6ec20a",
+    "checkpoint_id": "5e2a78de4bf20daf",
+    "condition": "A"
+  },
+  {
+    "review_id": "6427dd30dc485da74182",
+    "checkpoint_id": "5e2a78de4bf20daf",
+    "condition": "B"
+  },
+  {
+    "review_id": "1ce14cff1b5d5bf190e6",
+    "checkpoint_id": "2642cf6998f407ee",
+    "condition": "A"
+  },
+  {
+    "review_id": "bddde426cdd91299f8ea",
+    "checkpoint_id": "2642cf6998f407ee",
+    "condition": "B"
+  },
+  {
+    "review_id": "999cbb27c7cd53a0e379",
+    "checkpoint_id": "abfe488430621c12",
+    "condition": "A"
+  },
+  {
+    "review_id": "78f2d3cd0cbdfd8e7feb",
+    "checkpoint_id": "abfe488430621c12",
+    "condition": "B"
+  },
+  {
+    "review_id": "a2a1aa8f63ddd32ad5ea",
+    "checkpoint_id": "0197da296b5038a9",
+    "condition": "A"
+  },
+  {
+    "review_id": "646a9977f20075935f98",
+    "checkpoint_id": "0197da296b5038a9",
+    "condition": "B"
+  },
+  {
+    "review_id": "d9eac3148e0d5751e153",
+    "checkpoint_id": "d399fcabd7a5e6d0",
+    "condition": "A"
+  },
+  {
+    "review_id": "120445c98f644740ab3a",
+    "checkpoint_id": "d399fcabd7a5e6d0",
+    "condition": "B"
+  },
+  {
+    "review_id": "0f4ab832dadcf46202e8",
+    "checkpoint_id": "1540f020b2f419a0",
+    "condition": "A"
+  },
+  {
+    "review_id": "15ed77fca23122f53947",
+    "checkpoint_id": "1540f020b2f419a0",
+    "condition": "B"
+  },
+  {
+    "review_id": "66cf0be40e743270eb01",
+    "checkpoint_id": "6138bbd5f0f8a072",
+    "condition": "A"
+  },
+  {
+    "review_id": "52691df34122d5112387",
+    "checkpoint_id": "6138bbd5f0f8a072",
+    "condition": "B"
+  },
+  {
+    "review_id": "b9c3a8a81e8a0b2dc746",
+    "checkpoint_id": "269f2e6f74e3c5a6",
+    "condition": "A"
+  },
+  {
+    "review_id": "20ae8ca160555d77b649",
+    "checkpoint_id": "269f2e6f74e3c5a6",
+    "condition": "B"
+  },
+  {
+    "review_id": "2b07f993349c2c694dde",
+    "checkpoint_id": "f3ef7b2925004393",
+    "condition": "A"
+  },
+  {
+    "review_id": "fba9e210d111a41c22d1",
+    "checkpoint_id": "f3ef7b2925004393",
+    "condition": "B"
+  },
+  {
+    "review_id": "b3c1fc29a4580435947d",
+    "checkpoint_id": "eb59088ea3791840",
+    "condition": "A"
+  },
+  {
+    "review_id": "50649ca70417b4ff3b61",
+    "checkpoint_id": "eb59088ea3791840",
+    "condition": "B"
+  }
+]

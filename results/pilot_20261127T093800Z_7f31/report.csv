@@ -1,0 +1,8 @@
+metric,a_numerator,a_denominator,b_numerator,b_denominator,a_percent,b_percent,a_minus_b_pp,ci95_low_pp,ci95_high_pp,a_only,b_only,paired_games,completed_pairs,assigned_pairs,score_status
+detection_3,0,8,1,8,0.0,12.5,-12.5,-37.5,0.0,0,1,8,12,12,provisional_language
+strategy_5,0,8,2,8,0.0,25.0,-25.0,-62.5,0.0,0,2,8,12,12,automatic_environment_behavior
+recovery_10,0,8,0,8,0.0,0.0,0.0,0.0,0.0,0,0,8,12,12,automatic_environment_behavior
+success_20,0,12,0,12,0.0,0.0,0.0,0.0,0.0,0,0,12,12,12,automatic_environment_behavior
+false_positive_3,0,4,0,4,0.0,0.0,0.0,0.0,0.0,0,0,4,12,12,provisional_language
+success_20_error,0,8,0,8,0.0,0.0,0.0,0.0,0.0,0,0,8,12,12,automatic_environment_behavior
+success_20_normal,0,4,0,4,0.0,0.0,0.0,0.0,0.0,0,0,4,12,12,automatic_environment_behavior

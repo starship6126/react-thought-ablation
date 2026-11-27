@@ -1,0 +1,746 @@
+[
+  {
+    "checkpoint_id": "57a28f2c543c1f16",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "57a28f2c543c1f16",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "21eca2b4ff5ce5e8",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "21eca2b4ff5ce5e8",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "5e2a78de4bf20daf",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "5e2a78de4bf20daf",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "2642cf6998f407ee",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "2642cf6998f407ee",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "abfe488430621c12",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "abfe488430621c12",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "0197da296b5038a9",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "0197da296b5038a9",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "d399fcabd7a5e6d0",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "d399fcabd7a5e6d0",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 1,
+        "evidence": "Turn 1: executed 'go to bathtubbasin 1'; frozen strategy_rules rule 1 matched; observation=You arrive at bathtubbasin 1. On the bathtubbasin 1, you see nothing.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "1540f020b2f419a0",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "1540f020b2f419a0",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 1,
+        "evidence": "Turn 1: executed 'go to cabinet 1'; frozen strategy_rules rule 2 matched; observation=You arrive at cabinet 1. The cabinet 1 is closed.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "6138bbd5f0f8a072",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "6138bbd5f0f8a072",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "269f2e6f74e3c5a6",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "269f2e6f74e3c5a6",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "f3ef7b2925004393",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "f3ef7b2925004393",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "eb59088ea3791840",
+    "condition": "A",
+    "scores": {
+      "detection_3": {
+        "score": 0,
+        "evidence": "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  },
+  {
+    "checkpoint_id": "eb59088ea3791840",
+    "condition": "B",
+    "scores": {
+      "detection_3": {
+        "score": 1,
+        "evidence": "Turn 2 thought specifically acknowledges a blocked subgoal: I need to open the cabinet to find more soapbars.",
+        "provisional": true
+      },
+      "strategy_5": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "recovery_10": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": false
+      },
+      "success_20": {
+        "score": 0,
+        "evidence": "No official won=True within 20 actions.",
+        "provisional": false
+      },
+      "false_positive_3": {
+        "score": 0,
+        "evidence": "No qualifying evidence in the registered window.",
+        "provisional": true
+      }
+    }
+  }
+]

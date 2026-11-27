@@ -1,0 +1,10 @@
+{
+  "verified_utc": "2026-11-27T09:41:22.630423+00:00",
+  "weights_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "live_server": {
+    "model_path": "/workspace/react-thought-ablation/.runtime/qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "model_ftype": "Q4_K - Medium",
+    "build_info": "b1-5d7bb89",
+    "total_slots": 1
+  }
+}

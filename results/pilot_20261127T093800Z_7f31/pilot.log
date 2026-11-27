@@ -1,0 +1,511 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/react-thought-ablation/src/react_ablation/cli.py", line 42, in <module>
+    main()
+  File "/workspace/react-thought-ablation/src/react_ablation/cli.py", line 35, in main
+    print(json.dumps({"completed_pairs": run_pairs(**args)}))
+                                         ^^^^^^^^^^^^^^^^^
+  File "/workspace/react-thought-ablation/src/react_ablation/experiment.py", line 281, in run_pairs
+    freeze_manifest = json.loads((root / "freeze_manifest.json").read_text())
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agent/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/agent/.local/share/uv/python/cpython-3.11.18-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results/pilot_20261127T093800Z_7f31/freeze_manifest.json'
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 1, "action": "go to bathtubbasin 1", "won": false, "latency": 4.8813449350000155}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 2, "action": "go to sinkbasin 1", "won": false, "latency": 2.114234670998485}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 2.1474810290001187}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 4, "action": "go to sinkbasin 1", "won": false, "latency": 1.8864765190010075}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 1.8365254560012545}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 6, "action": "go to sinkbasin 1", "won": false, "latency": 1.8201218889989832}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 7, "action": "go to sinkbasin 1", "won": false, "latency": 1.8463166459987406}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 8, "action": "go to sinkbasin 1", "won": false, "latency": 1.8940129050006362}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 9, "action": "go to sinkbasin 1", "won": false, "latency": 1.921331547000591}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 10, "action": "go to sinkbasin 1", "won": false, "latency": 1.9625262990011834}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 1.942925577999631}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 1.9698189239989006}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 1.9901780519994645}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 14, "action": "go to sinkbasin 1", "won": false, "latency": 2.030003083000338}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 2.034098897000149}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 16, "action": "go to sinkbasin 1", "won": false, "latency": 2.0618398190017615}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 2.0329987490003987}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 18, "action": "go to sinkbasin 1", "won": false, "latency": 2.0902754239996284}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 19, "action": "go to sinkbasin 1", "won": false, "latency": 2.174009254000339}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "B", "step": 20, "action": "go to sinkbasin 1", "won": false, "latency": 2.1071994150006503}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 1, "action": "go to countertop 1", "won": false, "latency": 5.573671894000654}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 2, "action": "take soapbar 2 from countertop 1", "won": false, "latency": 2.403555269998833}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 1.989692611999999}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 4, "action": "go to countertop 2", "won": false, "latency": 2.0671340560002136}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 2.3231355379994056}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 6, "action": "go to countertop 2", "won": false, "latency": 2.147914897001101}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 7, "action": "go to sinkbasin 1", "won": false, "latency": 2.3614580190005654}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 8, "action": "go to sinkbasin 1", "won": false, "latency": 2.244765245999588}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 9, "action": "go to sinkbasin 1", "won": false, "latency": 2.1263568729991675}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 10, "action": "go to sinkbasin 1", "won": false, "latency": 2.2438144590014417}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 2.47938410200004}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 2.278714609999952}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 2.213190193000628}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 14, "action": "go to sinkbasin 1", "won": false, "latency": 2.282628681999995}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 2.2399721880010475}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 16, "action": "go to sinkbasin 1", "won": false, "latency": 2.441807619999963}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 2.31614608900054}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 18, "action": "go to sinkbasin 1", "won": false, "latency": 2.3207031290003215}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 19, "action": "go to sinkbasin 1", "won": false, "latency": 2.309239001999231}
+{"phase": "resume", "checkpoint": "57a28f2c543c1f16", "condition": "A", "step": 20, "action": "go to sinkbasin 1", "won": false, "latency": 2.315183082000658}
+{"phase": "pair_complete", "checkpoint": "57a28f2c543c1f16", "completed_pairs": 1}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 1, "action": "go to countertop 1", "won": false, "latency": 6.53341347300011}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 2, "action": "go to countertop 1", "won": false, "latency": 1.6877868759984267}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 3, "action": "go to countertop 1", "won": false, "latency": 1.7298475560000952}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 4, "action": "go to countertop 1", "won": false, "latency": 1.735474646999137}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 5, "action": "go to countertop 1", "won": false, "latency": 1.7465472199983196}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 6, "action": "go to countertop 1", "won": false, "latency": 1.7481762320003327}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 7, "action": "go to countertop 1", "won": false, "latency": 1.8573529660006898}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 8, "action": "go to countertop 1", "won": false, "latency": 1.7864825410015328}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 9, "action": "go to countertop 1", "won": false, "latency": 1.8082749629993486}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 10, "action": "go to countertop 1", "won": false, "latency": 1.714400150000074}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 11, "action": "go to countertop 1", "won": false, "latency": 1.7298140229995624}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 12, "action": "go to countertop 1", "won": false, "latency": 1.7687457940010063}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 13, "action": "go to countertop 1", "won": false, "latency": 1.784826258000976}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 14, "action": "go to countertop 1", "won": false, "latency": 1.8661253159989428}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 15, "action": "go to countertop 1", "won": false, "latency": 1.8068872750009177}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 16, "action": "go to countertop 1", "won": false, "latency": 1.7939564089992928}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 17, "action": "go to countertop 1", "won": false, "latency": 1.797161930000584}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 18, "action": "go to countertop 1", "won": false, "latency": 1.806757315998766}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 19, "action": "go to countertop 1", "won": false, "latency": 1.8390405499994813}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "A", "step": 20, "action": "go to countertop 1", "won": false, "latency": 1.8437020119999943}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 1, "action": "go to drawer 1", "won": false, "latency": 6.070311956998921}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 2, "action": "open drawer 1", "won": false, "latency": 1.866800775000229}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 3, "action": "go to cabinet 12", "won": false, "latency": 1.939762897998662}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 4, "action": "go to cabinet 12", "won": false, "latency": 2.0981675000002724}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 5, "action": "go to cabinet 12", "won": false, "latency": 2.497940061999543}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 6, "action": "go to cabinet 12", "won": false, "latency": 2.035147798000253}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 7, "action": "go to cabinet 12", "won": false, "latency": 1.8606514440016326}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 8, "action": "go to cabinet 12", "won": false, "latency": 1.8964917169996625}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 9, "action": "go to cabinet 12", "won": false, "latency": 2.056653206000192}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 10, "action": "go to cabinet 12", "won": false, "latency": 1.9691521869990538}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 11, "action": "go to cabinet 12", "won": false, "latency": 1.918631226000798}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 12, "action": "go to cabinet 12", "won": false, "latency": 1.9390760900005262}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 13, "action": "go to cabinet 12", "won": false, "latency": 1.95385189100125}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 14, "action": "go to cabinet 12", "won": false, "latency": 1.9600240479994682}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 15, "action": "go to cabinet 12", "won": false, "latency": 1.9852555759989627}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 16, "action": "go to cabinet 12", "won": false, "latency": 1.8097263010004099}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 17, "action": "go to cabinet 12", "won": false, "latency": 1.8795222730004753}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 18, "action": "go to cabinet 12", "won": false, "latency": 1.868103627999517}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 19, "action": "go to cabinet 12", "won": false, "latency": 1.8967573399986577}
+{"phase": "resume", "checkpoint": "21eca2b4ff5ce5e8", "condition": "B", "step": 20, "action": "go to cabinet 12", "won": false, "latency": 2.006498336000732}
+{"phase": "pair_complete", "checkpoint": "21eca2b4ff5ce5e8", "completed_pairs": 2}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 1, "action": "go to fridge 1", "won": false, "latency": 6.123111728000367}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 2, "action": "open fridge 1", "won": false, "latency": 1.8178094670001883}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 2.350123447999067}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 4, "action": "go to fridge 1", "won": false, "latency": 1.9720084179989499}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 5, "action": "go to fridge 1", "won": false, "latency": 2.1868566399989504}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 6, "action": "go to fridge 1", "won": false, "latency": 1.7758209660005377}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 7, "action": "go to fridge 1", "won": false, "latency": 1.9863957970010233}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 8, "action": "go to fridge 1", "won": false, "latency": 2.101131962999716}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 9, "action": "open fridge 1", "won": false, "latency": 1.891681246999724}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 10, "action": "go to fridge 1", "won": false, "latency": 2.30206136400011}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 11, "action": "open fridge 1", "won": false, "latency": 3.2584265299992694}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 12, "action": "go to fridge 1", "won": false, "latency": 1.8488280099991243}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 13, "action": "open fridge 1", "won": false, "latency": 1.7591743960001622}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 14, "action": "go to fridge 1", "won": false, "latency": 1.845476549000523}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 15, "action": "open fridge 1", "won": false, "latency": 1.7656265139994503}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 16, "action": "go to fridge 1", "won": false, "latency": 3.5473375969995686}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 17, "action": "open fridge 1", "won": false, "latency": 2.8302983260000474}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 18, "action": "go to fridge 1", "won": false, "latency": 3.236504205999154}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 19, "action": "open fridge 1", "won": false, "latency": 3.2519967459993495}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "A", "step": 20, "action": "open fridge 1", "won": false, "latency": 3.0614138019991515}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 1, "action": "go to sinkbasin 1", "won": false, "latency": 6.337175344999196}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 2, "action": "go to fridge 1", "won": false, "latency": 1.9507276299991645}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 3.42330379699888}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 4, "action": "go to sinkbasin 1", "won": false, "latency": 2.275059563000468}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 1.8205627059996914}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 6, "action": "go to sinkbasin 1", "won": false, "latency": 1.7549628889992164}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 7, "action": "go to sinkbasin 1", "won": false, "latency": 1.7471247450012015}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 8, "action": "go to sinkbasin 1", "won": false, "latency": 1.7824609849994886}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 9, "action": "go to sinkbasin 1", "won": false, "latency": 1.7620156800003315}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 10, "action": "go to sinkbasin 1", "won": false, "latency": 1.8127700169989112}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 1.8135543779990257}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 1.8728606419990683}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 1.8751656650001678}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 14, "action": "go to sinkbasin 1", "won": false, "latency": 1.8903064400001313}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 2.3901704820000305}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 16, "action": "go to sinkbasin 1", "won": false, "latency": 2.575752425000246}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 2.514133717999357}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 18, "action": "go to sinkbasin 1", "won": false, "latency": 2.496119710998755}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 19, "action": "go to sinkbasin 1", "won": false, "latency": 2.5830310500005}
+{"phase": "resume", "checkpoint": "5e2a78de4bf20daf", "condition": "B", "step": 20, "action": "go to sinkbasin 1", "won": false, "latency": 2.5728752550003264}
+{"phase": "pair_complete", "checkpoint": "5e2a78de4bf20daf", "completed_pairs": 3}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 1, "action": "take plate 2 from countertop 1", "won": false, "latency": 7.545543408999947}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 2, "action": "go to microwave 1", "won": false, "latency": 2.585032905000844}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 3, "action": "open microwave 1", "won": false, "latency": 2.216894217001027}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 4, "action": "go to fridge 1", "won": false, "latency": 2.3690380440002627}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 5, "action": "take plate 2 from fridge 1", "won": false, "latency": 2.511673803001031}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 6, "action": "go to fridge 1", "won": false, "latency": 2.173327701000744}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 7, "action": "take plate 2 from fridge 1", "won": false, "latency": 2.434366618999775}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 8, "action": "go to microwave 1", "won": false, "latency": 2.2253071400009503}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 9, "action": "go to microwave 1", "won": false, "latency": 1.8954212199987523}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 10, "action": "go to microwave 1", "won": false, "latency": 1.7473373240009096}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 11, "action": "go to microwave 1", "won": false, "latency": 1.7530855670011078}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 12, "action": "go to microwave 1", "won": false, "latency": 1.7389453380001214}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 13, "action": "go to microwave 1", "won": false, "latency": 1.8187809020000714}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 14, "action": "go to microwave 1", "won": false, "latency": 1.8248366839998198}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 15, "action": "go to microwave 1", "won": false, "latency": 1.7958239790004882}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 16, "action": "go to microwave 1", "won": false, "latency": 1.813492244000372}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 17, "action": "go to microwave 1", "won": false, "latency": 1.7666076500008785}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 18, "action": "go to microwave 1", "won": false, "latency": 1.822418738000124}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 19, "action": "go to microwave 1", "won": false, "latency": 1.8748650329998782}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "B", "step": 20, "action": "go to microwave 1", "won": false, "latency": 1.8683150879987807}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 1, "action": "take plate 2 from countertop 1", "won": false, "latency": 5.962823535999632}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 2, "action": "go to microwave 1", "won": false, "latency": 2.0209603479997895}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 3, "action": "open microwave 1", "won": false, "latency": 1.894009082001503}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 4, "action": "go to countertop 1", "won": false, "latency": 1.8286191189999954}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 5, "action": "take plate 2 from countertop 1", "won": false, "latency": 2.7859454970002844}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 6, "action": "go to countertop 1", "won": false, "latency": 1.971630500000174}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 7, "action": "go to diningtable 1", "won": false, "latency": 1.763885049000237}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 8, "action": "take plate 1 from diningtable 1", "won": false, "latency": 2.7811556920005387}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 9, "action": "go to diningtable 1", "won": false, "latency": 1.9583496209997975}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 10, "action": "go to diningtable 1", "won": false, "latency": 1.740750476001267}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 11, "action": "go to countertop 1", "won": false, "latency": 1.7581726600001275}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 12, "action": "go to diningtable 1", "won": false, "latency": 2.0089201989994763}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 13, "action": "go to diningtable 1", "won": false, "latency": 2.2740927939994435}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 14, "action": "go to diningtable 1", "won": false, "latency": 1.8204864070012263}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 15, "action": "go to diningtable 1", "won": false, "latency": 1.8379495969984418}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 16, "action": "go to diningtable 1", "won": false, "latency": 1.782814280999446}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 17, "action": "go to diningtable 1", "won": false, "latency": 1.8502372020011535}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 18, "action": "go to diningtable 1", "won": false, "latency": 1.8341576919992804}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 19, "action": "go to diningtable 1", "won": false, "latency": 1.857411360999322}
+{"phase": "resume", "checkpoint": "2642cf6998f407ee", "condition": "A", "step": 20, "action": "go to diningtable 1", "won": false, "latency": 1.8678255390004779}
+{"phase": "pair_complete", "checkpoint": "2642cf6998f407ee", "completed_pairs": 4}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 1, "action": "go to sinkbasin 1", "won": false, "latency": 5.004518023999481}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 2, "action": "go to sinkbasin 1", "won": false, "latency": 1.6653855590011517}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 1.675271853000595}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 4, "action": "go to sinkbasin 1", "won": false, "latency": 1.69142670400106}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 1.6699874620007904}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 6, "action": "go to sinkbasin 1", "won": false, "latency": 1.671616556999652}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 7, "action": "go to sinkbasin 1", "won": false, "latency": 1.6883001930000319}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 8, "action": "go to sinkbasin 1", "won": false, "latency": 1.707317824000711}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 9, "action": "go to sinkbasin 1", "won": false, "latency": 1.779755749999822}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 10, "action": "go to sinkbasin 1", "won": false, "latency": 1.7667602550009178}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 1.777140803000293}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 1.7897049119983421}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 1.775819529999353}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 14, "action": "go to sinkbasin 1", "won": false, "latency": 1.813098885000727}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 1.855589497999972}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 16, "action": "go to sinkbasin 1", "won": false, "latency": 1.8281295239994506}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 1.8541597059993364}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 18, "action": "go to sinkbasin 1", "won": false, "latency": 1.8295846480014006}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 19, "action": "go to sinkbasin 1", "won": false, "latency": 1.9872790099998383}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "A", "step": 20, "action": "go to sinkbasin 1", "won": false, "latency": 1.9025787980008317}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 1, "action": "look at sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbas", "won": false, "latency": 6.571670229001029}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 2, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.6284196999986307}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 3, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.747438336000414}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 4, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 4.47425880100127}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 5, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.9217407039996033}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 6, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.7765099089992873}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 7, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.801208177001172}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 8, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.816059431999747}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 9, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.857811675999983}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 10, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 3.856726942000023}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 11, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 4.669063695999284}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 12, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 5.416739029000382}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 13, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 5.3480195270003605}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 14, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 5.339064863001113}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 15, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 5.40713519000019}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 16, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 5.533098541000072}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 17, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 5.62772231100098}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 18, "action": "look at sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbas", "won": false, "latency": 5.7827922769993165}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 19, "action": "go to countertop 1. examine countertop 1. examine countertop 1. examine countertop 1. examine countertop 1. examine", "won": false, "latency": 5.469460251999408}
+{"phase": "resume", "checkpoint": "abfe488430621c12", "condition": "B", "step": 20, "action": "go to sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin 1. examine sinkbasin", "won": false, "latency": 7.368911703999402}
+{"phase": "pair_complete", "checkpoint": "abfe488430621c12", "completed_pairs": 5}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 1, "action": "go to countertop 2", "won": false, "latency": 11.718890993000969}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 2, "action": "go to countertop 2", "won": false, "latency": 1.8051937039999757}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 3, "action": "go to countertop 2", "won": false, "latency": 1.800379457001327}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 4, "action": "go to countertop 2", "won": false, "latency": 1.7999191970011452}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 5, "action": "go to countertop 2", "won": false, "latency": 1.8072786409993569}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 6, "action": "go to countertop 2", "won": false, "latency": 1.8879140460012422}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 7, "action": "go to countertop 2", "won": false, "latency": 2.218645500001003}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 8, "action": "go to countertop 2", "won": false, "latency": 1.719513869000366}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 9, "action": "go to countertop 2", "won": false, "latency": 1.7203251470000396}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 10, "action": "go to countertop 2", "won": false, "latency": 1.7234331460003887}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 11, "action": "go to countertop 2", "won": false, "latency": 1.7625586569993175}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 12, "action": "go to countertop 2", "won": false, "latency": 1.769604196999353}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 13, "action": "go to countertop 2", "won": false, "latency": 2.012443202000213}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 14, "action": "go to countertop 2", "won": false, "latency": 2.44656784000108}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 15, "action": "go to countertop 2", "won": false, "latency": 1.754617018999852}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 16, "action": "go to countertop 2", "won": false, "latency": 1.7729727710011502}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 17, "action": "go to countertop 2", "won": false, "latency": 1.7960389089985256}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 18, "action": "go to countertop 2", "won": false, "latency": 2.1637700970004516}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 19, "action": "go to countertop 2", "won": false, "latency": 2.1274579460005043}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "B", "step": 20, "action": "go to countertop 2", "won": false, "latency": 1.8328154039991205}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 1, "action": "go to countertop 2", "won": false, "latency": 6.84323320600015}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 2, "action": "go to countertop 2", "won": false, "latency": 1.729305201999523}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 3, "action": "go to countertop 2", "won": false, "latency": 1.7702127779994044}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 4, "action": "go to countertop 2", "won": false, "latency": 1.733325301998775}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 5, "action": "go to countertop 2", "won": false, "latency": 1.7637877950000984}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 6, "action": "go to countertop 2", "won": false, "latency": 1.8082775530001527}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 7, "action": "go to countertop 2", "won": false, "latency": 1.7624902530005784}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 8, "action": "go to countertop 2", "won": false, "latency": 1.786082096001337}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 9, "action": "go to countertop 2", "won": false, "latency": 1.7870933740014152}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 10, "action": "go to countertop 2", "won": false, "latency": 1.8327881280001748}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 11, "action": "go to countertop 2", "won": false, "latency": 1.82384000699858}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 12, "action": "go to countertop 2", "won": false, "latency": 2.8387711420000414}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 13, "action": "go to countertop 2", "won": false, "latency": 3.7374650509991625}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 14, "action": "go to countertop 2", "won": false, "latency": 4.501546366000184}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 15, "action": "go to countertop 2", "won": false, "latency": 4.380818277999424}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 16, "action": "go to countertop 2", "won": false, "latency": 2.998693784000352}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 17, "action": "go to countertop 2", "won": false, "latency": 2.527938943998379}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 18, "action": "go to countertop 2", "won": false, "latency": 2.5264695169989864}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 19, "action": "go to countertop 2", "won": false, "latency": 3.199639260999902}
+{"phase": "resume", "checkpoint": "0197da296b5038a9", "condition": "A", "step": 20, "action": "go to countertop 2", "won": false, "latency": 2.5594132249989343}
+{"phase": "pair_complete", "checkpoint": "0197da296b5038a9", "completed_pairs": 6}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 1, "action": "go to sinkbasin 2", "won": false, "latency": 5.976798338999288}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 2, "action": "go to sinkbasin 2", "won": false, "latency": 2.0178858950002905}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 3, "action": "go to sinkbasin 2", "won": false, "latency": 2.006854156999907}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 4, "action": "go to sinkbasin 2", "won": false, "latency": 1.9859266370003752}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 5, "action": "go to sinkbasin 2", "won": false, "latency": 2.135761444000309}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 6, "action": "go to sinkbasin 2", "won": false, "latency": 2.0040249320009025}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 7, "action": "go to sinkbasin 2", "won": false, "latency": 2.0270519370005786}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 8, "action": "go to sinkbasin 2", "won": false, "latency": 2.0659319189999223}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 9, "action": "go to sinkbasin 2", "won": false, "latency": 2.0595403099996474}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 10, "action": "go to sinkbasin 2", "won": false, "latency": 2.1215283110013843}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 11, "action": "go to sinkbasin 2", "won": false, "latency": 2.073359590000109}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 12, "action": "go to sinkbasin 2", "won": false, "latency": 2.1226640320001025}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 13, "action": "go to sinkbasin 2", "won": false, "latency": 2.1050407879993145}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 14, "action": "go to sinkbasin 2", "won": false, "latency": 2.1356516550004017}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 15, "action": "go to sinkbasin 2", "won": false, "latency": 2.1409731620005914}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 16, "action": "go to sinkbasin 2", "won": false, "latency": 2.1829240010010835}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 17, "action": "go to sinkbasin 2", "won": false, "latency": 2.195514725999601}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 18, "action": "go to sinkbasin 2", "won": false, "latency": 2.1161299670002336}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 19, "action": "go to sinkbasin 2", "won": false, "latency": 2.1899783999997453}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "A", "step": 20, "action": "go to sinkbasin 2", "won": false, "latency": 2.237597958999686}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 1, "action": "go to bathtubbasin 1", "won": false, "latency": 5.5815841290004755}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 2, "action": "go to toilet 1", "won": false, "latency": 1.8557784439999523}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 3, "action": "go to bathtubbasin 1", "won": false, "latency": 2.0317038200009847}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 4, "action": "go to bathtubbasin 1", "won": false, "latency": 1.9945311319988832}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 1.846321643999545}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 6, "action": "go to sinkbasin 2", "won": false, "latency": 2.0939723909996246}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 7, "action": "go to bathtubbasin 1", "won": false, "latency": 2.0887631660007173}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 8, "action": "go to sinkbasin 1", "won": false, "latency": 3.740410698999767}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 9, "action": "go to sinkbasin 2", "won": false, "latency": 2.1890456069995707}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 10, "action": "go to bathtubbasin 1", "won": false, "latency": 2.2554172210002434}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 2.2539250970003195}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 12, "action": "go to sinkbasin 2", "won": false, "latency": 2.152303392000249}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 2.167675667998992}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 14, "action": "go to sinkbasin 2", "won": false, "latency": 2.160830609000186}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 2.2074765730012587}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 16, "action": "go to sinkbasin 2", "won": false, "latency": 2.2153826629983087}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 2.2372996939993754}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 18, "action": "go to sinkbasin 2", "won": false, "latency": 2.221268246999898}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 19, "action": "go to sinkbasin 1", "won": false, "latency": 2.240766029999577}
+{"phase": "resume", "checkpoint": "d399fcabd7a5e6d0", "condition": "B", "step": 20, "action": "go to sinkbasin 2", "won": false, "latency": 2.27713765199951}
+{"phase": "pair_complete", "checkpoint": "d399fcabd7a5e6d0", "completed_pairs": 7}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 1, "action": "go to cabinet 1", "won": false, "latency": 4.944729091999761}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 2, "action": "open cabinet 1", "won": false, "latency": 1.678537898000286}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 3, "action": "go to countertop 1", "won": false, "latency": 1.93353855299938}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 4, "action": "go to cabinet 2", "won": false, "latency": 2.544304746999842}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 5, "action": "open cabinet 2", "won": false, "latency": 2.1090978939992056}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 6, "action": "go to cabinet 3", "won": false, "latency": 2.2351075949991355}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 7, "action": "open cabinet 3", "won": false, "latency": 2.5073484469994582}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 8, "action": "go to cabinet 4", "won": false, "latency": 2.7774604959995486}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 9, "action": "open cabinet 4", "won": false, "latency": 2.752247135000289}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 10, "action": "go to bathtubbasin 1", "won": false, "latency": 3.7852153589992668}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 11, "action": "take dishsponge 2 from bathtubbasin 1.", "won": false, "latency": 4.034994192999875}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 2.745381572000042}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 2.09435934800058}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 14, "action": "go to cabinet 1", "won": false, "latency": 1.8172948610008461}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 15, "action": "go to cabinet 2", "won": false, "latency": 2.44361215599929}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 16, "action": "go to cabinet 3", "won": false, "latency": 2.1574606569993193}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 17, "action": "go to cabinet 4", "won": false, "latency": 2.148563925999042}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 18, "action": "go to bathtubbasin 1", "won": false, "latency": 2.2193472079998173}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 19, "action": "go to bathtubbasin 1", "won": false, "latency": 2.2725899770011893}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "B", "step": 20, "action": "go to bathtubbasin 1", "won": false, "latency": 2.280898883998816}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 1, "action": "go to sinkbasin 1", "won": false, "latency": 5.506787764999899}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 2, "action": "go to sinkbasin 1", "won": false, "latency": 2.117385776999072}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 2.4049552630003745}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 4, "action": "go to sinkbasin 1", "won": false, "latency": 2.131921496000359}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 2.1182626290010376}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 6, "action": "go to sinkbasin 1", "won": false, "latency": 2.134578437999153}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 7, "action": "go to sinkbasin 1", "won": false, "latency": 2.1570133340010216}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 8, "action": "go to sinkbasin 1", "won": false, "latency": 2.1938929349998944}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 9, "action": "go to sinkbasin 1", "won": false, "latency": 2.2023676260014327}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 10, "action": "go to sinkbasin 1", "won": false, "latency": 2.3301887520010496}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 2.2688746380008524}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 2.1996857679987443}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 2.2309477620001417}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 14, "action": "go to sinkbasin 1", "won": false, "latency": 2.310489671999676}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 2.3138598459991044}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 16, "action": "go to sinkbasin 1", "won": false, "latency": 2.3278416189987183}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 2.353172959999938}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 18, "action": "go to sinkbasin 1", "won": false, "latency": 2.3248839740008407}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 19, "action": "go to sinkbasin 1", "won": false, "latency": 5.115502848000688}
+{"phase": "resume", "checkpoint": "1540f020b2f419a0", "condition": "A", "step": 20, "action": "go to sinkbasin 1", "won": false, "latency": 4.123614027001167}
+{"phase": "pair_complete", "checkpoint": "1540f020b2f419a0", "completed_pairs": 8}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 1, "action": "go to countertop 1. examine lettuce 1 from countertop 1. cool lettuce 1 with countertop 1. put lettuce 1 to countertop 1", "won": false, "latency": 7.518933327999548}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 2, "action": "go to drawer 1. examine lettuce 1 from drawer 1. cool lettuce 1 with drawer 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 3.5029684000001}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 3, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 3.5798459710003954}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 4, "action": "go to garbagecan 1. examine lettuce 1 from garbagecan 1. cool lettuce 1 with garbagecan 1. put lettuce 1 to countertop 1", "won": false, "latency": 3.946184596999956}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 5, "action": "go to shelf 1. examine lettuce 1 from shelf 1. cool lettuce 1 with shelf 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 4.187357451000935}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 6, "action": "go to microwave 1. examine lettuce 1 from microwave 1. cool lettuce 1 with microwave 1. put lettuce 1 to countertop 1. 1", "won": false, "latency": 4.252589462999822}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 7, "action": "go to stoveburner 1. examine lettuce 1 from stoveburner 1. cool lettuce 1 with stoveburner 1. put lettuce 1 to countert", "won": false, "latency": 4.307865037999363}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 8, "action": "go to sinkbasin 1. examine lettuce 1 from sinkbasin 1. cool lettuce 1 with sinkbasin 1. put lettuce 1 to countertop 1. 1", "won": false, "latency": 4.947535713999969}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 9, "action": "go to fridge 1. examine lettuce 1 from fridge 1. cool lettuce 1 with fridge 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 5.097223318000033}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 10, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 5.090890348999892}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 11, "action": "go to fridge 1. examine lettuce 1 from fridge 1. cool lettuce 1 with fridge 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 4.265446849}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 12, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 5.096006902998852}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 13, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 5.55843798999922}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 14, "action": "go to fridge 1. examine lettuce 1 from fridge 1. cool lettuce 1 with fridge 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 4.111839015000442}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 15, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 4.091995142998712}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 16, "action": "go to fridge 1. examine lettuce 1 from fridge 1. cool lettuce 1 with fridge 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 4.286265247999836}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 17, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 4.297168418999718}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 18, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 5.496376000000964}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 19, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 4.3876648060013395}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "B", "step": 20, "action": "go to cabinet 1. examine lettuce 1 from cabinet 1. cool lettuce 1 with cabinet 1. put lettuce 1 to countertop 1. examine", "won": false, "latency": 4.231860552999933}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 1, "action": "take lettuce 1 from fridge 1. go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countert", "won": false, "latency": 8.45228954400045}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 2, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 5.1934214220000285}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 3, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.068230453000069}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 4, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.149030017000769}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 5, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.1459802290009975}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 6, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.113648132999515}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 7, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.26650375600002}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 8, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.361346285000764}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 9, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.322911770999781}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 10, "action": "go to fridge 1. examine lettuce 1 from fridge 1. cool lettuce 1 with fridge 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 4.075531140000749}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 11, "action": "go to fridge 1. examine lettuce 1 from fridge 1. cool lettuce 1 with fridge 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 3.835208884998792}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 12, "action": "go to fridge 1. examine lettuce 1 from fridge 1. cool lettuce 1 with fridge 1. put lettuce 1 to countertop 1. examine 1.", "won": false, "latency": 3.8703500419997}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 13, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.351255572999435}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 14, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.949236603000827}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 15, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.69970648799972}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 16, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 4.896824908000781}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 17, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 5.161111929999606}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 18, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 5.309913179000432}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 19, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 5.274264642999697}
+{"phase": "resume", "checkpoint": "6138bbd5f0f8a072", "condition": "A", "step": 20, "action": "go to countertop 1. put lettuce 1 to countertop 1. examine 1. cool lettuce 1 with countertop 1. examine 1. cool lettuce", "won": false, "latency": 5.317519951999202}
+{"phase": "pair_complete", "checkpoint": "6138bbd5f0f8a072", "completed_pairs": 9}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 1, "action": "go to sidetable 1", "won": false, "latency": 7.298339748000217}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 2, "action": "go to sidetable 1", "won": false, "latency": 2.0468950619997486}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 3, "action": "go to sidetable 1", "won": false, "latency": 2.0014722790001542}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 4, "action": "go to sidetable 1", "won": false, "latency": 1.914764967001247}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 5, "action": "go to sidetable 1", "won": false, "latency": 1.939222406999761}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 6, "action": "go to sidetable 1", "won": false, "latency": 1.9491245839999465}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 7, "action": "go to sidetable 1", "won": false, "latency": 2.0610674589988776}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 8, "action": "go to sidetable 1", "won": false, "latency": 2.004027513999972}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 9, "action": "go to sidetable 1", "won": false, "latency": 2.0176725440014707}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 10, "action": "go to sidetable 1", "won": false, "latency": 2.0333823839991965}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 11, "action": "go to sidetable 1", "won": false, "latency": 2.0566077170005883}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 12, "action": "go to sidetable 1", "won": false, "latency": 2.0409325230011746}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 13, "action": "go to sidetable 1", "won": false, "latency": 2.029244760000438}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 14, "action": "go to sidetable 1", "won": false, "latency": 1.9876264790000278}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 15, "action": "go to sidetable 1", "won": false, "latency": 1.778799153998989}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 16, "action": "go to sidetable 1", "won": false, "latency": 1.7730215749998024}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 17, "action": "go to sidetable 1", "won": false, "latency": 1.7557793910000328}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 18, "action": "go to sidetable 1", "won": false, "latency": 1.7678278169987607}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 19, "action": "go to sidetable 1", "won": false, "latency": 1.803235379000398}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "B", "step": 20, "action": "go to sidetable 1", "won": false, "latency": 1.8295708929999819}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 1, "action": "go to coffeetable 1", "won": false, "latency": 5.961298096000974}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 2, "action": "go to coffeetable 1", "won": false, "latency": 1.9522499140002765}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 3, "action": "go to coffeetable 1", "won": false, "latency": 2.365682308000032}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 4, "action": "go to coffeetable 1", "won": false, "latency": 2.3222848969999177}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 5, "action": "go to coffeetable 1", "won": false, "latency": 2.364269907999187}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 6, "action": "go to coffeetable 1", "won": false, "latency": 2.429196884000703}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 7, "action": "go to coffeetable 1", "won": false, "latency": 2.545464032000382}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 8, "action": "go to coffeetable 1", "won": false, "latency": 1.829716782000105}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 9, "action": "go to coffeetable 1", "won": false, "latency": 1.8341060059992742}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 10, "action": "go to coffeetable 1", "won": false, "latency": 1.8601276919998782}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 11, "action": "go to coffeetable 1", "won": false, "latency": 1.8721711239995784}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 12, "action": "go to coffeetable 1", "won": false, "latency": 1.8803182970004855}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 13, "action": "go to coffeetable 1", "won": false, "latency": 1.8941093609992095}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 14, "action": "go to coffeetable 1", "won": false, "latency": 1.8943378749991098}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 15, "action": "go to garbagecan 1", "won": false, "latency": 1.8192460690006556}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 16, "action": "go to sidetable 1", "won": false, "latency": 1.8804294840010698}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 17, "action": "go to sidetable 2", "won": false, "latency": 1.9574296870014223}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 18, "action": "go to sidetable 3", "won": false, "latency": 2.0391335830008757}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 19, "action": "go to coffeetable 1", "won": false, "latency": 1.9617785760001425}
+{"phase": "resume", "checkpoint": "269f2e6f74e3c5a6", "condition": "A", "step": 20, "action": "go to coffeetable 1", "won": false, "latency": 2.1882869889996073}
+{"phase": "pair_complete", "checkpoint": "269f2e6f74e3c5a6", "completed_pairs": 10}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 1, "action": "go to sinkbasin 1", "won": false, "latency": 4.768033839000054}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 2, "action": "go to sinkbasin 1", "won": false, "latency": 1.9711853150001843}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 2.0051306539990037}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 4, "action": "go to sinkbasin 1", "won": false, "latency": 2.0338314399996307}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 2.044513797000036}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 6, "action": "go to sinkbasin 1", "won": false, "latency": 2.02798080499997}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 7, "action": "go to sinkbasin 1", "won": false, "latency": 2.0346564629999193}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 8, "action": "go to bathtubbasin 1", "won": false, "latency": 2.2412948360015434}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 9, "action": "go to garbagecan 1", "won": false, "latency": 2.7635371329997724}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 10, "action": "go to shelf 1", "won": false, "latency": 2.9818338910008606}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 11, "action": "take spraybottle 2 from shelf 1.", "won": false, "latency": 2.459869059999619}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 12, "action": "go to toilet 1", "won": false, "latency": 2.012390439000228}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 13, "action": "take spraybottle 2 from shelf 1.", "won": false, "latency": 2.1739005750005163}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 14, "action": "go to shelf 1", "won": false, "latency": 1.7523750230011501}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 2.4016202309994696}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 16, "action": "go to shelf 1", "won": false, "latency": 1.9671559369999159}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 2.4323286340004415}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 18, "action": "go to sinkbasin 1", "won": false, "latency": 2.437372567001148}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 19, "action": "go to shelf 1", "won": false, "latency": 1.9257617439998285}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "B", "step": 20, "action": "go to shelf 1", "won": false, "latency": 2.053552147001028}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 1, "action": "go to sinkbasin 1", "won": false, "latency": 5.458628840999154}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 2, "action": "go to sinkbasin 1", "won": false, "latency": 2.3888680769996427}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 3, "action": "go to sinkbasin 1", "won": false, "latency": 2.403611832000024}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 4, "action": "go to sinkbasin 1", "won": false, "latency": 2.427048207000553}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 5, "action": "go to sinkbasin 1", "won": false, "latency": 3.265453633001016}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 6, "action": "go to sinkbasin 1", "won": false, "latency": 2.6216835159993934}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 7, "action": "go to sinkbasin 1", "won": false, "latency": 2.554224110999712}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 8, "action": "go to sinkbasin 1", "won": false, "latency": 3.20864130299924}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 9, "action": "go to sinkbasin 1", "won": false, "latency": 3.416996834001111}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 10, "action": "go to sinkbasin 1", "won": false, "latency": 3.255794430999231}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 2.6636276109984465}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 2.636439498000982}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 2.1038229080004385}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 14, "action": "go to sinkbasin 1", "won": false, "latency": 2.5121435889996064}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 15, "action": "go to sinkbasin 1", "won": false, "latency": 2.135191612000199}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 16, "action": "go to sinkbasin 1", "won": false, "latency": 2.039849762000813}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 17, "action": "go to sinkbasin 1", "won": false, "latency": 2.526227463000396}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 18, "action": "go to sinkbasin 1", "won": false, "latency": 2.6826226909997786}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 19, "action": "go to sinkbasin 1", "won": false, "latency": 2.162912805000815}
+{"phase": "resume", "checkpoint": "f3ef7b2925004393", "condition": "A", "step": 20, "action": "go to sinkbasin 1", "won": false, "latency": 2.028823963999457}
+{"phase": "pair_complete", "checkpoint": "f3ef7b2925004393", "completed_pairs": 11}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 1, "action": "go to cabinet 1", "won": false, "latency": 4.395586971000739}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 2, "action": "open cabinet 1", "won": false, "latency": 1.6461190680001891}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 3, "action": "go to cabinet 2", "won": false, "latency": 1.989567458998863}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 4, "action": "go to cabinet 2", "won": false, "latency": 1.9597243339994748}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 5, "action": "go to cabinet 3", "won": false, "latency": 1.59898882699963}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 6, "action": "open cabinet 3", "won": false, "latency": 1.499686559998736}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 7, "action": "go to cabinet 3", "won": false, "latency": 1.718807901999753}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 8, "action": "go to countertop 1", "won": false, "latency": 1.5162025239987997}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 9, "action": "go to cabinet 1", "won": false, "latency": 1.9176880840004742}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 10, "action": "go to cabinet 2", "won": false, "latency": 1.6904550529998232}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 11, "action": "go to cabinet 3", "won": false, "latency": 1.546418318999713}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 12, "action": "go to cabinet 3", "won": false, "latency": 1.6456612160000077}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 13, "action": "go to cabinet 1", "won": false, "latency": 1.5250108149994048}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 14, "action": "go to cabinet 2", "won": false, "latency": 1.7362979400004406}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 15, "action": "go to cabinet 3", "won": false, "latency": 1.5887391050000588}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 16, "action": "go to cabinet 1", "won": false, "latency": 1.6860084990003088}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 17, "action": "go to cabinet 2", "won": false, "latency": 1.7578293200003827}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 18, "action": "go to cabinet 3", "won": false, "latency": 1.6000469499995233}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 19, "action": "go to cabinet 1", "won": false, "latency": 1.7008211779993871}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "B", "step": 20, "action": "go to cabinet 2", "won": false, "latency": 1.8290357360001508}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 1, "action": "go to sinkbasin 1", "won": false, "latency": 5.047952848999557}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 2, "action": "go to sinkbasin 1", "won": false, "latency": 1.9967301939996105}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 3, "action": "go to toilet 1", "won": false, "latency": 1.9045711489998212}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 4, "action": "go to cabinet 1", "won": false, "latency": 2.6454827449997538}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 5, "action": "open cabinet 1", "won": false, "latency": 2.027789797000878}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 6, "action": "go to cabinet 2", "won": false, "latency": 2.336362828998972}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 7, "action": "go to cabinet 3", "won": false, "latency": 2.3273281710007723}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 8, "action": "open cabinet 2", "won": false, "latency": 3.4876563779998833}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 9, "action": "go to cabinet 3", "won": false, "latency": 2.05487617000108}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 10, "action": "go to sinkbasin 1", "won": false, "latency": 2.1026104409993422}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 11, "action": "go to sinkbasin 1", "won": false, "latency": 2.323328294000021}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 12, "action": "go to sinkbasin 1", "won": false, "latency": 2.2176556419999542}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 13, "action": "go to sinkbasin 1", "won": false, "latency": 3.0080918629992084}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 14, "action": "go to handtowelholder 1", "won": false, "latency": 2.754862855999818}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 15, "action": "go to handtowelholder 2", "won": false, "latency": 2.6003719799991813}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 16, "action": "go to cabinet 1", "won": false, "latency": 1.9731030399998417}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 17, "action": "go to cabinet 2", "won": false, "latency": 1.8913420700009738}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 18, "action": "go to cabinet 3", "won": false, "latency": 1.7654839840015484}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 19, "action": "go to handtowelholder 1", "won": false, "latency": 2.229691644999548}
+{"phase": "resume", "checkpoint": "eb59088ea3791840", "condition": "A", "step": 20, "action": "go to handtowelholder 2", "won": false, "latency": 2.3561211899996124}
+{"phase": "pair_complete", "checkpoint": "eb59088ea3791840", "completed_pairs": 12}
+{"completed_pairs": 12}

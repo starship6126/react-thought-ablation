@@ -1,0 +1,5 @@
+{
+  "benchmark_pairs_executed": 0,
+  "reason": "Pre-A/B actual recovery probe revealed shared prompt used unsupported put in/on placement syntax. Corrected to official move to and recollected all checkpoints before freeze. Model and decoding unchanged.",
+  "retained_as": "preflight diagnostics only"
+}

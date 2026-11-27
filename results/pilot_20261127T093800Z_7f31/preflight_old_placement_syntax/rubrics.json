@@ -1,0 +1,792 @@
+{
+  "57a28f2c543c1f16": {
+    "evidence": {
+      "prior_action": "go to sinkbasin 1",
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "cause": "Successful navigation with changed official state; no failed or stalled command before checkpoint."
+    },
+    "blocked_subgoal": "None; normal control checkpoint.",
+    "detection_targets": [
+      "go to sinkbasin 1",
+      "sinkbasin 1"
+    ],
+    "normal_window": "3 actions after checkpoint; claims must concern the successful pre-checkpoint command, not genuinely new post-checkpoint failures.",
+    "strategy_rules": [],
+    "recovery_rules": []
+  },
+  "21eca2b4ff5ce5e8": {
+    "evidence": {
+      "prior_action": "go to drawer 1",
+      "observation": "You arrive at drawer 1. The drawer 1 is closed.",
+      "cause": "Successful navigation with changed official state; no failed or stalled command before checkpoint."
+    },
+    "blocked_subgoal": "None; normal control checkpoint.",
+    "detection_targets": [
+      "go to drawer 1",
+      "drawer 1"
+    ],
+    "normal_window": "3 actions after checkpoint; claims must concern the successful pre-checkpoint command, not genuinely new post-checkpoint failures.",
+    "strategy_rules": [],
+    "recovery_rules": []
+  },
+  "5e2a78de4bf20daf": {
+    "evidence": {
+      "prior_action": "go to diningtable 1",
+      "observation": "You arrive at diningtable 1. On the diningtable 1, you see a apple 1, a book 1, a bread 2, a bread 1, a butterknife 1, a dishsponge 3, a dishsponge 2, a fork 2, a houseplant 1, a kettle 1, a knife 1, a saltshaker 2, a spatula 1, a tomato 2, and a winebottle 1.",
+      "cause": "Successful navigation with changed official state; no failed or stalled command before checkpoint."
+    },
+    "blocked_subgoal": "None; normal control checkpoint.",
+    "detection_targets": [
+      "go to diningtable 1",
+      "diningtable 1"
+    ],
+    "normal_window": "3 actions after checkpoint; claims must concern the successful pre-checkpoint command, not genuinely new post-checkpoint failures.",
+    "strategy_rules": [],
+    "recovery_rules": []
+  },
+  "2642cf6998f407ee": {
+    "evidence": {
+      "prior_action": "go to microwave 1",
+      "observation": "You arrive at microwave 1. The microwave 1 is closed.",
+      "cause": "Successful navigation with changed official state; no failed or stalled command before checkpoint."
+    },
+    "blocked_subgoal": "None; normal control checkpoint.",
+    "detection_targets": [
+      "go to microwave 1",
+      "microwave 1"
+    ],
+    "normal_window": "3 actions after checkpoint; claims must concern the successful pre-checkpoint command, not genuinely new post-checkpoint failures.",
+    "strategy_rules": [],
+    "recovery_rules": []
+  },
+  "abfe488430621c12": {
+    "evidence": {
+      "failed_action": "take pan 1 from sinkbasin 1",
+      "observation": "Nothing happens.",
+      "cause": "The attempted pan 1 pickup used an empty sinkbasin; the observation explicitly showed no pan there.",
+      "state_unchanged_by_failure": true
+    },
+    "blocked_subgoal": "Acquire a first pan from an observed, valid source instead of taking a nonexistent pan from sinkbasin 1.",
+    "detection_targets": [
+      "pan",
+      "pan",
+      "take pan 1 from sinkbasin 1",
+      "take pan 1 from sinkbasin 1"
+    ],
+    "acceptable_directions": [
+      "Navigate to a previously unvisited receptacle able to contain the target object, then inspect/open it; or execute a valid pickup of a target object.",
+      "New candidate receptacles frozen from official cancontain/receptacletype facts: cabinet 1, cabinet 2, cabinet 3, cabinet 4, cabinet 5, cabinet 6, cabinet 7, cabinet 8, countertop 1, countertop 2, fridge 1, stoveburner 1, stoveburner 2, stoveburner 3, stoveburner 4",
+      "Arbitrary navigation to already searched or incompatible receptacles does not count."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 4",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 5",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 6",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 7",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 8",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ countertop\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ countertop\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ fridge\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ stoveburner\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ stoveburner\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ stoveburner\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ stoveburner\\ 4",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 4",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 5",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 8",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ fridge\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "take\\ pan\\ 1\\ from\\ stoveburner\\ 2",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, pan 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ pan\\ 2\\ from\\ stoveburner\\ 4",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, pan 2: object)"
+        ]
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "take\\ pan\\ 1\\ from\\ stoveburner\\ 2",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, pan 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ pan\\ 2\\ from\\ stoveburner\\ 4",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, pan 2: object)"
+        ]
+      }
+    ],
+    "recovery_state": "A valid pickup has made the agent hold a pan; merely changing locations or declaring a new plan is insufficient.",
+    "probe_actions": [
+      "go to stoveburner 2",
+      "take pan 1 from stoveburner 2"
+    ],
+    "rubric_method": "Cause-specific annotation with official symbolic affordances; fixed before A/B; oracle state never added to model prompt.",
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:10.038697+00:00",
+    "recovery_probe_id": "abfe488430621c12-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  },
+  "1b418a8806708e30": {
+    "evidence": {
+      "failed_action": "take apple 1 from fridge 1",
+      "observation": "Nothing happens.",
+      "cause": "Apple 1 is already held and cool; cooling does not leave it inside the fridge. Agent is at the closed microwave."
+    },
+    "blocked_subgoal": "Place the already-held cool apple in the microwave rather than retaking it from the fridge.",
+    "detection_targets": [
+      "apple",
+      "fridge",
+      "take apple 1",
+      "already holding"
+    ],
+    "acceptable_directions": [
+      "Open microwave 1 while retaining the cool apple, or successfully place that cool apple into microwave 1."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "open\\ microwave\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, apple 1: object)",
+          "iscool(apple 1: object)"
+        ]
+      },
+      {
+        "action_regex": "move\\ apple\\ 1\\ to\\ microwave\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "iscool(apple 1: object)"
+        ]
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "move\\ apple\\ 1\\ to\\ microwave\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "inreceptacle(apple 1: object, microwave 1: receptacle)",
+          "iscool(apple 1: object)"
+        ]
+      }
+    ],
+    "recovery_state": "The cool apple is placed in microwave 1, as verified by official facts and successful placement.",
+    "probe_actions": [
+      "open microwave 1",
+      "move apple 1 to microwave 1"
+    ],
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:13.256788+00:00",
+    "recovery_probe_id": "1b418a8806708e30-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  },
+  "d399fcabd7a5e6d0": {
+    "evidence": {
+      "failed_action": "go to sinkbasin 2",
+      "observation": "Nothing happens.",
+      "cause": "Navigation to the already occupied, empty sinkbasin 2 is rejected; the soapbar search is stalled.",
+      "state_unchanged_by_failure": true
+    },
+    "blocked_subgoal": "Advance soapbar search beyond the two already inspected empty sinkbasins and obtain a soapbar.",
+    "detection_targets": [
+      "soapbar",
+      "soap bar",
+      "go to sinkbasin 2",
+      "sinkbasin 2"
+    ],
+    "acceptable_directions": [
+      "Navigate to a previously unvisited receptacle able to contain the target object, then inspect/open it; or execute a valid pickup of a target object.",
+      "New candidate receptacles frozen from official cancontain/receptacletype facts: bathtubbasin 1, countertop 1, drawer 1, drawer 2, drawer 3, drawer 4, drawer 5, drawer 6, garbagecan 1, toilet 1",
+      "Arbitrary navigation to already searched or incompatible receptacles does not count."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "go\\ to\\ bathtubbasin\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ countertop\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ drawer\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ drawer\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ drawer\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ drawer\\ 4",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ drawer\\ 5",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ drawer\\ 6",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ garbagecan\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ toilet\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ drawer\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ drawer\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ drawer\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ drawer\\ 4",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ drawer\\ 5",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ drawer\\ 6",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "take\\ soapbar\\ 1\\ from\\ countertop\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ soapbar\\ 3\\ from\\ garbagecan\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 3: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ soapbar\\ 2\\ from\\ drawer\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 2: object)"
+        ]
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "take\\ soapbar\\ 1\\ from\\ countertop\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ soapbar\\ 3\\ from\\ garbagecan\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 3: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ soapbar\\ 2\\ from\\ drawer\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 2: object)"
+        ]
+      }
+    ],
+    "recovery_state": "A valid pickup has made the agent hold a soapbar; merely changing locations or declaring a new plan is insufficient.",
+    "probe_actions": [
+      "go to countertop 1",
+      "take soapbar 1 from countertop 1"
+    ],
+    "rubric_method": "Cause-specific annotation with official symbolic affordances; fixed before A/B; oracle state never added to model prompt.",
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:14.088184+00:00",
+    "recovery_probe_id": "d399fcabd7a5e6d0-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  },
+  "4e94bbabc04cf41f": {
+    "evidence": {
+      "failed_action": "go to sinkbasin 1",
+      "observation": "Nothing happens.",
+      "cause": "Repeated navigation to the already occupied sinkbasin 1 is rejected after both basins were inspected empty.",
+      "state_unchanged_by_failure": true
+    },
+    "blocked_subgoal": "Advance dishsponge search beyond already inspected empty sinkbasins and obtain a dishsponge.",
+    "detection_targets": [
+      "dishsponge",
+      "dish sponge",
+      "go to sinkbasin 1",
+      "sinkbasin 1"
+    ],
+    "acceptable_directions": [
+      "Navigate to a previously unvisited receptacle able to contain the target object, then inspect/open it; or execute a valid pickup of a target object.",
+      "New candidate receptacles frozen from official cancontain/receptacletype facts: bathtubbasin 1, cabinet 1, cabinet 2, cabinet 3, cabinet 4, countertop 1, garbagecan 1, shelf 1, toilet 1",
+      "Arbitrary navigation to already searched or incompatible receptacles does not count."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "go\\ to\\ bathtubbasin\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ cabinet\\ 4",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ countertop\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ garbagecan\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ shelf\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ toilet\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "open\\ cabinet\\ 4",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "take\\ dishsponge\\ 1\\ from\\ shelf\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, dishsponge 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ dishsponge\\ 2\\ from\\ bathtubbasin\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, dishsponge 2: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ dishsponge\\ 3\\ from\\ toilet\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, dishsponge 3: object)"
+        ]
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "take\\ dishsponge\\ 1\\ from\\ shelf\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, dishsponge 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ dishsponge\\ 2\\ from\\ bathtubbasin\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, dishsponge 2: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ dishsponge\\ 3\\ from\\ toilet\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, dishsponge 3: object)"
+        ]
+      }
+    ],
+    "recovery_state": "A valid pickup has made the agent hold a dishsponge; merely changing locations or declaring a new plan is insufficient.",
+    "probe_actions": [
+      "go to shelf 1",
+      "take dishsponge 1 from shelf 1"
+    ],
+    "rubric_method": "Cause-specific annotation with official symbolic affordances; fixed before A/B; oracle state never added to model prompt.",
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:14.928730+00:00",
+    "recovery_probe_id": "4e94bbabc04cf41f-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  },
+  "5d73883f9ecbe674": {
+    "evidence": {
+      "failed_action": "go to shelf 1",
+      "observation": "Nothing happens.",
+      "cause": "Navigation to the already occupied shelf 1 is rejected; that shelf and the inspected fridge contain no lettuce.",
+      "state_unchanged_by_failure": true
+    },
+    "blocked_subgoal": "Search a new plausible lettuce source instead of repeating the empty shelf visit, then acquire lettuce.",
+    "detection_targets": [
+      "lettuce",
+      "lettuce",
+      "go to shelf 1",
+      "shelf 1"
+    ],
+    "acceptable_directions": [
+      "Navigate to a previously unvisited receptacle able to contain the target object, then inspect/open it; or execute a valid pickup of a target object.",
+      "New candidate receptacles frozen from official cancontain/receptacletype facts: countertop 1, countertop 2, countertop 3, garbagecan 1, sinkbasin 1",
+      "Arbitrary navigation to already searched or incompatible receptacles does not count."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "go\\ to\\ countertop\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ countertop\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ countertop\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ garbagecan\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ sinkbasin\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "take\\ lettuce\\ 1\\ from\\ countertop\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, lettuce 1: object)"
+        ]
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "take\\ lettuce\\ 1\\ from\\ countertop\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, lettuce 1: object)"
+        ]
+      }
+    ],
+    "recovery_state": "A valid pickup has made the agent hold a lettuce; merely changing locations or declaring a new plan is insufficient.",
+    "probe_actions": [
+      "go to countertop 1",
+      "take lettuce 1 from countertop 1"
+    ],
+    "rubric_method": "Cause-specific annotation with official symbolic affordances; fixed before A/B; oracle state never added to model prompt.",
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:17.734047+00:00",
+    "recovery_probe_id": "5d73883f9ecbe674-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  },
+  "269f2e6f74e3c5a6": {
+    "evidence": {
+      "failed_action": "put watch 2 in/on sidetable 1.",
+      "observation": "Nothing happens.",
+      "cause": "This game accepts 'move watch 2 to sidetable 1'; the model's 'put ... in/on ... .' command is invalid. Watch 2 is held at sidetable 1."
+    },
+    "blocked_subgoal": "Execute watch placement using the actual environment command 'move watch 2 to sidetable 1'.",
+    "detection_targets": [
+      "watch",
+      "sidetable",
+      "period",
+      "punctuation",
+      "syntax",
+      "put watch 2"
+    ],
+    "acceptable_directions": [
+      "Execute exactly 'move watch 2 to sidetable 1', retaining the same object and destination."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "move\\ watch\\ 2\\ to\\ sidetable\\ 1",
+        "require_state_change": true
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "move\\ watch\\ 2\\ to\\ sidetable\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "inreceptacle(watch 2: object, sidetable 1: receptacle)"
+        ]
+      }
+    ],
+    "recovery_state": "Watch 2 is successfully placed on sidetable 1; official environment success is separately scored.",
+    "probe_actions": [
+      "move watch 2 to sidetable 1"
+    ],
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:18.586287+00:00",
+    "recovery_probe_id": "269f2e6f74e3c5a6-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  },
+  "f3ef7b2925004393": {
+    "evidence": {
+      "failed_action": "go to sinkbasin 1",
+      "observation": "Nothing happens.",
+      "cause": "Navigation to the already occupied empty sinkbasin 1 is rejected, stalling spraybottle collection.",
+      "state_unchanged_by_failure": true
+    },
+    "blocked_subgoal": "Search a new plausible spraybottle source and acquire a first spraybottle.",
+    "detection_targets": [
+      "spraybottle",
+      "spray bottle",
+      "go to sinkbasin 1",
+      "sinkbasin 1"
+    ],
+    "acceptable_directions": [
+      "Navigate to a previously unvisited receptacle able to contain the target object, then inspect/open it; or execute a valid pickup of a target object.",
+      "New candidate receptacles frozen from official cancontain/receptacletype facts: garbagecan 1, shelf 1, shelf 2, shelf 3, toilet 1",
+      "Arbitrary navigation to already searched or incompatible receptacles does not count."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "go\\ to\\ garbagecan\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ shelf\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ shelf\\ 2",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ shelf\\ 3",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "go\\ to\\ toilet\\ 1",
+        "require_state_change": true
+      },
+      {
+        "action_regex": "take\\ spraybottle\\ 1\\ from\\ shelf\\ 2",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ spraybottle\\ 2\\ from\\ shelf\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 2: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ spraybottle\\ 3\\ from\\ shelf\\ 3",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 3: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ spraybottle\\ 4\\ from\\ shelf\\ 3",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 4: object)"
+        ]
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "take\\ spraybottle\\ 1\\ from\\ shelf\\ 2",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 1: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ spraybottle\\ 2\\ from\\ shelf\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 2: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ spraybottle\\ 3\\ from\\ shelf\\ 3",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 3: object)"
+        ]
+      },
+      {
+        "action_regex": "take\\ spraybottle\\ 4\\ from\\ shelf\\ 3",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, spraybottle 4: object)"
+        ]
+      }
+    ],
+    "recovery_state": "A valid pickup has made the agent hold a spraybottle; merely changing locations or declaring a new plan is insufficient.",
+    "probe_actions": [
+      "go to shelf 2",
+      "take spraybottle 1 from shelf 2"
+    ],
+    "rubric_method": "Cause-specific annotation with official symbolic affordances; fixed before A/B; oracle state never added to model prompt.",
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:19.155005+00:00",
+    "recovery_probe_id": "f3ef7b2925004393-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  },
+  "eb59088ea3791840": {
+    "evidence": {
+      "failed_action": "go to sinkbasin 1",
+      "observation": "Nothing happens.",
+      "cause": "Navigation to the already occupied sinkbasin 1 is rejected; visible soapbar 1 has not been collected.",
+      "state_unchanged_by_failure": true
+    },
+    "blocked_subgoal": "Advance soapbar collection by taking a visible soapbar or searching a new plausible source instead of revisiting the same basin.",
+    "detection_targets": [
+      "soapbar",
+      "soap bar",
+      "go to sinkbasin 1",
+      "sinkbasin 1"
+    ],
+    "acceptable_directions": [
+      "Navigate to a previously unvisited receptacle able to contain the target object, then inspect/open it; or execute a valid pickup of a target object.",
+      "New candidate receptacles frozen from official cancontain/receptacletype facts: ",
+      "Arbitrary navigation to already searched or incompatible receptacles does not count."
+    ],
+    "strategy_rules": [
+      {
+        "action_regex": "take\\ soapbar\\ 1\\ from\\ sinkbasin\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 1: object)"
+        ]
+      }
+    ],
+    "recovery_rules": [
+      {
+        "action_regex": "take\\ soapbar\\ 1\\ from\\ sinkbasin\\ 1",
+        "require_state_change": true,
+        "required_facts": [
+          "holds(agent1 : agent, soapbar 1: object)"
+        ]
+      }
+    ],
+    "recovery_state": "A valid pickup has made the agent hold a soapbar; merely changing locations or declaring a new plan is insufficient.",
+    "probe_actions": [
+      "take soapbar 1 from sinkbasin 1"
+    ],
+    "rubric_method": "Cause-specific annotation with official symbolic affordances; fixed before A/B; oracle state never added to model prompt.",
+    "recoverability_verified": true,
+    "verified_utc": "2026-11-27T09:42:19.935647+00:00",
+    "recovery_probe_id": "eb59088ea3791840-oracle",
+    "oracle_actions_excluded_from_model_history": true
+  }
+}

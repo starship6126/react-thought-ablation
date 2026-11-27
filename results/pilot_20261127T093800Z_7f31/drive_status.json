@@ -1,0 +1,14 @@
+{
+  "status": "verified",
+  "folder_id": "1y_byNrEmv9yddr2wKN3KoCVVPHcmuZM4",
+  "folder_url": "https://drive.google.com/drive/folders/1y_byNrEmv9yddr2wKN3KoCVVPHcmuZM4",
+  "expected_files": [
+    "checkpoints.jsonl",
+    "runs.jsonl",
+    "blind_review.csv",
+    "report.csv",
+    "report.md"
+  ],
+  "file_count": 5,
+  "verification_file": "drive_verification.json"
+}

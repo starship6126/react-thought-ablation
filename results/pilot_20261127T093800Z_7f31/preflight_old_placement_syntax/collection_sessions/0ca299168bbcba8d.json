@@ -1,0 +1,4096 @@
+{
+  "game_id": "valid_seen/pick_clean_then_place_in_recep-DishSponge-None-CounterTop-403/trial_T20190908_144357_621068/game.tw-pddl",
+  "seed": 20261134,
+  "normal_candidate_designated": false,
+  "initial": {
+    "observation": "-= Welcome to TextWorld, ALFRED! =-\n\nYou are in the middle of a room. Looking quickly around you, you see a bathtubbasin 1, a cabinet 4, a cabinet 3, a cabinet 2, a cabinet 1, a countertop 1, a garbagecan 1, a handtowelholder 1, a shelf 1, a sinkbasin 2, a sinkbasin 1, a toilet 1, a toiletpaperhanger 1, a towelholder 2, and a towelholder 1.\n\nYour task is to: clean some dishsponge and put it in countertop.",
+    "state_hash": "87287e20035cb9c742d1368dc472c2822e4a084c162f4ac250d33fdcd62cda58",
+    "facts": [
+      "atlocation(agent1 : agent, loc 12: location)",
+      "cancontain(bathtubbasintype : rtype, clothtype : otype)",
+      "cancontain(bathtubbasintype : rtype, dishspongetype : otype)",
+      "cancontain(bathtubbasintype : rtype, handtoweltype : otype)",
+      "cancontain(bathtubbasintype : rtype, soapbartype : otype)",
+      "cancontain(cabinettype : rtype, candletype : otype)",
+      "cancontain(cabinettype : rtype, clothtype : otype)",
+      "cancontain(cabinettype : rtype, dishspongetype : otype)",
+      "cancontain(cabinettype : rtype, handtoweltype : otype)",
+      "cancontain(cabinettype : rtype, plungertype : otype)",
+      "cancontain(cabinettype : rtype, soapbartype : otype)",
+      "cancontain(cabinettype : rtype, soapbottletype : otype)",
+      "cancontain(cabinettype : rtype, spraybottletype : otype)",
+      "cancontain(cabinettype : rtype, toiletpapertype : otype)",
+      "cancontain(countertoptype : rtype, candletype : otype)",
+      "cancontain(countertoptype : rtype, clothtype : otype)",
+      "cancontain(countertoptype : rtype, dishspongetype : otype)",
+      "cancontain(countertoptype : rtype, handtoweltype : otype)",
+      "cancontain(countertoptype : rtype, soapbartype : otype)",
+      "cancontain(countertoptype : rtype, soapbottletype : otype)",
+      "cancontain(countertoptype : rtype, spraybottletype : otype)",
+      "cancontain(countertoptype : rtype, toiletpapertype : otype)",
+      "cancontain(garbagecantype : rtype, clothtype : otype)",
+      "cancontain(garbagecantype : rtype, dishspongetype : otype)",
+      "cancontain(garbagecantype : rtype, handtoweltype : otype)",
+      "cancontain(garbagecantype : rtype, soapbartype : otype)",
+      "cancontain(garbagecantype : rtype, soapbottletype : otype)",
+      "cancontain(garbagecantype : rtype, spraybottletype : otype)",
+      "cancontain(garbagecantype : rtype, toiletpapertype : otype)",
+      "cancontain(handtowelholdertype : rtype, handtoweltype : otype)",
+      "cancontain(shelftype : rtype, candletype : otype)",
+      "cancontain(shelftype : rtype, clothtype : otype)",
+      "cancontain(shelftype : rtype, dishspongetype : otype)",
+      "cancontain(shelftype : rtype, handtoweltype : otype)",
+      "cancontain(shelftype : rtype, soapbartype : otype)",
+      "cancontain(shelftype : rtype, soapbottletype : otype)",
+      "cancontain(shelftype : rtype, spraybottletype : otype)",
+      "cancontain(shelftype : rtype, toiletpapertype : otype)",
+      "cancontain(sinkbasintype : rtype, clothtype : otype)",
+      "cancontain(sinkbasintype : rtype, dishspongetype : otype)",
+      "cancontain(sinkbasintype : rtype, handtoweltype : otype)",
+      "cancontain(sinkbasintype : rtype, soapbartype : otype)",
+      "cancontain(toiletpaperhangertype : rtype, toiletpapertype : otype)",
+      "cancontain(toilettype : rtype, candletype : otype)",
+      "cancontain(toilettype : rtype, clothtype : otype)",
+      "cancontain(toilettype : rtype, dishspongetype : otype)",
+      "cancontain(toilettype : rtype, handtoweltype : otype)",
+      "cancontain(toilettype : rtype, soapbartype : otype)",
+      "cancontain(toilettype : rtype, soapbottletype : otype)",
+      "cancontain(toilettype : rtype, spraybottletype : otype)",
+      "cancontain(toilettype : rtype, toiletpapertype : otype)",
+      "cancontain(towelholdertype : rtype, toweltype : otype)",
+      "cleanable(cloth 1: object)",
+      "cleanable(cloth 2: object)",
+      "cleanable(dishsponge 1: object)",
+      "cleanable(dishsponge 2: object)",
+      "cleanable(dishsponge 3: object)",
+      "cleanable(soapbar 1: object)",
+      "inreceptacle(candle 1: object, countertop 1: receptacle)",
+      "inreceptacle(cloth 1: object, shelf 1: receptacle)",
+      "inreceptacle(cloth 2: object, cabinet 1: receptacle)",
+      "inreceptacle(dishsponge 1: object, shelf 1: receptacle)",
+      "inreceptacle(dishsponge 2: object, bathtubbasin 1: receptacle)",
+      "inreceptacle(dishsponge 3: object, toilet 1: receptacle)",
+      "inreceptacle(handtowel 1: object, handtowelholder 1: receptacle)",
+      "inreceptacle(mirror 1: object, countertop 1: receptacle)",
+      "inreceptacle(papertowelroll 1: object, toilet 1: receptacle)",
+      "inreceptacle(showerglass 1: object, countertop 1: receptacle)",
+      "inreceptacle(showerglass 1: object, shelf 1: receptacle)",
+      "inreceptacle(soapbar 1: object, toilet 1: receptacle)",
+      "inreceptacle(soapbottle 1: object, countertop 1: receptacle)",
+      "inreceptacle(spraybottle 1: object, cabinet 2: receptacle)",
+      "inreceptacle(spraybottle 2: object, cabinet 3: receptacle)",
+      "inreceptacle(spraybottle 3: object, toilet 1: receptacle)",
+      "inreceptacle(toiletpaper 1: object, cabinet 1: receptacle)",
+      "inreceptacle(toiletpaper 2: object, garbagecan 1: receptacle)",
+      "inreceptacle(towel 1: object, towelholder 1: receptacle)",
+      "inreceptacle(towel 2: object, towelholder 2: receptacle)",
+      "objectatlocation(bathtub 1: object, loc 3: location)",
+      "objectatlocation(candle 1: object, loc 10: location)",
+      "objectatlocation(cloth 1: object, loc 1: location)",
+      "objectatlocation(cloth 2: object, loc 7: location)",
+      "objectatlocation(dishsponge 1: object, loc 1: location)",
+      "objectatlocation(dishsponge 2: object, loc 3: location)",
+      "objectatlocation(dishsponge 3: object, loc 18: location)",
+      "objectatlocation(handtowel 1: object, loc 22: location)",
+      "objectatlocation(lightswitch 1: object, loc 17: location)",
+      "objectatlocation(mirror 1: object, loc 10: location)",
+      "objectatlocation(papertowelroll 1: object, loc 18: location)",
+      "objectatlocation(plunger 1: object, loc 16: location)",
+      "objectatlocation(scrubbrush 1: object, loc 16: location)",
+      "objectatlocation(showerdoor 1: object, loc 5: location)",
+      "objectatlocation(showerglass 1: object, loc 1: location)",
+      "objectatlocation(sink 1: object, loc 6: location)",
+      "objectatlocation(sink 2: object, loc 14: location)",
+      "objectatlocation(soapbar 1: object, loc 18: location)",
+      "objectatlocation(soapbottle 1: object, loc 10: location)",
+      "objectatlocation(soapbottle 2: object, loc 3: location)",
+      "objectatlocation(spraybottle 1: object, loc 11: location)",
+      "objectatlocation(spraybottle 2: object, loc 9: location)",
+      "objectatlocation(spraybottle 3: object, loc 18: location)",
+      "objectatlocation(toiletpaper 1: object, loc 7: location)",
+      "objectatlocation(toiletpaper 2: object, loc 23: location)",
+      "objectatlocation(towel 1: object, loc 19: location)",
+      "objectatlocation(towel 2: object, loc 20: location)",
+      "objectatlocation(window 1: object, loc 2: location)",
+      "objectatlocation(window 2: object, loc 4: location)",
+      "objecttype(bathtub 1: object, bathtubtype : otype)",
+      "objecttype(candle 1: object, candletype : otype)",
+      "objecttype(cloth 1: object, clothtype : otype)",
+      "objecttype(cloth 2: object, clothtype : otype)",
+      "objecttype(dishsponge 1: object, dishspongetype : otype)",
+      "objecttype(dishsponge 2: object, dishspongetype : otype)",
+      "objecttype(dishsponge 3: object, dishspongetype : otype)",
+      "objecttype(handtowel 1: object, handtoweltype : otype)",
+      "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+      "objecttype(mirror 1: object, mirrortype : otype)",
+      "objecttype(papertowelroll 1: object, papertowelrolltype : otype)",
+      "objecttype(plunger 1: object, plungertype : otype)",
+      "objecttype(scrubbrush 1: object, scrubbrushtype : otype)",
+      "objecttype(showerdoor 1: object, showerdoortype : otype)",
+      "objecttype(showerglass 1: object, showerglasstype : otype)",
+      "objecttype(sink 1: object, sinktype : otype)",
+      "objecttype(sink 2: object, sinktype : otype)",
+      "objecttype(soapbar 1: object, soapbartype : otype)",
+      "objecttype(soapbottle 1: object, soapbottletype : otype)",
+      "objecttype(soapbottle 2: object, soapbottletype : otype)",
+      "objecttype(spraybottle 1: object, spraybottletype : otype)",
+      "objecttype(spraybottle 2: object, spraybottletype : otype)",
+      "objecttype(spraybottle 3: object, spraybottletype : otype)",
+      "objecttype(toiletpaper 1: object, toiletpapertype : otype)",
+      "objecttype(toiletpaper 2: object, toiletpapertype : otype)",
+      "objecttype(towel 1: object, toweltype : otype)",
+      "objecttype(towel 2: object, toweltype : otype)",
+      "objecttype(window 1: object, windowtype : otype)",
+      "objecttype(window 2: object, windowtype : otype)",
+      "openable(cabinet 1: receptacle)",
+      "openable(cabinet 2: receptacle)",
+      "openable(cabinet 3: receptacle)",
+      "openable(cabinet 4: receptacle)",
+      "pickupable(candle 1: object)",
+      "pickupable(cloth 1: object)",
+      "pickupable(cloth 2: object)",
+      "pickupable(dishsponge 1: object)",
+      "pickupable(dishsponge 2: object)",
+      "pickupable(dishsponge 3: object)",
+      "pickupable(handtowel 1: object)",
+      "pickupable(papertowelroll 1: object)",
+      "pickupable(plunger 1: object)",
+      "pickupable(scrubbrush 1: object)",
+      "pickupable(soapbar 1: object)",
+      "pickupable(soapbottle 1: object)",
+      "pickupable(soapbottle 2: object)",
+      "pickupable(spraybottle 1: object)",
+      "pickupable(spraybottle 2: object)",
+      "pickupable(spraybottle 3: object)",
+      "pickupable(toiletpaper 1: object)",
+      "pickupable(toiletpaper 2: object)",
+      "pickupable(towel 1: object)",
+      "pickupable(towel 2: object)",
+      "receptacleatlocation(bathtubbasin 1: receptacle, loc 3: location)",
+      "receptacleatlocation(cabinet 1: receptacle, loc 7: location)",
+      "receptacleatlocation(cabinet 2: receptacle, loc 11: location)",
+      "receptacleatlocation(cabinet 3: receptacle, loc 9: location)",
+      "receptacleatlocation(cabinet 4: receptacle, loc 13: location)",
+      "receptacleatlocation(countertop 1: receptacle, loc 10: location)",
+      "receptacleatlocation(garbagecan 1: receptacle, loc 23: location)",
+      "receptacleatlocation(handtowelholder 1: receptacle, loc 22: location)",
+      "receptacleatlocation(shelf 1: receptacle, loc 1: location)",
+      "receptacleatlocation(sinkbasin 1: receptacle, loc 8: location)",
+      "receptacleatlocation(sinkbasin 2: receptacle, loc 15: location)",
+      "receptacleatlocation(toilet 1: receptacle, loc 18: location)",
+      "receptacleatlocation(toiletpaperhanger 1: receptacle, loc 21: location)",
+      "receptacleatlocation(towelholder 1: receptacle, loc 19: location)",
+      "receptacleatlocation(towelholder 2: receptacle, loc 20: location)",
+      "receptacletype(bathtubbasin 1: receptacle, bathtubbasintype : rtype)",
+      "receptacletype(cabinet 1: receptacle, cabinettype : rtype)",
+      "receptacletype(cabinet 2: receptacle, cabinettype : rtype)",
+      "receptacletype(cabinet 3: receptacle, cabinettype : rtype)",
+      "receptacletype(cabinet 4: receptacle, cabinettype : rtype)",
+      "receptacletype(countertop 1: receptacle, countertoptype : rtype)",
+      "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+      "receptacletype(handtowelholder 1: receptacle, handtowelholdertype : rtype)",
+      "receptacletype(shelf 1: receptacle, shelftype : rtype)",
+      "receptacletype(sinkbasin 1: receptacle, sinkbasintype : rtype)",
+      "receptacletype(sinkbasin 2: receptacle, sinkbasintype : rtype)",
+      "receptacletype(toilet 1: receptacle, toilettype : rtype)",
+      "receptacletype(toiletpaperhanger 1: receptacle, toiletpaperhangertype : rtype)",
+      "receptacletype(towelholder 1: receptacle, towelholdertype : rtype)",
+      "receptacletype(towelholder 2: receptacle, towelholdertype : rtype)"
+    ],
+    "fact_records": [
+      {
+        "predicate": "atlocation",
+        "arguments": [
+          {
+            "name": "agent1 ",
+            "type": "agent"
+          },
+          {
+            "name": "loc 12",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "bathtub 1",
+            "type": "object"
+          },
+          {
+            "name": "bathtubtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "bathtub 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 3",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "bathtubbasin 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "bathtubbasintype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "bathtubbasin 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 3",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "bathtubbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "bathtubbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "bathtubbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "bathtubbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "cabinet 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "cabinet 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 7",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "cabinet 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "cabinet 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "cabinet 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 11",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "cabinet 2",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "cabinet 3",
+            "type": "receptacle"
+          },
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "cabinet 3",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 9",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "cabinet 3",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "cabinet 4",
+            "type": "receptacle"
+          },
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "cabinet 4",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 13",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "openable",
+        "arguments": [
+          {
+            "name": "cabinet 4",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "candletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "plungertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "cabinettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "candle 1",
+            "type": "object"
+          },
+          {
+            "name": "candletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "candle 1",
+            "type": "object"
+          },
+          {
+            "name": "countertop 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "candle 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 10",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "candle 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "cloth 1",
+            "type": "object"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "cloth 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 1",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "cloth 1",
+            "type": "object"
+          },
+          {
+            "name": "shelf 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "cleanable",
+        "arguments": [
+          {
+            "name": "cloth 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "cloth 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "cloth 2",
+            "type": "object"
+          },
+          {
+            "name": "cabinet 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "cloth 2",
+            "type": "object"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "cloth 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 7",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cleanable",
+        "arguments": [
+          {
+            "name": "cloth 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "cloth 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "countertop 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "countertop 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 10",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "candletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "countertoptype ",
+            "type": "rtype"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "dishsponge 1",
+            "type": "object"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "dishsponge 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 1",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "dishsponge 1",
+            "type": "object"
+          },
+          {
+            "name": "shelf 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "cleanable",
+        "arguments": [
+          {
+            "name": "dishsponge 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "dishsponge 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "dishsponge 2",
+            "type": "object"
+          },
+          {
+            "name": "bathtubbasin 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "dishsponge 2",
+            "type": "object"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "dishsponge 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 3",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cleanable",
+        "arguments": [
+          {
+            "name": "dishsponge 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "dishsponge 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "dishsponge 3",
+            "type": "object"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "dishsponge 3",
+            "type": "object"
+          },
+          {
+            "name": "loc 18",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "dishsponge 3",
+            "type": "object"
+          },
+          {
+            "name": "toilet 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "cleanable",
+        "arguments": [
+          {
+            "name": "dishsponge 3",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "dishsponge 3",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "garbagecan 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "garbagecan 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 23",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "garbagecantype ",
+            "type": "rtype"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "handtowel 1",
+            "type": "object"
+          },
+          {
+            "name": "handtowelholder 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "handtowel 1",
+            "type": "object"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "handtowel 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 22",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "handtowel 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "handtowelholder 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "handtowelholdertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "handtowelholder 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 22",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "handtowelholdertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "lightswitch 1",
+            "type": "object"
+          },
+          {
+            "name": "lightswitchtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "lightswitch 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 17",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "mirror 1",
+            "type": "object"
+          },
+          {
+            "name": "countertop 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "mirror 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 10",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "mirror 1",
+            "type": "object"
+          },
+          {
+            "name": "mirrortype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "papertowelroll 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 18",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "papertowelroll 1",
+            "type": "object"
+          },
+          {
+            "name": "papertowelrolltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "papertowelroll 1",
+            "type": "object"
+          },
+          {
+            "name": "toilet 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "papertowelroll 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "plunger 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 16",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "plunger 1",
+            "type": "object"
+          },
+          {
+            "name": "plungertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "plunger 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "scrubbrush 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 16",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "scrubbrush 1",
+            "type": "object"
+          },
+          {
+            "name": "scrubbrushtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "scrubbrush 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "shelf 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 1",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "shelf 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "candletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "shelftype ",
+            "type": "rtype"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "showerdoor 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 5",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "showerdoor 1",
+            "type": "object"
+          },
+          {
+            "name": "showerdoortype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "showerglass 1",
+            "type": "object"
+          },
+          {
+            "name": "countertop 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "showerglass 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 1",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "showerglass 1",
+            "type": "object"
+          },
+          {
+            "name": "shelf 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "showerglass 1",
+            "type": "object"
+          },
+          {
+            "name": "showerglasstype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "sink 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 6",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "sink 1",
+            "type": "object"
+          },
+          {
+            "name": "sinktype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "sink 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 14",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "sink 2",
+            "type": "object"
+          },
+          {
+            "name": "sinktype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "sinkbasin 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 8",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "sinkbasin 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "sinkbasintype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "sinkbasin 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 15",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "sinkbasin 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "sinkbasintype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sinkbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sinkbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sinkbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "sinkbasintype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "soapbar 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 18",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "soapbar 1",
+            "type": "object"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "soapbar 1",
+            "type": "object"
+          },
+          {
+            "name": "toilet 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "cleanable",
+        "arguments": [
+          {
+            "name": "soapbar 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "soapbar 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "soapbottle 1",
+            "type": "object"
+          },
+          {
+            "name": "countertop 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "soapbottle 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 10",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "soapbottle 1",
+            "type": "object"
+          },
+          {
+            "name": "soapbottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "soapbottle 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "soapbottle 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 3",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "soapbottle 2",
+            "type": "object"
+          },
+          {
+            "name": "soapbottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "soapbottle 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "spraybottle 1",
+            "type": "object"
+          },
+          {
+            "name": "cabinet 2",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "spraybottle 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 11",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "spraybottle 1",
+            "type": "object"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "spraybottle 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "spraybottle 2",
+            "type": "object"
+          },
+          {
+            "name": "cabinet 3",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "spraybottle 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 9",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "spraybottle 2",
+            "type": "object"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "spraybottle 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "spraybottle 3",
+            "type": "object"
+          },
+          {
+            "name": "loc 18",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "spraybottle 3",
+            "type": "object"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "spraybottle 3",
+            "type": "object"
+          },
+          {
+            "name": "toilet 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "spraybottle 3",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "toilet 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 18",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "toilet 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "toiletpaper 1",
+            "type": "object"
+          },
+          {
+            "name": "cabinet 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "toiletpaper 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 7",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "toiletpaper 1",
+            "type": "object"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "toiletpaper 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "toiletpaper 2",
+            "type": "object"
+          },
+          {
+            "name": "garbagecan 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "toiletpaper 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 23",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "toiletpaper 2",
+            "type": "object"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "toiletpaper 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "toiletpaperhanger 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 21",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "toiletpaperhanger 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "toiletpaperhangertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toiletpaperhangertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "candletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "clothtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "dishspongetype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "handtoweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbartype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "soapbottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "spraybottletype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "toilettype ",
+            "type": "rtype"
+          },
+          {
+            "name": "toiletpapertype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "towel 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 19",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "towel 1",
+            "type": "object"
+          },
+          {
+            "name": "towelholder 1",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "towel 1",
+            "type": "object"
+          },
+          {
+            "name": "toweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "towel 1",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "towel 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 20",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "inreceptacle",
+        "arguments": [
+          {
+            "name": "towel 2",
+            "type": "object"
+          },
+          {
+            "name": "towelholder 2",
+            "type": "receptacle"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "towel 2",
+            "type": "object"
+          },
+          {
+            "name": "toweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "pickupable",
+        "arguments": [
+          {
+            "name": "towel 2",
+            "type": "object"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "towelholder 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 19",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "towelholder 1",
+            "type": "receptacle"
+          },
+          {
+            "name": "towelholdertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacleatlocation",
+        "arguments": [
+          {
+            "name": "towelholder 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "loc 20",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "receptacletype",
+        "arguments": [
+          {
+            "name": "towelholder 2",
+            "type": "receptacle"
+          },
+          {
+            "name": "towelholdertype ",
+            "type": "rtype"
+          }
+        ]
+      },
+      {
+        "predicate": "cancontain",
+        "arguments": [
+          {
+            "name": "towelholdertype ",
+            "type": "rtype"
+          },
+          {
+            "name": "toweltype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "window 1",
+            "type": "object"
+          },
+          {
+            "name": "loc 2",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "window 1",
+            "type": "object"
+          },
+          {
+            "name": "windowtype ",
+            "type": "otype"
+          }
+        ]
+      },
+      {
+        "predicate": "objectatlocation",
+        "arguments": [
+          {
+            "name": "window 2",
+            "type": "object"
+          },
+          {
+            "name": "loc 4",
+            "type": "location"
+          }
+        ]
+      },
+      {
+        "predicate": "objecttype",
+        "arguments": [
+          {
+            "name": "window 2",
+            "type": "object"
+          },
+          {
+            "name": "windowtype ",
+            "type": "otype"
+          }
+        ]
+      }
+    ],
+    "admissible_commands": [
+      "go to bathtubbasin 1",
+      "go to cabinet 1",
+      "go to cabinet 2",
+      "go to cabinet 3",
+      "go to cabinet 4",
+      "go to countertop 1",
+      "go to garbagecan 1",
+      "go to handtowelholder 1",
+      "go to shelf 1",
+      "go to sinkbasin 1",
+      "go to sinkbasin 2",
+      "go to toilet 1",
+      "go to toiletpaperhanger 1",
+      "go to towelholder 1",
+      "go to towelholder 2",
+      "help",
+      "inventory",
+      "look"
+    ],
+    "entities": {
+      "agent1": {
+        "name": "agent1 ",
+        "type": "agent"
+      },
+      "bathtub_bar__minus_02_dot_23_bar__plus_00_dot_29_bar__plus_00_dot_72": {
+        "name": "bathtub 1",
+        "type": "object"
+      },
+      "bathtub_bar__minus_02_dot_23_bar__plus_00_dot_29_bar__plus_00_dot_72_bar_bathtubbasin": {
+        "name": "bathtubbasin 1",
+        "type": "receptacle"
+      },
+      "bathtubbasintype": {
+        "name": "bathtubbasintype ",
+        "type": "rtype"
+      },
+      "bathtubtype": {
+        "name": "bathtubtype ",
+        "type": "otype"
+      },
+      "cabinet_bar__minus_00_dot_34_bar__plus_00_dot_43_bar__plus_02_dot_87": {
+        "name": "cabinet 4",
+        "type": "receptacle"
+      },
+      "cabinet_bar__minus_01_dot_36_bar__plus_00_dot_43_bar__plus_02_dot_87": {
+        "name": "cabinet 3",
+        "type": "receptacle"
+      },
+      "cabinet_bar__minus_01_dot_40_bar__plus_00_dot_43_bar__plus_02_dot_87": {
+        "name": "cabinet 2",
+        "type": "receptacle"
+      },
+      "cabinet_bar__minus_02_dot_42_bar__plus_00_dot_43_bar__plus_02_dot_87": {
+        "name": "cabinet 1",
+        "type": "receptacle"
+      },
+      "cabinettype": {
+        "name": "cabinettype ",
+        "type": "rtype"
+      },
+      "candle_bar__minus_00_dot_32_bar__plus_01_dot_10_bar__plus_03_dot_06": {
+        "name": "candle 1",
+        "type": "object"
+      },
+      "candletype": {
+        "name": "candletype ",
+        "type": "otype"
+      },
+      "cloth_bar__minus_02_dot_12_bar__plus_00_dot_06_bar__plus_03_dot_02": {
+        "name": "cloth 2",
+        "type": "object"
+      },
+      "cloth_bar__minus_03_dot_12_bar__plus_00_dot_60_bar__plus_01_dot_47": {
+        "name": "cloth 1",
+        "type": "object"
+      },
+      "clothtype": {
+        "name": "clothtype ",
+        "type": "otype"
+      },
+      "countertop_bar__minus_01_dot_36_bar__plus_01_dot_09_bar__plus_03_dot_15": {
+        "name": "countertop 1",
+        "type": "receptacle"
+      },
+      "countertoptype": {
+        "name": "countertoptype ",
+        "type": "rtype"
+      },
+      "dishsponge_bar__minus_00_dot_82_bar__plus_01_dot_07_bar__plus_00_dot_33": {
+        "name": "dishsponge 3",
+        "type": "object"
+      },
+      "dishsponge_bar__minus_01_dot_86_bar__plus_00_dot_11_bar__plus_00_dot_54": {
+        "name": "dishsponge 2",
+        "type": "object"
+      },
+      "dishsponge_bar__minus_02_dot_81_bar__plus_00_dot_60_bar__plus_01_dot_47": {
+        "name": "dishsponge 1",
+        "type": "object"
+      },
+      "dishspongetype": {
+        "name": "dishspongetype ",
+        "type": "otype"
+      },
+      "garbagecan_bar__minus_00_dot_13_bar__plus_00_dot_03_bar__plus_03_dot_25": {
+        "name": "garbagecan 1",
+        "type": "receptacle"
+      },
+      "garbagecantype": {
+        "name": "garbagecantype ",
+        "type": "rtype"
+      },
+      "handtowel_bar__minus_00_dot_24_bar__plus_01_dot_76_bar__plus_03_dot_43": {
+        "name": "handtowel 1",
+        "type": "object"
+      },
+      "handtowelholder_bar__minus_00_dot_24_bar__plus_01_dot_86_bar__plus_03_dot_47": {
+        "name": "handtowelholder 1",
+        "type": "receptacle"
+      },
+      "handtowelholdertype": {
+        "name": "handtowelholdertype ",
+        "type": "rtype"
+      },
+      "handtoweltype": {
+        "name": "handtoweltype ",
+        "type": "otype"
+      },
+      "lightswitch_bar__plus_00_dot_97_bar__plus_01_dot_43_bar__plus_01_dot_13": {
+        "name": "lightswitch 1",
+        "type": "object"
+      },
+      "lightswitchtype": {
+        "name": "lightswitchtype ",
+        "type": "otype"
+      },
+      "loc_bar_0_bar_11_bar_0_bar_60": {
+        "name": "loc 23",
+        "type": "location"
+      },
+      "loc_bar_0_bar_11_bar_0_bar__minus_15": {
+        "name": "loc 22",
+        "type": "location"
+      },
+      "loc_bar_0_bar_3_bar_2_bar_45": {
+        "name": "loc 21",
+        "type": "location"
+      },
+      "loc_bar_1_bar_11_bar_0_bar_15": {
+        "name": "loc 20",
+        "type": "location"
+      },
+      "loc_bar_1_bar_11_bar_1_bar_30": {
+        "name": "loc 19",
+        "type": "location"
+      },
+      "loc_bar_1_bar_3_bar_3_bar_60": {
+        "name": "loc 18",
+        "type": "location"
+      },
+      "loc_bar_2_bar_5_bar_1_bar_30": {
+        "name": "loc 17",
+        "type": "location"
+      },
+      "loc_bar__minus_1_bar_3_bar_2_bar_60": {
+        "name": "loc 16",
+        "type": "location"
+      },
+      "loc_bar__minus_2_bar_10_bar_0_bar_45": {
+        "name": "loc 15",
+        "type": "location"
+      },
+      "loc_bar__minus_3_bar_10_bar_0_bar_45": {
+        "name": "loc 14",
+        "type": "location"
+      },
+      "loc_bar__minus_4_bar_8_bar_0_bar_60": {
+        "name": "loc 13",
+        "type": "location"
+      },
+      "loc_bar__minus_4_bar_9_bar_1_bar_30": {
+        "name": "loc 12",
+        "type": "location"
+      },
+      "loc_bar__minus_5_bar_8_bar_0_bar_60": {
+        "name": "loc 11",
+        "type": "location"
+      },
+      "loc_bar__minus_6_bar_10_bar_0_bar_45": {
+        "name": "loc 10",
+        "type": "location"
+      },
+      "loc_bar__minus_6_bar_8_bar_0_bar_60": {
+        "name": "loc 9",
+        "type": "location"
+      },
+      "loc_bar__minus_7_bar_10_bar_0_bar_45": {
+        "name": "loc 8",
+        "type": "location"
+      },
+      "loc_bar__minus_7_bar_8_bar_0_bar_60": {
+        "name": "loc 7",
+        "type": "location"
+      },
+      "loc_bar__minus_8_bar_10_bar_0_bar_45": {
+        "name": "loc 6",
+        "type": "location"
+      },
+      "loc_bar__minus_8_bar_10_bar_3_bar__minus_15": {
+        "name": "loc 5",
+        "type": "location"
+      },
+      "loc_bar__minus_8_bar_6_bar_2_bar_0": {
+        "name": "loc 4",
+        "type": "location"
+      },
+      "loc_bar__minus_8_bar_6_bar_2_bar_60": {
+        "name": "loc 3",
+        "type": "location"
+      },
+      "loc_bar__minus_8_bar_6_bar_3_bar_0": {
+        "name": "loc 2",
+        "type": "location"
+      },
+      "loc_bar__minus_8_bar_6_bar_3_bar_45": {
+        "name": "loc 1",
+        "type": "location"
+      },
+      "mirror_bar__minus_01_dot_39_bar__plus_01_dot_60_bar__plus_03_dot_46": {
+        "name": "mirror 1",
+        "type": "object"
+      },
+      "mirrortype": {
+        "name": "mirrortype ",
+        "type": "otype"
+      },
+      "papertowelroll_bar__minus_00_dot_56_bar__plus_01_dot_18_bar__plus_00_dot_33": {
+        "name": "papertowelroll 1",
+        "type": "object"
+      },
+      "papertowelrolltype": {
+        "name": "papertowelrolltype ",
+        "type": "otype"
+      },
+      "plunger_bar__minus_00_dot_22_bar__plus_00_dot_03_bar__plus_00_dot_49": {
+        "name": "plunger 1",
+        "type": "object"
+      },
+      "plungertype": {
+        "name": "plungertype ",
+        "type": "otype"
+      },
+      "scrubbrush_bar__minus_00_dot_35_bar__plus_00_dot_03_bar__plus_00_dot_35": {
+        "name": "scrubbrush 1",
+        "type": "object"
+      },
+      "scrubbrushtype": {
+        "name": "scrubbrushtype ",
+        "type": "otype"
+      },
+      "shelf_bar__minus_02_dot_93_bar__plus_00_dot_59_bar__plus_01_dot_43": {
+        "name": "shelf 1",
+        "type": "receptacle"
+      },
+      "shelftype": {
+        "name": "shelftype ",
+        "type": "rtype"
+      },
+      "showerdoor_bar__minus_02_dot_48_bar__plus_01_dot_77_bar__plus_02_dot_39": {
+        "name": "showerdoor 1",
+        "type": "object"
+      },
+      "showerdoortype": {
+        "name": "showerdoortype ",
+        "type": "otype"
+      },
+      "showerglass_bar__minus_02_dot_90_bar__plus_01_dot_42_bar__plus_02_dot_34": {
+        "name": "showerglass 1",
+        "type": "object"
+      },
+      "showerglasstype": {
+        "name": "showerglasstype ",
+        "type": "otype"
+      },
+      "sink_bar__minus_00_dot_85_bar__plus_00_dot_95_bar__plus_03_dot_14": {
+        "name": "sink 2",
+        "type": "object"
+      },
+      "sink_bar__minus_00_dot_85_bar__plus_00_dot_95_bar__plus_03_dot_14_bar_sinkbasin": {
+        "name": "sinkbasin 2",
+        "type": "receptacle"
+      },
+      "sink_bar__minus_01_dot_94_bar__plus_00_dot_95_bar__plus_03_dot_14": {
+        "name": "sink 1",
+        "type": "object"
+      },
+      "sink_bar__minus_01_dot_94_bar__plus_00_dot_95_bar__plus_03_dot_14_bar_sinkbasin": {
+        "name": "sinkbasin 1",
+        "type": "receptacle"
+      },
+      "sinkbasintype": {
+        "name": "sinkbasintype ",
+        "type": "rtype"
+      },
+      "sinktype": {
+        "name": "sinktype ",
+        "type": "otype"
+      },
+      "soapbar_bar__minus_00_dot_69_bar__plus_01_dot_07_bar__plus_00_dot_36": {
+        "name": "soapbar 1",
+        "type": "object"
+      },
+      "soapbartype": {
+        "name": "soapbartype ",
+        "type": "otype"
+      },
+      "soapbottle_bar__minus_01_dot_19_bar__plus_00_dot_60_bar__plus_00_dot_86": {
+        "name": "soapbottle 2",
+        "type": "object"
+      },
+      "soapbottle_bar__minus_02_dot_34_bar__plus_01_dot_11_bar__plus_03_dot_21": {
+        "name": "soapbottle 1",
+        "type": "object"
+      },
+      "soapbottletype": {
+        "name": "soapbottletype ",
+        "type": "otype"
+      },
+      "spraybottle_bar__minus_00_dot_63_bar__plus_01_dot_07_bar__plus_00_dot_24": {
+        "name": "spraybottle 3",
+        "type": "object"
+      },
+      "spraybottle_bar__minus_01_dot_00_bar__plus_00_dot_06_bar__plus_03_dot_36": {
+        "name": "spraybottle 2",
+        "type": "object"
+      },
+      "spraybottle_bar__minus_01_dot_70_bar__plus_00_dot_06_bar__plus_02_dot_95": {
+        "name": "spraybottle 1",
+        "type": "object"
+      },
+      "spraybottletype": {
+        "name": "spraybottletype ",
+        "type": "otype"
+      },
+      "toilet_bar__minus_00_dot_70_bar__plus_00_dot_03_bar__plus_00_dot_66": {
+        "name": "toilet 1",
+        "type": "receptacle"
+      },
+      "toiletpaper_bar__minus_00_dot_14_bar__plus_00_dot_06_bar__plus_03_dot_30": {
+        "name": "toiletpaper 2",
+        "type": "object"
+      },
+      "toiletpaper_bar__minus_02_dot_18_bar__plus_00_dot_05_bar__plus_03_dot_16": {
+        "name": "toiletpaper 1",
+        "type": "object"
+      },
+      "toiletpaperhanger_bar__minus_00_dot_04_bar__plus_00_dot_96_bar__plus_00_dot_20": {
+        "name": "toiletpaperhanger 1",
+        "type": "receptacle"
+      },
+      "toiletpaperhangertype": {
+        "name": "toiletpaperhangertype ",
+        "type": "rtype"
+      },
+      "toiletpapertype": {
+        "name": "toiletpapertype ",
+        "type": "otype"
+      },
+      "toilettype": {
+        "name": "toilettype ",
+        "type": "rtype"
+      },
+      "towel_bar__plus_00_dot_40_bar__plus_01_dot_39_bar__plus_03_dot_36": {
+        "name": "towel 2",
+        "type": "object"
+      },
+      "towel_bar__plus_00_dot_86_bar__plus_01_dot_36_bar__plus_02_dot_86": {
+        "name": "towel 1",
+        "type": "object"
+      },
+      "towelholder_bar__plus_00_dot_40_bar__plus_01_dot_38_bar__plus_03_dot_47": {
+        "name": "towelholder 2",
+        "type": "receptacle"
+      },
+      "towelholder_bar__plus_00_dot_97_bar__plus_01_dot_34_bar__plus_02_dot_86": {
+        "name": "towelholder 1",
+        "type": "receptacle"
+      },
+      "towelholdertype": {
+        "name": "towelholdertype ",
+        "type": "rtype"
+      },
+      "toweltype": {
+        "name": "toweltype ",
+        "type": "otype"
+      },
+      "window_bar__minus_02_dot_19_bar__plus_01_dot_55_bar__plus_00_dot_09": {
+        "name": "window 2",
+        "type": "object"
+      },
+      "window_bar__minus_03_dot_45_bar__plus_01_dot_59_bar__plus_00_dot_65": {
+        "name": "window 1",
+        "type": "object"
+      },
+      "windowtype": {
+        "name": "windowtype ",
+        "type": "otype"
+      }
+    },
+    "won": false,
+    "done": false,
+    "reward": 0.0,
+    "moves": 0
+  },
+  "history": [
+    {
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "state_hash": "f6c524fd289405725837cf82169dcb23ca89f782f46a941bfd12a6ee2f10d3f6",
+      "facts": [
+        "atlocation(agent1 : agent, loc 8: location)",
+        "cancontain(bathtubbasintype : rtype, clothtype : otype)",
+        "cancontain(bathtubbasintype : rtype, dishspongetype : otype)",
+        "cancontain(bathtubbasintype : rtype, handtoweltype : otype)",
+        "cancontain(bathtubbasintype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, candletype : otype)",
+        "cancontain(cabinettype : rtype, clothtype : otype)",
+        "cancontain(cabinettype : rtype, dishspongetype : otype)",
+        "cancontain(cabinettype : rtype, handtoweltype : otype)",
+        "cancontain(cabinettype : rtype, plungertype : otype)",
+        "cancontain(cabinettype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, soapbottletype : otype)",
+        "cancontain(cabinettype : rtype, spraybottletype : otype)",
+        "cancontain(cabinettype : rtype, toiletpapertype : otype)",
+        "cancontain(countertoptype : rtype, candletype : otype)",
+        "cancontain(countertoptype : rtype, clothtype : otype)",
+        "cancontain(countertoptype : rtype, dishspongetype : otype)",
+        "cancontain(countertoptype : rtype, handtoweltype : otype)",
+        "cancontain(countertoptype : rtype, soapbartype : otype)",
+        "cancontain(countertoptype : rtype, soapbottletype : otype)",
+        "cancontain(countertoptype : rtype, spraybottletype : otype)",
+        "cancontain(countertoptype : rtype, toiletpapertype : otype)",
+        "cancontain(garbagecantype : rtype, clothtype : otype)",
+        "cancontain(garbagecantype : rtype, dishspongetype : otype)",
+        "cancontain(garbagecantype : rtype, handtoweltype : otype)",
+        "cancontain(garbagecantype : rtype, soapbartype : otype)",
+        "cancontain(garbagecantype : rtype, soapbottletype : otype)",
+        "cancontain(garbagecantype : rtype, spraybottletype : otype)",
+        "cancontain(garbagecantype : rtype, toiletpapertype : otype)",
+        "cancontain(handtowelholdertype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, candletype : otype)",
+        "cancontain(shelftype : rtype, clothtype : otype)",
+        "cancontain(shelftype : rtype, dishspongetype : otype)",
+        "cancontain(shelftype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, soapbartype : otype)",
+        "cancontain(shelftype : rtype, soapbottletype : otype)",
+        "cancontain(shelftype : rtype, spraybottletype : otype)",
+        "cancontain(shelftype : rtype, toiletpapertype : otype)",
+        "cancontain(sinkbasintype : rtype, clothtype : otype)",
+        "cancontain(sinkbasintype : rtype, dishspongetype : otype)",
+        "cancontain(sinkbasintype : rtype, handtoweltype : otype)",
+        "cancontain(sinkbasintype : rtype, soapbartype : otype)",
+        "cancontain(toiletpaperhangertype : rtype, toiletpapertype : otype)",
+        "cancontain(toilettype : rtype, candletype : otype)",
+        "cancontain(toilettype : rtype, clothtype : otype)",
+        "cancontain(toilettype : rtype, dishspongetype : otype)",
+        "cancontain(toilettype : rtype, handtoweltype : otype)",
+        "cancontain(toilettype : rtype, soapbartype : otype)",
+        "cancontain(toilettype : rtype, soapbottletype : otype)",
+        "cancontain(toilettype : rtype, spraybottletype : otype)",
+        "cancontain(toilettype : rtype, toiletpapertype : otype)",
+        "cancontain(towelholdertype : rtype, toweltype : otype)",
+        "cleanable(cloth 1: object)",
+        "cleanable(cloth 2: object)",
+        "cleanable(dishsponge 1: object)",
+        "cleanable(dishsponge 2: object)",
+        "cleanable(dishsponge 3: object)",
+        "cleanable(soapbar 1: object)",
+        "inreceptacle(candle 1: object, countertop 1: receptacle)",
+        "inreceptacle(cloth 1: object, shelf 1: receptacle)",
+        "inreceptacle(cloth 2: object, cabinet 1: receptacle)",
+        "inreceptacle(dishsponge 1: object, shelf 1: receptacle)",
+        "inreceptacle(dishsponge 2: object, bathtubbasin 1: receptacle)",
+        "inreceptacle(dishsponge 3: object, toilet 1: receptacle)",
+        "inreceptacle(handtowel 1: object, handtowelholder 1: receptacle)",
+        "inreceptacle(mirror 1: object, countertop 1: receptacle)",
+        "inreceptacle(papertowelroll 1: object, toilet 1: receptacle)",
+        "inreceptacle(showerglass 1: object, countertop 1: receptacle)",
+        "inreceptacle(showerglass 1: object, shelf 1: receptacle)",
+        "inreceptacle(soapbar 1: object, toilet 1: receptacle)",
+        "inreceptacle(soapbottle 1: object, countertop 1: receptacle)",
+        "inreceptacle(spraybottle 1: object, cabinet 2: receptacle)",
+        "inreceptacle(spraybottle 2: object, cabinet 3: receptacle)",
+        "inreceptacle(spraybottle 3: object, toilet 1: receptacle)",
+        "inreceptacle(toiletpaper 1: object, cabinet 1: receptacle)",
+        "inreceptacle(toiletpaper 2: object, garbagecan 1: receptacle)",
+        "inreceptacle(towel 1: object, towelholder 1: receptacle)",
+        "inreceptacle(towel 2: object, towelholder 2: receptacle)",
+        "not_atlocation(agent1 : agent, loc 12: location)",
+        "objectatlocation(bathtub 1: object, loc 3: location)",
+        "objectatlocation(candle 1: object, loc 10: location)",
+        "objectatlocation(cloth 1: object, loc 1: location)",
+        "objectatlocation(cloth 2: object, loc 7: location)",
+        "objectatlocation(dishsponge 1: object, loc 1: location)",
+        "objectatlocation(dishsponge 2: object, loc 3: location)",
+        "objectatlocation(dishsponge 3: object, loc 18: location)",
+        "objectatlocation(handtowel 1: object, loc 22: location)",
+        "objectatlocation(lightswitch 1: object, loc 17: location)",
+        "objectatlocation(mirror 1: object, loc 10: location)",
+        "objectatlocation(papertowelroll 1: object, loc 18: location)",
+        "objectatlocation(plunger 1: object, loc 16: location)",
+        "objectatlocation(scrubbrush 1: object, loc 16: location)",
+        "objectatlocation(showerdoor 1: object, loc 5: location)",
+        "objectatlocation(showerglass 1: object, loc 1: location)",
+        "objectatlocation(sink 1: object, loc 6: location)",
+        "objectatlocation(sink 2: object, loc 14: location)",
+        "objectatlocation(soapbar 1: object, loc 18: location)",
+        "objectatlocation(soapbottle 1: object, loc 10: location)",
+        "objectatlocation(soapbottle 2: object, loc 3: location)",
+        "objectatlocation(spraybottle 1: object, loc 11: location)",
+        "objectatlocation(spraybottle 2: object, loc 9: location)",
+        "objectatlocation(spraybottle 3: object, loc 18: location)",
+        "objectatlocation(toiletpaper 1: object, loc 7: location)",
+        "objectatlocation(toiletpaper 2: object, loc 23: location)",
+        "objectatlocation(towel 1: object, loc 19: location)",
+        "objectatlocation(towel 2: object, loc 20: location)",
+        "objectatlocation(window 1: object, loc 2: location)",
+        "objectatlocation(window 2: object, loc 4: location)",
+        "objecttype(bathtub 1: object, bathtubtype : otype)",
+        "objecttype(candle 1: object, candletype : otype)",
+        "objecttype(cloth 1: object, clothtype : otype)",
+        "objecttype(cloth 2: object, clothtype : otype)",
+        "objecttype(dishsponge 1: object, dishspongetype : otype)",
+        "objecttype(dishsponge 2: object, dishspongetype : otype)",
+        "objecttype(dishsponge 3: object, dishspongetype : otype)",
+        "objecttype(handtowel 1: object, handtoweltype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(mirror 1: object, mirrortype : otype)",
+        "objecttype(papertowelroll 1: object, papertowelrolltype : otype)",
+        "objecttype(plunger 1: object, plungertype : otype)",
+        "objecttype(scrubbrush 1: object, scrubbrushtype : otype)",
+        "objecttype(showerdoor 1: object, showerdoortype : otype)",
+        "objecttype(showerglass 1: object, showerglasstype : otype)",
+        "objecttype(sink 1: object, sinktype : otype)",
+        "objecttype(sink 2: object, sinktype : otype)",
+        "objecttype(soapbar 1: object, soapbartype : otype)",
+        "objecttype(soapbottle 1: object, soapbottletype : otype)",
+        "objecttype(soapbottle 2: object, soapbottletype : otype)",
+        "objecttype(spraybottle 1: object, spraybottletype : otype)",
+        "objecttype(spraybottle 2: object, spraybottletype : otype)",
+        "objecttype(spraybottle 3: object, spraybottletype : otype)",
+        "objecttype(toiletpaper 1: object, toiletpapertype : otype)",
+        "objecttype(toiletpaper 2: object, toiletpapertype : otype)",
+        "objecttype(towel 1: object, toweltype : otype)",
+        "objecttype(towel 2: object, toweltype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "objecttype(window 2: object, windowtype : otype)",
+        "openable(cabinet 1: receptacle)",
+        "openable(cabinet 2: receptacle)",
+        "openable(cabinet 3: receptacle)",
+        "openable(cabinet 4: receptacle)",
+        "pickupable(candle 1: object)",
+        "pickupable(cloth 1: object)",
+        "pickupable(cloth 2: object)",
+        "pickupable(dishsponge 1: object)",
+        "pickupable(dishsponge 2: object)",
+        "pickupable(dishsponge 3: object)",
+        "pickupable(handtowel 1: object)",
+        "pickupable(papertowelroll 1: object)",
+        "pickupable(plunger 1: object)",
+        "pickupable(scrubbrush 1: object)",
+        "pickupable(soapbar 1: object)",
+        "pickupable(soapbottle 1: object)",
+        "pickupable(soapbottle 2: object)",
+        "pickupable(spraybottle 1: object)",
+        "pickupable(spraybottle 2: object)",
+        "pickupable(spraybottle 3: object)",
+        "pickupable(toiletpaper 1: object)",
+        "pickupable(toiletpaper 2: object)",
+        "pickupable(towel 1: object)",
+        "pickupable(towel 2: object)",
+        "receptacleatlocation(bathtubbasin 1: receptacle, loc 3: location)",
+        "receptacleatlocation(cabinet 1: receptacle, loc 7: location)",
+        "receptacleatlocation(cabinet 2: receptacle, loc 11: location)",
+        "receptacleatlocation(cabinet 3: receptacle, loc 9: location)",
+        "receptacleatlocation(cabinet 4: receptacle, loc 13: location)",
+        "receptacleatlocation(countertop 1: receptacle, loc 10: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 23: location)",
+        "receptacleatlocation(handtowelholder 1: receptacle, loc 22: location)",
+        "receptacleatlocation(shelf 1: receptacle, loc 1: location)",
+        "receptacleatlocation(sinkbasin 1: receptacle, loc 8: location)",
+        "receptacleatlocation(sinkbasin 2: receptacle, loc 15: location)",
+        "receptacleatlocation(toilet 1: receptacle, loc 18: location)",
+        "receptacleatlocation(toiletpaperhanger 1: receptacle, loc 21: location)",
+        "receptacleatlocation(towelholder 1: receptacle, loc 19: location)",
+        "receptacleatlocation(towelholder 2: receptacle, loc 20: location)",
+        "receptacletype(bathtubbasin 1: receptacle, bathtubbasintype : rtype)",
+        "receptacletype(cabinet 1: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 2: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 3: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 4: receptacle, cabinettype : rtype)",
+        "receptacletype(countertop 1: receptacle, countertoptype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(handtowelholder 1: receptacle, handtowelholdertype : rtype)",
+        "receptacletype(shelf 1: receptacle, shelftype : rtype)",
+        "receptacletype(sinkbasin 1: receptacle, sinkbasintype : rtype)",
+        "receptacletype(sinkbasin 2: receptacle, sinkbasintype : rtype)",
+        "receptacletype(toilet 1: receptacle, toilettype : rtype)",
+        "receptacletype(toiletpaperhanger 1: receptacle, toiletpaperhangertype : rtype)",
+        "receptacletype(towelholder 1: receptacle, towelholdertype : rtype)",
+        "receptacletype(towelholder 2: receptacle, towelholdertype : rtype)"
+      ],
+      "admissible_commands": [
+        "examine sinkbasin 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 1,
+      "thought": "I need to find a dish sponge and clean it.",
+      "action": "go to sinkbasin 1",
+      "parse_ok": true,
+      "thought_word_count": 10,
+      "raw_response": "Thought: I need to find a dish sponge and clean it.\nAction: go to sinkbasin 1\n",
+      "model": {
+        "latency_seconds": 4.283939852000913,
+        "prompt_tokens": 407,
+        "prompt_sha256": "d8511a7f08b9b60da0bee10caf38a2c27582bfc240c6bdc846334df227efd040",
+        "seed": 20262134,
+        "truncated": false,
+        "tokens_predicted": 24,
+        "tokens_evaluated": 407,
+        "cached_tokens": 0,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 407,
+          "prompt_ms": 3144.586,
+          "prompt_per_token_ms": 7.726255528255527,
+          "prompt_per_second": 129.42880239242942,
+          "predicted_n": 24,
+          "predicted_ms": 1135.112,
+          "predicted_per_token_ms": 49.352695652173914,
+          "predicted_per_second": 20.262317727237487
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "87287e20035cb9c742d1368dc472c2822e4a084c162f4ac250d33fdcd62cda58",
+      "admissible_before": [
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "recorded_utc": "2026-11-27T09:38:20.450464+00:00"
+    },
+    {
+      "observation": "You arrive at sinkbasin 2. On the sinkbasin 2, you see nothing.",
+      "state_hash": "f29d7e5b205a471197fcdedd7136c21e2902bad98186da2f693f36b5bd63b950",
+      "facts": [
+        "atlocation(agent1 : agent, loc 15: location)",
+        "cancontain(bathtubbasintype : rtype, clothtype : otype)",
+        "cancontain(bathtubbasintype : rtype, dishspongetype : otype)",
+        "cancontain(bathtubbasintype : rtype, handtoweltype : otype)",
+        "cancontain(bathtubbasintype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, candletype : otype)",
+        "cancontain(cabinettype : rtype, clothtype : otype)",
+        "cancontain(cabinettype : rtype, dishspongetype : otype)",
+        "cancontain(cabinettype : rtype, handtoweltype : otype)",
+        "cancontain(cabinettype : rtype, plungertype : otype)",
+        "cancontain(cabinettype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, soapbottletype : otype)",
+        "cancontain(cabinettype : rtype, spraybottletype : otype)",
+        "cancontain(cabinettype : rtype, toiletpapertype : otype)",
+        "cancontain(countertoptype : rtype, candletype : otype)",
+        "cancontain(countertoptype : rtype, clothtype : otype)",
+        "cancontain(countertoptype : rtype, dishspongetype : otype)",
+        "cancontain(countertoptype : rtype, handtoweltype : otype)",
+        "cancontain(countertoptype : rtype, soapbartype : otype)",
+        "cancontain(countertoptype : rtype, soapbottletype : otype)",
+        "cancontain(countertoptype : rtype, spraybottletype : otype)",
+        "cancontain(countertoptype : rtype, toiletpapertype : otype)",
+        "cancontain(garbagecantype : rtype, clothtype : otype)",
+        "cancontain(garbagecantype : rtype, dishspongetype : otype)",
+        "cancontain(garbagecantype : rtype, handtoweltype : otype)",
+        "cancontain(garbagecantype : rtype, soapbartype : otype)",
+        "cancontain(garbagecantype : rtype, soapbottletype : otype)",
+        "cancontain(garbagecantype : rtype, spraybottletype : otype)",
+        "cancontain(garbagecantype : rtype, toiletpapertype : otype)",
+        "cancontain(handtowelholdertype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, candletype : otype)",
+        "cancontain(shelftype : rtype, clothtype : otype)",
+        "cancontain(shelftype : rtype, dishspongetype : otype)",
+        "cancontain(shelftype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, soapbartype : otype)",
+        "cancontain(shelftype : rtype, soapbottletype : otype)",
+        "cancontain(shelftype : rtype, spraybottletype : otype)",
+        "cancontain(shelftype : rtype, toiletpapertype : otype)",
+        "cancontain(sinkbasintype : rtype, clothtype : otype)",
+        "cancontain(sinkbasintype : rtype, dishspongetype : otype)",
+        "cancontain(sinkbasintype : rtype, handtoweltype : otype)",
+        "cancontain(sinkbasintype : rtype, soapbartype : otype)",
+        "cancontain(toiletpaperhangertype : rtype, toiletpapertype : otype)",
+        "cancontain(toilettype : rtype, candletype : otype)",
+        "cancontain(toilettype : rtype, clothtype : otype)",
+        "cancontain(toilettype : rtype, dishspongetype : otype)",
+        "cancontain(toilettype : rtype, handtoweltype : otype)",
+        "cancontain(toilettype : rtype, soapbartype : otype)",
+        "cancontain(toilettype : rtype, soapbottletype : otype)",
+        "cancontain(toilettype : rtype, spraybottletype : otype)",
+        "cancontain(toilettype : rtype, toiletpapertype : otype)",
+        "cancontain(towelholdertype : rtype, toweltype : otype)",
+        "cleanable(cloth 1: object)",
+        "cleanable(cloth 2: object)",
+        "cleanable(dishsponge 1: object)",
+        "cleanable(dishsponge 2: object)",
+        "cleanable(dishsponge 3: object)",
+        "cleanable(soapbar 1: object)",
+        "inreceptacle(candle 1: object, countertop 1: receptacle)",
+        "inreceptacle(cloth 1: object, shelf 1: receptacle)",
+        "inreceptacle(cloth 2: object, cabinet 1: receptacle)",
+        "inreceptacle(dishsponge 1: object, shelf 1: receptacle)",
+        "inreceptacle(dishsponge 2: object, bathtubbasin 1: receptacle)",
+        "inreceptacle(dishsponge 3: object, toilet 1: receptacle)",
+        "inreceptacle(handtowel 1: object, handtowelholder 1: receptacle)",
+        "inreceptacle(mirror 1: object, countertop 1: receptacle)",
+        "inreceptacle(papertowelroll 1: object, toilet 1: receptacle)",
+        "inreceptacle(showerglass 1: object, countertop 1: receptacle)",
+        "inreceptacle(showerglass 1: object, shelf 1: receptacle)",
+        "inreceptacle(soapbar 1: object, toilet 1: receptacle)",
+        "inreceptacle(soapbottle 1: object, countertop 1: receptacle)",
+        "inreceptacle(spraybottle 1: object, cabinet 2: receptacle)",
+        "inreceptacle(spraybottle 2: object, cabinet 3: receptacle)",
+        "inreceptacle(spraybottle 3: object, toilet 1: receptacle)",
+        "inreceptacle(toiletpaper 1: object, cabinet 1: receptacle)",
+        "inreceptacle(toiletpaper 2: object, garbagecan 1: receptacle)",
+        "inreceptacle(towel 1: object, towelholder 1: receptacle)",
+        "inreceptacle(towel 2: object, towelholder 2: receptacle)",
+        "not_atlocation(agent1 : agent, loc 12: location)",
+        "not_atlocation(agent1 : agent, loc 8: location)",
+        "objectatlocation(bathtub 1: object, loc 3: location)",
+        "objectatlocation(candle 1: object, loc 10: location)",
+        "objectatlocation(cloth 1: object, loc 1: location)",
+        "objectatlocation(cloth 2: object, loc 7: location)",
+        "objectatlocation(dishsponge 1: object, loc 1: location)",
+        "objectatlocation(dishsponge 2: object, loc 3: location)",
+        "objectatlocation(dishsponge 3: object, loc 18: location)",
+        "objectatlocation(handtowel 1: object, loc 22: location)",
+        "objectatlocation(lightswitch 1: object, loc 17: location)",
+        "objectatlocation(mirror 1: object, loc 10: location)",
+        "objectatlocation(papertowelroll 1: object, loc 18: location)",
+        "objectatlocation(plunger 1: object, loc 16: location)",
+        "objectatlocation(scrubbrush 1: object, loc 16: location)",
+        "objectatlocation(showerdoor 1: object, loc 5: location)",
+        "objectatlocation(showerglass 1: object, loc 1: location)",
+        "objectatlocation(sink 1: object, loc 6: location)",
+        "objectatlocation(sink 2: object, loc 14: location)",
+        "objectatlocation(soapbar 1: object, loc 18: location)",
+        "objectatlocation(soapbottle 1: object, loc 10: location)",
+        "objectatlocation(soapbottle 2: object, loc 3: location)",
+        "objectatlocation(spraybottle 1: object, loc 11: location)",
+        "objectatlocation(spraybottle 2: object, loc 9: location)",
+        "objectatlocation(spraybottle 3: object, loc 18: location)",
+        "objectatlocation(toiletpaper 1: object, loc 7: location)",
+        "objectatlocation(toiletpaper 2: object, loc 23: location)",
+        "objectatlocation(towel 1: object, loc 19: location)",
+        "objectatlocation(towel 2: object, loc 20: location)",
+        "objectatlocation(window 1: object, loc 2: location)",
+        "objectatlocation(window 2: object, loc 4: location)",
+        "objecttype(bathtub 1: object, bathtubtype : otype)",
+        "objecttype(candle 1: object, candletype : otype)",
+        "objecttype(cloth 1: object, clothtype : otype)",
+        "objecttype(cloth 2: object, clothtype : otype)",
+        "objecttype(dishsponge 1: object, dishspongetype : otype)",
+        "objecttype(dishsponge 2: object, dishspongetype : otype)",
+        "objecttype(dishsponge 3: object, dishspongetype : otype)",
+        "objecttype(handtowel 1: object, handtoweltype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(mirror 1: object, mirrortype : otype)",
+        "objecttype(papertowelroll 1: object, papertowelrolltype : otype)",
+        "objecttype(plunger 1: object, plungertype : otype)",
+        "objecttype(scrubbrush 1: object, scrubbrushtype : otype)",
+        "objecttype(showerdoor 1: object, showerdoortype : otype)",
+        "objecttype(showerglass 1: object, showerglasstype : otype)",
+        "objecttype(sink 1: object, sinktype : otype)",
+        "objecttype(sink 2: object, sinktype : otype)",
+        "objecttype(soapbar 1: object, soapbartype : otype)",
+        "objecttype(soapbottle 1: object, soapbottletype : otype)",
+        "objecttype(soapbottle 2: object, soapbottletype : otype)",
+        "objecttype(spraybottle 1: object, spraybottletype : otype)",
+        "objecttype(spraybottle 2: object, spraybottletype : otype)",
+        "objecttype(spraybottle 3: object, spraybottletype : otype)",
+        "objecttype(toiletpaper 1: object, toiletpapertype : otype)",
+        "objecttype(toiletpaper 2: object, toiletpapertype : otype)",
+        "objecttype(towel 1: object, toweltype : otype)",
+        "objecttype(towel 2: object, toweltype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "objecttype(window 2: object, windowtype : otype)",
+        "openable(cabinet 1: receptacle)",
+        "openable(cabinet 2: receptacle)",
+        "openable(cabinet 3: receptacle)",
+        "openable(cabinet 4: receptacle)",
+        "pickupable(candle 1: object)",
+        "pickupable(cloth 1: object)",
+        "pickupable(cloth 2: object)",
+        "pickupable(dishsponge 1: object)",
+        "pickupable(dishsponge 2: object)",
+        "pickupable(dishsponge 3: object)",
+        "pickupable(handtowel 1: object)",
+        "pickupable(papertowelroll 1: object)",
+        "pickupable(plunger 1: object)",
+        "pickupable(scrubbrush 1: object)",
+        "pickupable(soapbar 1: object)",
+        "pickupable(soapbottle 1: object)",
+        "pickupable(soapbottle 2: object)",
+        "pickupable(spraybottle 1: object)",
+        "pickupable(spraybottle 2: object)",
+        "pickupable(spraybottle 3: object)",
+        "pickupable(toiletpaper 1: object)",
+        "pickupable(toiletpaper 2: object)",
+        "pickupable(towel 1: object)",
+        "pickupable(towel 2: object)",
+        "receptacleatlocation(bathtubbasin 1: receptacle, loc 3: location)",
+        "receptacleatlocation(cabinet 1: receptacle, loc 7: location)",
+        "receptacleatlocation(cabinet 2: receptacle, loc 11: location)",
+        "receptacleatlocation(cabinet 3: receptacle, loc 9: location)",
+        "receptacleatlocation(cabinet 4: receptacle, loc 13: location)",
+        "receptacleatlocation(countertop 1: receptacle, loc 10: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 23: location)",
+        "receptacleatlocation(handtowelholder 1: receptacle, loc 22: location)",
+        "receptacleatlocation(shelf 1: receptacle, loc 1: location)",
+        "receptacleatlocation(sinkbasin 1: receptacle, loc 8: location)",
+        "receptacleatlocation(sinkbasin 2: receptacle, loc 15: location)",
+        "receptacleatlocation(toilet 1: receptacle, loc 18: location)",
+        "receptacleatlocation(toiletpaperhanger 1: receptacle, loc 21: location)",
+        "receptacleatlocation(towelholder 1: receptacle, loc 19: location)",
+        "receptacleatlocation(towelholder 2: receptacle, loc 20: location)",
+        "receptacletype(bathtubbasin 1: receptacle, bathtubbasintype : rtype)",
+        "receptacletype(cabinet 1: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 2: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 3: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 4: receptacle, cabinettype : rtype)",
+        "receptacletype(countertop 1: receptacle, countertoptype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(handtowelholder 1: receptacle, handtowelholdertype : rtype)",
+        "receptacletype(shelf 1: receptacle, shelftype : rtype)",
+        "receptacletype(sinkbasin 1: receptacle, sinkbasintype : rtype)",
+        "receptacletype(sinkbasin 2: receptacle, sinkbasintype : rtype)",
+        "receptacletype(toilet 1: receptacle, toilettype : rtype)",
+        "receptacletype(toiletpaperhanger 1: receptacle, toiletpaperhangertype : rtype)",
+        "receptacletype(towelholder 1: receptacle, towelholdertype : rtype)",
+        "receptacletype(towelholder 2: receptacle, towelholdertype : rtype)"
+      ],
+      "admissible_commands": [
+        "examine sinkbasin 2",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 2,
+      "thought": "I need to find a dish sponge in the sinkbasin.",
+      "action": "go to sinkbasin 2",
+      "parse_ok": true,
+      "thought_word_count": 10,
+      "raw_response": "Thought: I need to find a dish sponge in the sinkbasin.\nAction: go to sinkbasin 2\n",
+      "model": {
+        "latency_seconds": 1.8957784180001909,
+        "prompt_tokens": 458,
+        "prompt_sha256": "83e0a9ef8cd26fe3007f273229912d45bae2e2e0c2dbbdb8a85af0f66590186f",
+        "seed": 20262135,
+        "truncated": false,
+        "tokens_predicted": 26,
+        "tokens_evaluated": 458,
+        "cached_tokens": 392,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 392,
+          "prompt_n": 66,
+          "prompt_ms": 637.097,
+          "prompt_per_token_ms": 9.652984848484849,
+          "prompt_per_second": 103.59489999168102,
+          "predicted_n": 26,
+          "predicted_ms": 1256.107,
+          "predicted_per_token_ms": 50.244279999999996,
+          "predicted_per_second": 19.902763060790203
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "f6c524fd289405725837cf82169dcb23ca89f782f46a941bfd12a6ee2f10d3f6",
+      "admissible_before": [
+        "examine sinkbasin 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "recorded_utc": "2026-11-27T09:38:22.408956+00:00"
+    },
+    {
+      "observation": "You arrive at sinkbasin 1. On the sinkbasin 1, you see nothing.",
+      "state_hash": "1aedd9e7288a15334b36e9519d3ccf2513321a3a7789988c70c20c4a6e3a242c",
+      "facts": [
+        "atlocation(agent1 : agent, loc 8: location)",
+        "cancontain(bathtubbasintype : rtype, clothtype : otype)",
+        "cancontain(bathtubbasintype : rtype, dishspongetype : otype)",
+        "cancontain(bathtubbasintype : rtype, handtoweltype : otype)",
+        "cancontain(bathtubbasintype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, candletype : otype)",
+        "cancontain(cabinettype : rtype, clothtype : otype)",
+        "cancontain(cabinettype : rtype, dishspongetype : otype)",
+        "cancontain(cabinettype : rtype, handtoweltype : otype)",
+        "cancontain(cabinettype : rtype, plungertype : otype)",
+        "cancontain(cabinettype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, soapbottletype : otype)",
+        "cancontain(cabinettype : rtype, spraybottletype : otype)",
+        "cancontain(cabinettype : rtype, toiletpapertype : otype)",
+        "cancontain(countertoptype : rtype, candletype : otype)",
+        "cancontain(countertoptype : rtype, clothtype : otype)",
+        "cancontain(countertoptype : rtype, dishspongetype : otype)",
+        "cancontain(countertoptype : rtype, handtoweltype : otype)",
+        "cancontain(countertoptype : rtype, soapbartype : otype)",
+        "cancontain(countertoptype : rtype, soapbottletype : otype)",
+        "cancontain(countertoptype : rtype, spraybottletype : otype)",
+        "cancontain(countertoptype : rtype, toiletpapertype : otype)",
+        "cancontain(garbagecantype : rtype, clothtype : otype)",
+        "cancontain(garbagecantype : rtype, dishspongetype : otype)",
+        "cancontain(garbagecantype : rtype, handtoweltype : otype)",
+        "cancontain(garbagecantype : rtype, soapbartype : otype)",
+        "cancontain(garbagecantype : rtype, soapbottletype : otype)",
+        "cancontain(garbagecantype : rtype, spraybottletype : otype)",
+        "cancontain(garbagecantype : rtype, toiletpapertype : otype)",
+        "cancontain(handtowelholdertype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, candletype : otype)",
+        "cancontain(shelftype : rtype, clothtype : otype)",
+        "cancontain(shelftype : rtype, dishspongetype : otype)",
+        "cancontain(shelftype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, soapbartype : otype)",
+        "cancontain(shelftype : rtype, soapbottletype : otype)",
+        "cancontain(shelftype : rtype, spraybottletype : otype)",
+        "cancontain(shelftype : rtype, toiletpapertype : otype)",
+        "cancontain(sinkbasintype : rtype, clothtype : otype)",
+        "cancontain(sinkbasintype : rtype, dishspongetype : otype)",
+        "cancontain(sinkbasintype : rtype, handtoweltype : otype)",
+        "cancontain(sinkbasintype : rtype, soapbartype : otype)",
+        "cancontain(toiletpaperhangertype : rtype, toiletpapertype : otype)",
+        "cancontain(toilettype : rtype, candletype : otype)",
+        "cancontain(toilettype : rtype, clothtype : otype)",
+        "cancontain(toilettype : rtype, dishspongetype : otype)",
+        "cancontain(toilettype : rtype, handtoweltype : otype)",
+        "cancontain(toilettype : rtype, soapbartype : otype)",
+        "cancontain(toilettype : rtype, soapbottletype : otype)",
+        "cancontain(toilettype : rtype, spraybottletype : otype)",
+        "cancontain(toilettype : rtype, toiletpapertype : otype)",
+        "cancontain(towelholdertype : rtype, toweltype : otype)",
+        "cleanable(cloth 1: object)",
+        "cleanable(cloth 2: object)",
+        "cleanable(dishsponge 1: object)",
+        "cleanable(dishsponge 2: object)",
+        "cleanable(dishsponge 3: object)",
+        "cleanable(soapbar 1: object)",
+        "inreceptacle(candle 1: object, countertop 1: receptacle)",
+        "inreceptacle(cloth 1: object, shelf 1: receptacle)",
+        "inreceptacle(cloth 2: object, cabinet 1: receptacle)",
+        "inreceptacle(dishsponge 1: object, shelf 1: receptacle)",
+        "inreceptacle(dishsponge 2: object, bathtubbasin 1: receptacle)",
+        "inreceptacle(dishsponge 3: object, toilet 1: receptacle)",
+        "inreceptacle(handtowel 1: object, handtowelholder 1: receptacle)",
+        "inreceptacle(mirror 1: object, countertop 1: receptacle)",
+        "inreceptacle(papertowelroll 1: object, toilet 1: receptacle)",
+        "inreceptacle(showerglass 1: object, countertop 1: receptacle)",
+        "inreceptacle(showerglass 1: object, shelf 1: receptacle)",
+        "inreceptacle(soapbar 1: object, toilet 1: receptacle)",
+        "inreceptacle(soapbottle 1: object, countertop 1: receptacle)",
+        "inreceptacle(spraybottle 1: object, cabinet 2: receptacle)",
+        "inreceptacle(spraybottle 2: object, cabinet 3: receptacle)",
+        "inreceptacle(spraybottle 3: object, toilet 1: receptacle)",
+        "inreceptacle(toiletpaper 1: object, cabinet 1: receptacle)",
+        "inreceptacle(toiletpaper 2: object, garbagecan 1: receptacle)",
+        "inreceptacle(towel 1: object, towelholder 1: receptacle)",
+        "inreceptacle(towel 2: object, towelholder 2: receptacle)",
+        "not_atlocation(agent1 : agent, loc 12: location)",
+        "not_atlocation(agent1 : agent, loc 15: location)",
+        "objectatlocation(bathtub 1: object, loc 3: location)",
+        "objectatlocation(candle 1: object, loc 10: location)",
+        "objectatlocation(cloth 1: object, loc 1: location)",
+        "objectatlocation(cloth 2: object, loc 7: location)",
+        "objectatlocation(dishsponge 1: object, loc 1: location)",
+        "objectatlocation(dishsponge 2: object, loc 3: location)",
+        "objectatlocation(dishsponge 3: object, loc 18: location)",
+        "objectatlocation(handtowel 1: object, loc 22: location)",
+        "objectatlocation(lightswitch 1: object, loc 17: location)",
+        "objectatlocation(mirror 1: object, loc 10: location)",
+        "objectatlocation(papertowelroll 1: object, loc 18: location)",
+        "objectatlocation(plunger 1: object, loc 16: location)",
+        "objectatlocation(scrubbrush 1: object, loc 16: location)",
+        "objectatlocation(showerdoor 1: object, loc 5: location)",
+        "objectatlocation(showerglass 1: object, loc 1: location)",
+        "objectatlocation(sink 1: object, loc 6: location)",
+        "objectatlocation(sink 2: object, loc 14: location)",
+        "objectatlocation(soapbar 1: object, loc 18: location)",
+        "objectatlocation(soapbottle 1: object, loc 10: location)",
+        "objectatlocation(soapbottle 2: object, loc 3: location)",
+        "objectatlocation(spraybottle 1: object, loc 11: location)",
+        "objectatlocation(spraybottle 2: object, loc 9: location)",
+        "objectatlocation(spraybottle 3: object, loc 18: location)",
+        "objectatlocation(toiletpaper 1: object, loc 7: location)",
+        "objectatlocation(toiletpaper 2: object, loc 23: location)",
+        "objectatlocation(towel 1: object, loc 19: location)",
+        "objectatlocation(towel 2: object, loc 20: location)",
+        "objectatlocation(window 1: object, loc 2: location)",
+        "objectatlocation(window 2: object, loc 4: location)",
+        "objecttype(bathtub 1: object, bathtubtype : otype)",
+        "objecttype(candle 1: object, candletype : otype)",
+        "objecttype(cloth 1: object, clothtype : otype)",
+        "objecttype(cloth 2: object, clothtype : otype)",
+        "objecttype(dishsponge 1: object, dishspongetype : otype)",
+        "objecttype(dishsponge 2: object, dishspongetype : otype)",
+        "objecttype(dishsponge 3: object, dishspongetype : otype)",
+        "objecttype(handtowel 1: object, handtoweltype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(mirror 1: object, mirrortype : otype)",
+        "objecttype(papertowelroll 1: object, papertowelrolltype : otype)",
+        "objecttype(plunger 1: object, plungertype : otype)",
+        "objecttype(scrubbrush 1: object, scrubbrushtype : otype)",
+        "objecttype(showerdoor 1: object, showerdoortype : otype)",
+        "objecttype(showerglass 1: object, showerglasstype : otype)",
+        "objecttype(sink 1: object, sinktype : otype)",
+        "objecttype(sink 2: object, sinktype : otype)",
+        "objecttype(soapbar 1: object, soapbartype : otype)",
+        "objecttype(soapbottle 1: object, soapbottletype : otype)",
+        "objecttype(soapbottle 2: object, soapbottletype : otype)",
+        "objecttype(spraybottle 1: object, spraybottletype : otype)",
+        "objecttype(spraybottle 2: object, spraybottletype : otype)",
+        "objecttype(spraybottle 3: object, spraybottletype : otype)",
+        "objecttype(toiletpaper 1: object, toiletpapertype : otype)",
+        "objecttype(toiletpaper 2: object, toiletpapertype : otype)",
+        "objecttype(towel 1: object, toweltype : otype)",
+        "objecttype(towel 2: object, toweltype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "objecttype(window 2: object, windowtype : otype)",
+        "openable(cabinet 1: receptacle)",
+        "openable(cabinet 2: receptacle)",
+        "openable(cabinet 3: receptacle)",
+        "openable(cabinet 4: receptacle)",
+        "pickupable(candle 1: object)",
+        "pickupable(cloth 1: object)",
+        "pickupable(cloth 2: object)",
+        "pickupable(dishsponge 1: object)",
+        "pickupable(dishsponge 2: object)",
+        "pickupable(dishsponge 3: object)",
+        "pickupable(handtowel 1: object)",
+        "pickupable(papertowelroll 1: object)",
+        "pickupable(plunger 1: object)",
+        "pickupable(scrubbrush 1: object)",
+        "pickupable(soapbar 1: object)",
+        "pickupable(soapbottle 1: object)",
+        "pickupable(soapbottle 2: object)",
+        "pickupable(spraybottle 1: object)",
+        "pickupable(spraybottle 2: object)",
+        "pickupable(spraybottle 3: object)",
+        "pickupable(toiletpaper 1: object)",
+        "pickupable(toiletpaper 2: object)",
+        "pickupable(towel 1: object)",
+        "pickupable(towel 2: object)",
+        "receptacleatlocation(bathtubbasin 1: receptacle, loc 3: location)",
+        "receptacleatlocation(cabinet 1: receptacle, loc 7: location)",
+        "receptacleatlocation(cabinet 2: receptacle, loc 11: location)",
+        "receptacleatlocation(cabinet 3: receptacle, loc 9: location)",
+        "receptacleatlocation(cabinet 4: receptacle, loc 13: location)",
+        "receptacleatlocation(countertop 1: receptacle, loc 10: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 23: location)",
+        "receptacleatlocation(handtowelholder 1: receptacle, loc 22: location)",
+        "receptacleatlocation(shelf 1: receptacle, loc 1: location)",
+        "receptacleatlocation(sinkbasin 1: receptacle, loc 8: location)",
+        "receptacleatlocation(sinkbasin 2: receptacle, loc 15: location)",
+        "receptacleatlocation(toilet 1: receptacle, loc 18: location)",
+        "receptacleatlocation(toiletpaperhanger 1: receptacle, loc 21: location)",
+        "receptacleatlocation(towelholder 1: receptacle, loc 19: location)",
+        "receptacleatlocation(towelholder 2: receptacle, loc 20: location)",
+        "receptacletype(bathtubbasin 1: receptacle, bathtubbasintype : rtype)",
+        "receptacletype(cabinet 1: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 2: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 3: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 4: receptacle, cabinettype : rtype)",
+        "receptacletype(countertop 1: receptacle, countertoptype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(handtowelholder 1: receptacle, handtowelholdertype : rtype)",
+        "receptacletype(shelf 1: receptacle, shelftype : rtype)",
+        "receptacletype(sinkbasin 1: receptacle, sinkbasintype : rtype)",
+        "receptacletype(sinkbasin 2: receptacle, sinkbasintype : rtype)",
+        "receptacletype(toilet 1: receptacle, toilettype : rtype)",
+        "receptacletype(toiletpaperhanger 1: receptacle, toiletpaperhangertype : rtype)",
+        "receptacletype(towelholder 1: receptacle, towelholdertype : rtype)",
+        "receptacletype(towelholder 2: receptacle, towelholdertype : rtype)"
+      ],
+      "admissible_commands": [
+        "examine sinkbasin 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 3,
+      "thought": "I need to find a dish sponge in the sinkbasin.",
+      "action": "go to sinkbasin 1",
+      "parse_ok": true,
+      "thought_word_count": 10,
+      "raw_response": "Thought: I need to find a dish sponge in the sinkbasin.\nAction: go to sinkbasin 1\n",
+      "model": {
+        "latency_seconds": 1.9846231159990566,
+        "prompt_tokens": 511,
+        "prompt_sha256": "2c1e3cc8102bf5f41141e00408e4251871525cce9fea319182aca7cf89a30c0f",
+        "seed": 20262136,
+        "truncated": false,
+        "tokens_predicted": 26,
+        "tokens_evaluated": 511,
+        "cached_tokens": 443,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 443,
+          "prompt_n": 68,
+          "prompt_ms": 669.41,
+          "prompt_per_token_ms": 9.844264705882352,
+          "prompt_per_second": 101.58199011069449,
+          "predicted_n": 26,
+          "predicted_ms": 1312.646,
+          "predicted_per_token_ms": 52.50584,
+          "predicted_per_second": 19.04550046242475
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "f29d7e5b205a471197fcdedd7136c21e2902bad98186da2f693f36b5bd63b950",
+      "admissible_before": [
+        "examine sinkbasin 2",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 1",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "recorded_utc": "2026-11-27T09:38:24.455747+00:00"
+    },
+    {
+      "observation": "Nothing happens.",
+      "state_hash": "1aedd9e7288a15334b36e9519d3ccf2513321a3a7789988c70c20c4a6e3a242c",
+      "facts": [
+        "atlocation(agent1 : agent, loc 8: location)",
+        "cancontain(bathtubbasintype : rtype, clothtype : otype)",
+        "cancontain(bathtubbasintype : rtype, dishspongetype : otype)",
+        "cancontain(bathtubbasintype : rtype, handtoweltype : otype)",
+        "cancontain(bathtubbasintype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, candletype : otype)",
+        "cancontain(cabinettype : rtype, clothtype : otype)",
+        "cancontain(cabinettype : rtype, dishspongetype : otype)",
+        "cancontain(cabinettype : rtype, handtoweltype : otype)",
+        "cancontain(cabinettype : rtype, plungertype : otype)",
+        "cancontain(cabinettype : rtype, soapbartype : otype)",
+        "cancontain(cabinettype : rtype, soapbottletype : otype)",
+        "cancontain(cabinettype : rtype, spraybottletype : otype)",
+        "cancontain(cabinettype : rtype, toiletpapertype : otype)",
+        "cancontain(countertoptype : rtype, candletype : otype)",
+        "cancontain(countertoptype : rtype, clothtype : otype)",
+        "cancontain(countertoptype : rtype, dishspongetype : otype)",
+        "cancontain(countertoptype : rtype, handtoweltype : otype)",
+        "cancontain(countertoptype : rtype, soapbartype : otype)",
+        "cancontain(countertoptype : rtype, soapbottletype : otype)",
+        "cancontain(countertoptype : rtype, spraybottletype : otype)",
+        "cancontain(countertoptype : rtype, toiletpapertype : otype)",
+        "cancontain(garbagecantype : rtype, clothtype : otype)",
+        "cancontain(garbagecantype : rtype, dishspongetype : otype)",
+        "cancontain(garbagecantype : rtype, handtoweltype : otype)",
+        "cancontain(garbagecantype : rtype, soapbartype : otype)",
+        "cancontain(garbagecantype : rtype, soapbottletype : otype)",
+        "cancontain(garbagecantype : rtype, spraybottletype : otype)",
+        "cancontain(garbagecantype : rtype, toiletpapertype : otype)",
+        "cancontain(handtowelholdertype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, candletype : otype)",
+        "cancontain(shelftype : rtype, clothtype : otype)",
+        "cancontain(shelftype : rtype, dishspongetype : otype)",
+        "cancontain(shelftype : rtype, handtoweltype : otype)",
+        "cancontain(shelftype : rtype, soapbartype : otype)",
+        "cancontain(shelftype : rtype, soapbottletype : otype)",
+        "cancontain(shelftype : rtype, spraybottletype : otype)",
+        "cancontain(shelftype : rtype, toiletpapertype : otype)",
+        "cancontain(sinkbasintype : rtype, clothtype : otype)",
+        "cancontain(sinkbasintype : rtype, dishspongetype : otype)",
+        "cancontain(sinkbasintype : rtype, handtoweltype : otype)",
+        "cancontain(sinkbasintype : rtype, soapbartype : otype)",
+        "cancontain(toiletpaperhangertype : rtype, toiletpapertype : otype)",
+        "cancontain(toilettype : rtype, candletype : otype)",
+        "cancontain(toilettype : rtype, clothtype : otype)",
+        "cancontain(toilettype : rtype, dishspongetype : otype)",
+        "cancontain(toilettype : rtype, handtoweltype : otype)",
+        "cancontain(toilettype : rtype, soapbartype : otype)",
+        "cancontain(toilettype : rtype, soapbottletype : otype)",
+        "cancontain(toilettype : rtype, spraybottletype : otype)",
+        "cancontain(toilettype : rtype, toiletpapertype : otype)",
+        "cancontain(towelholdertype : rtype, toweltype : otype)",
+        "cleanable(cloth 1: object)",
+        "cleanable(cloth 2: object)",
+        "cleanable(dishsponge 1: object)",
+        "cleanable(dishsponge 2: object)",
+        "cleanable(dishsponge 3: object)",
+        "cleanable(soapbar 1: object)",
+        "inreceptacle(candle 1: object, countertop 1: receptacle)",
+        "inreceptacle(cloth 1: object, shelf 1: receptacle)",
+        "inreceptacle(cloth 2: object, cabinet 1: receptacle)",
+        "inreceptacle(dishsponge 1: object, shelf 1: receptacle)",
+        "inreceptacle(dishsponge 2: object, bathtubbasin 1: receptacle)",
+        "inreceptacle(dishsponge 3: object, toilet 1: receptacle)",
+        "inreceptacle(handtowel 1: object, handtowelholder 1: receptacle)",
+        "inreceptacle(mirror 1: object, countertop 1: receptacle)",
+        "inreceptacle(papertowelroll 1: object, toilet 1: receptacle)",
+        "inreceptacle(showerglass 1: object, countertop 1: receptacle)",
+        "inreceptacle(showerglass 1: object, shelf 1: receptacle)",
+        "inreceptacle(soapbar 1: object, toilet 1: receptacle)",
+        "inreceptacle(soapbottle 1: object, countertop 1: receptacle)",
+        "inreceptacle(spraybottle 1: object, cabinet 2: receptacle)",
+        "inreceptacle(spraybottle 2: object, cabinet 3: receptacle)",
+        "inreceptacle(spraybottle 3: object, toilet 1: receptacle)",
+        "inreceptacle(toiletpaper 1: object, cabinet 1: receptacle)",
+        "inreceptacle(toiletpaper 2: object, garbagecan 1: receptacle)",
+        "inreceptacle(towel 1: object, towelholder 1: receptacle)",
+        "inreceptacle(towel 2: object, towelholder 2: receptacle)",
+        "not_atlocation(agent1 : agent, loc 12: location)",
+        "not_atlocation(agent1 : agent, loc 15: location)",
+        "objectatlocation(bathtub 1: object, loc 3: location)",
+        "objectatlocation(candle 1: object, loc 10: location)",
+        "objectatlocation(cloth 1: object, loc 1: location)",
+        "objectatlocation(cloth 2: object, loc 7: location)",
+        "objectatlocation(dishsponge 1: object, loc 1: location)",
+        "objectatlocation(dishsponge 2: object, loc 3: location)",
+        "objectatlocation(dishsponge 3: object, loc 18: location)",
+        "objectatlocation(handtowel 1: object, loc 22: location)",
+        "objectatlocation(lightswitch 1: object, loc 17: location)",
+        "objectatlocation(mirror 1: object, loc 10: location)",
+        "objectatlocation(papertowelroll 1: object, loc 18: location)",
+        "objectatlocation(plunger 1: object, loc 16: location)",
+        "objectatlocation(scrubbrush 1: object, loc 16: location)",
+        "objectatlocation(showerdoor 1: object, loc 5: location)",
+        "objectatlocation(showerglass 1: object, loc 1: location)",
+        "objectatlocation(sink 1: object, loc 6: location)",
+        "objectatlocation(sink 2: object, loc 14: location)",
+        "objectatlocation(soapbar 1: object, loc 18: location)",
+        "objectatlocation(soapbottle 1: object, loc 10: location)",
+        "objectatlocation(soapbottle 2: object, loc 3: location)",
+        "objectatlocation(spraybottle 1: object, loc 11: location)",
+        "objectatlocation(spraybottle 2: object, loc 9: location)",
+        "objectatlocation(spraybottle 3: object, loc 18: location)",
+        "objectatlocation(toiletpaper 1: object, loc 7: location)",
+        "objectatlocation(toiletpaper 2: object, loc 23: location)",
+        "objectatlocation(towel 1: object, loc 19: location)",
+        "objectatlocation(towel 2: object, loc 20: location)",
+        "objectatlocation(window 1: object, loc 2: location)",
+        "objectatlocation(window 2: object, loc 4: location)",
+        "objecttype(bathtub 1: object, bathtubtype : otype)",
+        "objecttype(candle 1: object, candletype : otype)",
+        "objecttype(cloth 1: object, clothtype : otype)",
+        "objecttype(cloth 2: object, clothtype : otype)",
+        "objecttype(dishsponge 1: object, dishspongetype : otype)",
+        "objecttype(dishsponge 2: object, dishspongetype : otype)",
+        "objecttype(dishsponge 3: object, dishspongetype : otype)",
+        "objecttype(handtowel 1: object, handtoweltype : otype)",
+        "objecttype(lightswitch 1: object, lightswitchtype : otype)",
+        "objecttype(mirror 1: object, mirrortype : otype)",
+        "objecttype(papertowelroll 1: object, papertowelrolltype : otype)",
+        "objecttype(plunger 1: object, plungertype : otype)",
+        "objecttype(scrubbrush 1: object, scrubbrushtype : otype)",
+        "objecttype(showerdoor 1: object, showerdoortype : otype)",
+        "objecttype(showerglass 1: object, showerglasstype : otype)",
+        "objecttype(sink 1: object, sinktype : otype)",
+        "objecttype(sink 2: object, sinktype : otype)",
+        "objecttype(soapbar 1: object, soapbartype : otype)",
+        "objecttype(soapbottle 1: object, soapbottletype : otype)",
+        "objecttype(soapbottle 2: object, soapbottletype : otype)",
+        "objecttype(spraybottle 1: object, spraybottletype : otype)",
+        "objecttype(spraybottle 2: object, spraybottletype : otype)",
+        "objecttype(spraybottle 3: object, spraybottletype : otype)",
+        "objecttype(toiletpaper 1: object, toiletpapertype : otype)",
+        "objecttype(toiletpaper 2: object, toiletpapertype : otype)",
+        "objecttype(towel 1: object, toweltype : otype)",
+        "objecttype(towel 2: object, toweltype : otype)",
+        "objecttype(window 1: object, windowtype : otype)",
+        "objecttype(window 2: object, windowtype : otype)",
+        "openable(cabinet 1: receptacle)",
+        "openable(cabinet 2: receptacle)",
+        "openable(cabinet 3: receptacle)",
+        "openable(cabinet 4: receptacle)",
+        "pickupable(candle 1: object)",
+        "pickupable(cloth 1: object)",
+        "pickupable(cloth 2: object)",
+        "pickupable(dishsponge 1: object)",
+        "pickupable(dishsponge 2: object)",
+        "pickupable(dishsponge 3: object)",
+        "pickupable(handtowel 1: object)",
+        "pickupable(papertowelroll 1: object)",
+        "pickupable(plunger 1: object)",
+        "pickupable(scrubbrush 1: object)",
+        "pickupable(soapbar 1: object)",
+        "pickupable(soapbottle 1: object)",
+        "pickupable(soapbottle 2: object)",
+        "pickupable(spraybottle 1: object)",
+        "pickupable(spraybottle 2: object)",
+        "pickupable(spraybottle 3: object)",
+        "pickupable(toiletpaper 1: object)",
+        "pickupable(toiletpaper 2: object)",
+        "pickupable(towel 1: object)",
+        "pickupable(towel 2: object)",
+        "receptacleatlocation(bathtubbasin 1: receptacle, loc 3: location)",
+        "receptacleatlocation(cabinet 1: receptacle, loc 7: location)",
+        "receptacleatlocation(cabinet 2: receptacle, loc 11: location)",
+        "receptacleatlocation(cabinet 3: receptacle, loc 9: location)",
+        "receptacleatlocation(cabinet 4: receptacle, loc 13: location)",
+        "receptacleatlocation(countertop 1: receptacle, loc 10: location)",
+        "receptacleatlocation(garbagecan 1: receptacle, loc 23: location)",
+        "receptacleatlocation(handtowelholder 1: receptacle, loc 22: location)",
+        "receptacleatlocation(shelf 1: receptacle, loc 1: location)",
+        "receptacleatlocation(sinkbasin 1: receptacle, loc 8: location)",
+        "receptacleatlocation(sinkbasin 2: receptacle, loc 15: location)",
+        "receptacleatlocation(toilet 1: receptacle, loc 18: location)",
+        "receptacleatlocation(toiletpaperhanger 1: receptacle, loc 21: location)",
+        "receptacleatlocation(towelholder 1: receptacle, loc 19: location)",
+        "receptacleatlocation(towelholder 2: receptacle, loc 20: location)",
+        "receptacletype(bathtubbasin 1: receptacle, bathtubbasintype : rtype)",
+        "receptacletype(cabinet 1: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 2: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 3: receptacle, cabinettype : rtype)",
+        "receptacletype(cabinet 4: receptacle, cabinettype : rtype)",
+        "receptacletype(countertop 1: receptacle, countertoptype : rtype)",
+        "receptacletype(garbagecan 1: receptacle, garbagecantype : rtype)",
+        "receptacletype(handtowelholder 1: receptacle, handtowelholdertype : rtype)",
+        "receptacletype(shelf 1: receptacle, shelftype : rtype)",
+        "receptacletype(sinkbasin 1: receptacle, sinkbasintype : rtype)",
+        "receptacletype(sinkbasin 2: receptacle, sinkbasintype : rtype)",
+        "receptacletype(toilet 1: receptacle, toilettype : rtype)",
+        "receptacletype(toiletpaperhanger 1: receptacle, toiletpaperhangertype : rtype)",
+        "receptacletype(towelholder 1: receptacle, towelholdertype : rtype)",
+        "receptacletype(towelholder 2: receptacle, towelholdertype : rtype)"
+      ],
+      "admissible_commands": [
+        "examine sinkbasin 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "won": false,
+      "done": false,
+      "reward": 0.0,
+      "moves": 3,
+      "thought": "I need to find a dish sponge in the sinkbasin.",
+      "action": "go to sinkbasin 1",
+      "parse_ok": true,
+      "thought_word_count": 10,
+      "raw_response": "Thought: I need to find a dish sponge in the sinkbasin.\nAction: go to sinkbasin 1\n",
+      "model": {
+        "latency_seconds": 1.9360552899997856,
+        "prompt_tokens": 564,
+        "prompt_sha256": "faa1249836cf5a6cd006ca9e7679010fe6c3b94472113965a4a085fd19a32bdc",
+        "seed": 20262137,
+        "truncated": false,
+        "tokens_predicted": 26,
+        "tokens_evaluated": 564,
+        "cached_tokens": 496,
+        "stop_type": "eos",
+        "timings": {
+          "cache_n": 496,
+          "prompt_n": 68,
+          "prompt_ms": 641.702,
+          "prompt_per_token_ms": 9.436794117647059,
+          "prompt_per_second": 105.96819084247828,
+          "predicted_n": 26,
+          "predicted_ms": 1291.566,
+          "predicted_per_token_ms": 51.66264,
+          "predicted_per_second": 19.35634725596679
+        },
+        "config": {
+          "base_url": "http://127.0.0.1:18080",
+          "context_size": 16384,
+          "n_predict": 128,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.0,
+          "repeat_penalty": 1.0,
+          "cache_prompt": true
+        }
+      },
+      "before_state_hash": "1aedd9e7288a15334b36e9519d3ccf2513321a3a7789988c70c20c4a6e3a242c",
+      "admissible_before": [
+        "examine sinkbasin 1",
+        "go to bathtubbasin 1",
+        "go to cabinet 1",
+        "go to cabinet 2",
+        "go to cabinet 3",
+        "go to cabinet 4",
+        "go to countertop 1",
+        "go to garbagecan 1",
+        "go to handtowelholder 1",
+        "go to shelf 1",
+        "go to sinkbasin 2",
+        "go to toilet 1",
+        "go to toiletpaperhanger 1",
+        "go to towelholder 1",
+        "go to towelholder 2",
+        "help",
+        "inventory",
+        "look"
+      ],
+      "recorded_utc": "2026-11-27T09:38:26.445094+00:00"
+    }
+  ]
+}

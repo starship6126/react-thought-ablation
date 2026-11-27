@@ -312,6 +312,12 @@ def _write_report(root, rows, checkpoints, runs, completed_pairs, bootstrap_samp
                  f"{sum(count > 20 for count in plan_words)}/{len(plan_words)} exceed the 20-word instruction. These responses are retained without rewriting."]
         if latencies:
             text.append(f"Response latency: median {np.median(latencies):.2f}s, p95 {np.quantile(latencies, .95):.2f}s; prompt tokens maximum {max(tokens)}.")
+        rejected = sum(step.get("observation", "").strip() == "Nothing happens." for step in steps)
+        multi_command_lines = sum(bool(re.search(r"[.;]\s+[a-z]", step.get("action", ""), re.I)) for step in steps)
+        text.append(f"The official environment rejected {rejected}/{len(steps)} submitted command strings (`Nothing happens.`). "
+                    f"{multi_command_lines} Action lines contain apparent multi-command punctuation. "
+                    "Parsed means the two-line Thought/Action response format was readable; it does not mean the command was valid or followed the one-action instruction. "
+                    "Each submitted string is one actual environment step, with no hidden splitting or repair.")
     for name in ("runtime_manifest.json", "model_manifest.json"):
         path = root / name
         if path.exists():
@@ -321,6 +327,10 @@ def _write_report(root, rows, checkpoints, runs, completed_pairs, bootstrap_samp
     if environment_path.exists():
         text += ["", "Environment versions, official data archive hashes, and split counts (`environment_manifest.json`):",
                  "```json", environment_path.read_text().strip(), "```"]
+    success_row = next(row for row in rows if row["metric"] == "success_20")
+    if completed_pairs == len(checkpoints) and success_row["a_numerator"] == success_row["b_numerator"] == 0:
+        text += ["", "Neither condition completed a task in this pilot. This observed performance floor limits what task-success comparisons can reveal about past thought history; "
+                 "a zero difference is not evidence that historical thought has no effect. Correction and recovery outcomes describe only the predeclared local subgoals, not completed tasks."]
     text += ["", "This is an exploratory pilot of Qwen2.5-1.5B-Instruct GGUF Q4_K_M on the official ALFWorld text environment. "
              "A small, selected set of recoverable checkpoints and normal controls does not establish effects for other models, environments, or the full unseen benchmark. "
              "Wide or degenerate bootstrap intervals with few games should not be interpreted as definitive evidence of equivalence or causality outside this intervention. "

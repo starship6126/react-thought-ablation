@@ -51,6 +51,7 @@ PYTHONPATH=src .venv/bin/python -m react_ablation.cli freeze \
   --run-dir "$RUN_DIR" --rubrics "$RUN_DIR/rubrics.json"
 PYTHONPATH=src .venv/bin/python -m react_ablation.cli run --run-dir "$RUN_DIR"
 PYTHONPATH=src .venv/bin/python -m react_ablation.cli score --run-dir "$RUN_DIR"
+.venv/bin/python scripts/verify_results.py --run-dir "$RUN_DIR"
 ```
 
 `freeze`는 목표 개수, 실제 환경 재생, rubric 필수 항목을 검증하고 체크포인트와 프로토콜 해시를 고정한다. `run`은 조건 순서를 무작위화하고, 각 조건을 새 환경에서 초기 행동을 재생한 뒤 최대 20행동 동안 실행한다. A/B는 같은 게임 seed, 모델, 프롬프트 형식과 디코딩 설정을 사용한다. 각 조건의 재개 이후 thought는 해당 조건 이력에 그대로 쌓인다. 매 게임·조건 시작 전에 서버 slot cache를 지우고 첫 요청의 재사용 토큰 수가 0인지 확인한다. 이후 같은 세션에서는 CPU 실행 시간을 줄이기 위해 KV cache를 재사용한다.
@@ -111,3 +112,13 @@ PYTHONPATH=src .venv/bin/python -m react_ablation.cli score --run-dir "$RUN_DIR"
 다운로드가 차단되면 설치 로그의 실패 명령·도메인을 확인하고 접근이 복구된 뒤 해당 설치 명령을 다시 실행한다. 필요한 공개 호스트는 `github.com`, `release-assets.githubusercontent.com`, `huggingface.co`, Hugging Face가 리디렉션하는 `cas-bridge.xethub.hf.co`·`transfer.xethub.hf.co`·`cdn-lfs.huggingface.co`, `pypi.org`, `files.pythonhosted.org`이다. 세부 실패 증거는 `artifacts/setup/*failures*`에 남는다. TLS 검증을 끄거나 토큰을 코드에 넣을 필요가 없다.
 
 원본: [ALFWorld](https://github.com/alfworld/alfworld), [공개 Qwen 가중치](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF), [llama.cpp](https://github.com/ggml-org/llama.cpp).
+
+## 완료한 실제 파일럿
+
+`pilot_20261127T093800Z_7f31`: 오류 8개·정상 4개, 실제 **12쌍·24세션·480행동** 완료. 전체 환경 재생과 마스킹 검증을 통과했다. 오류 감지(잠정)는 A 0/8, B 1/8; 전략 수정은 A 0/8, B 2/8; 복구는 양쪽 0/8; 과제 성공은 양쪽 0/12였다. 이 작은 모델·환경에서의 탐색적 결과이며, 낮은 과제 수행 능력 때문에 일반적 thought 효과를 결론 내릴 수 없다. 언어 점수는 눈가림 검토용 잠정 점수다.
+
+- [저장소 보고서](results/pilot_20261127T093800Z_7f31/report.md)
+- [Google Drive 실행 결과 폴더](https://drive.google.com/drive/folders/1y_byNrEmv9yddr2wKN3KoCVVPHcmuZM4) — 지정한 결과 파일 5개의 이름·개수·크기 재확인 완료
+- [Drive report.md](https://docs.google.com/document/d/1B8UKhGUjrn_8h98OX_kUNOYc7NZQx0EF/edit?usp=drivesdk&ouid=105331807499188956411&rtpof=true&sd=true)
+
+unseen 134개 본 실험은 아직 실행하지 않았다. 위 명령으로 별도 실행할 수 있다.
