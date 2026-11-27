@@ -219,13 +219,15 @@ def score_directory(run_dir, bootstrap_samples=10000, seed=20261127):
     write_json(root / "review_mapping.json", mapping)
     completed_pairs = sum(all(runs.get((cp["checkpoint_id"], c), {}).get("status") == "completed" for c in ("A", "B")) for cp in checkpoints)
     report = []
-    for metric_index, metric in enumerate(METRICS):
-        selected = [cp for cp in checkpoints if metric == "success_20" or cp["kind"] == ("normal" if metric == "false_positive_3" else "error")]
-        a = [scores[(cp["checkpoint_id"], "A")][metric]["score"] for cp in selected]
-        b = [scores[(cp["checkpoint_id"], "B")][metric]["score"] for cp in selected]
+    report_metrics = [(metric, metric, None if metric == "success_20" else "normal" if metric == "false_positive_3" else "error") for metric in METRICS]
+    report_metrics += [("success_20_error", "success_20", "error"), ("success_20_normal", "success_20", "normal")]
+    for metric_index, (metric, source_metric, kind) in enumerate(report_metrics):
+        selected = [cp for cp in checkpoints if kind is None or cp["kind"] == kind]
+        a = [scores[(cp["checkpoint_id"], "A")][source_metric]["score"] for cp in selected]
+        b = [scores[(cp["checkpoint_id"], "B")][source_metric]["score"] for cp in selected]
         n = len(selected)
         low, high = paired_bootstrap(selected, [x-y for x, y in zip(a, b)], bootstrap_samples, seed + metric_index)
-        provisional = any(scores[(cp["checkpoint_id"], c)][metric]["provisional"] for cp in selected for c in ("A", "B"))
+        provisional = any(scores[(cp["checkpoint_id"], c)][source_metric]["provisional"] for cp in selected for c in ("A", "B"))
         report.append({"metric": metric, "a_numerator": sum(a), "a_denominator": n,
                        "b_numerator": sum(b), "b_denominator": n,
                        "a_percent": 100 * sum(a) / n if n else None,
@@ -256,9 +258,28 @@ def _write_report(root, rows, checkpoints, runs, completed_pairs, bootstrap_samp
             "|---|---:|---:|---:|---:|---:|---:|---|"]
     for row in rows:
         text.append(f"| {row['metric']} | {row['a_numerator']}/{row['a_denominator']} ({fmt(row['a_percent'])}) | {row['b_numerator']}/{row['b_denominator']} ({fmt(row['b_percent'])}) | {fmt(row['a_minus_b_pp'])} | [{fmt(row['ci95_low_pp'])}, {fmt(row['ci95_high_pp'])}] | {row['a_only']} | {row['b_only']} | {row['score_status']} |")
+    depths = {}
+    for kind in ("error", "normal"):
+        values = [len(cp.get("history", [])) for cp in checkpoints if cp["kind"] == kind]
+        if values:
+            depths[kind] = f"{kind}: min {min(values)}, median {np.median(values):g}, max {max(values)}"
+    text += ["", "Pre-checkpoint history depth in thought/action turns — " + "; ".join(depths.values()) + ". "
+             "These depths delimit how much prior thought information this pilot actually removes.", "",
+             "`[MASKED]` replaces variable-length thought bodies with a fixed marker. All other prompt text is invariant, "
+             "but token counts and subsequent token positions can differ. This is an effect of the specified masking intervention; "
+             "there is no length-matched control."]
+    preflight_path = root / "preflight_old_placement_syntax" / "status.json"
+    if preflight_path.exists():
+        preflight = json.loads(preflight_path.read_text())
+        discarded = read_jsonl(preflight_path.parent / "candidates.jsonl")
+        text += ["", f"Preflight diagnostics retained in `preflight_old_placement_syntax/` contain {len(discarded)} discarded candidates "
+                 f"and {preflight.get('benchmark_pairs_executed', 'unknown')} benchmark A/B pairs. "
+                 "A recovery probe found an unsupported placement command in the shared prompt; it was corrected to the official `move OBJECT to RECEPTACLE` grammar. "
+                 "All reported checkpoints were recollected with that corrected prompt before freezing and A/B execution. The model and decoding settings were unchanged."]
     text += ["", "Detection requires a specific failed command or blocked subgoal within 3 actions. Generic retry language scores 0. "
              "Strategy correction is an actually executed action matching a frozen cause-specific rule within 5 actions, independent of verbal detection. "
              "Recovery uses frozen environment/action predicates within 10 actions. Task success uses the environment's official `won` flag within 20 actions. "
+             "`success_20` includes all assigned checkpoints; `success_20_error` and `success_20_normal` report the two checkpoint strata separately. "
              "Normal-case false positives concern pre-checkpoint history within 3 actions; newly observed post-checkpoint failures do not count.", "",
              "Language scores are conservative lexical provisional scores unless an explicit blinded reviewer override is entered in `blind_review.csv`. "
              "That CSV contains no condition name or pre-checkpoint thought body. `review_mapping.json` must be withheld from reviewers. "

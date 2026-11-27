@@ -52,12 +52,15 @@ class LocalModel:
         result.raise_for_status()
         props = result.json()
         from pathlib import Path
-        assert Path(props["model_path"]).name == "qwen2.5-1.5b-instruct-q4_k_m.gguf"
-        assert props["total_slots"] == 1
-        assert props["default_generation_settings"]["n_ctx"] == self.config.context_size
-        assert identity["llama_commit"][:7] in props["build_info"]
-        assert "Q4_K" in props["model_ftype"]
-        assert not props["default_generation_settings"]["params"].get("lora")
+        expected = Path(__file__).resolve().parents[2] / ".runtime/qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        checks = [Path(props["model_path"]).resolve() == expected.resolve(),
+                  props["total_slots"] == 1,
+                  props["default_generation_settings"]["n_ctx"] == self.config.context_size,
+                  identity["llama_commit"][:7] in props["build_info"],
+                  "Q4_K" in props["model_ftype"],
+                  not props["default_generation_settings"]["params"].get("lora")]
+        if not all(checks):
+            raise RuntimeError("Live server model, build, quantization, slots or context differs from pinned protocol")
         return {key: props[key] for key in ("model_path", "model_ftype", "build_info", "total_slots")}
 
     def generate(self, prompt, seed):

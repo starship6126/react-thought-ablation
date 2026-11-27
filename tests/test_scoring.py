@@ -184,6 +184,28 @@ class ScoringProtocolTests(unittest.TestCase):
             self.assertEqual(strategy["a_only"], 1)
             self.assertEqual(strategy["b_only"], 1)
 
+    def test_success_strata_do_not_confuse_normal_and_error_denominators(self):
+        error = error_checkpoint()
+        normal = error_checkpoint()
+        normal.update(checkpoint_id="normal-checkpoint", game_id="normal-game", kind="normal", failure=None)
+        records = []
+        for cp, winner in ((error, "A"), (normal, "B")):
+            for condition in ("A", "B"):
+                record = run([step(won=condition == winner)])
+                record.update(checkpoint_id=cp["checkpoint_id"], condition=condition)
+                records.append(record)
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / "checkpoints.jsonl").write_text("\n".join(json.dumps(c) for c in (error, normal)) + "\n")
+            (root / "runs.jsonl").write_text("\n".join(json.dumps(r) for r in records) + "\n")
+            by_metric = {row["metric"]: row for row in score_directory(root, bootstrap_samples=100, seed=5)}
+            self.assertEqual(by_metric["success_20"]["a_denominator"], 2)
+            self.assertEqual(by_metric["success_20"]["a_minus_b_pp"], 0)
+            self.assertEqual(by_metric["success_20_error"]["a_denominator"], 1)
+            self.assertEqual(by_metric["success_20_error"]["a_minus_b_pp"], 100)
+            self.assertEqual(by_metric["success_20_normal"]["b_denominator"], 1)
+            self.assertEqual(by_metric["success_20_normal"]["a_minus_b_pp"], -100)
+
 
 if __name__ == "__main__":
     unittest.main()

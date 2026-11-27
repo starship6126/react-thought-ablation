@@ -15,41 +15,6 @@ from react_ablation.experiment import replay_checkpoint
 from react_ablation.scoring import rule_matches
 from react_ablation.storage import read_jsonl, write_json
 
-SEARCH = {
-    "abfe488430621c12": {
-        "object": "pan",
-        "cause": "The attempted pan 1 pickup used an empty sinkbasin; the observation explicitly showed no pan there.",
-        "blocked": "Acquire a first pan from an observed, valid source instead of taking a nonexistent pan from sinkbasin 1.",
-    },
-    "d399fcabd7a5e6d0": {
-        "object": "soapbar",
-        "cause": "Navigation to the already occupied, empty sinkbasin 2 is rejected; the soapbar search is stalled.",
-        "blocked": "Advance soapbar search beyond the two already inspected empty sinkbasins and obtain a soapbar.",
-    },
-    "4e94bbabc04cf41f": {
-        "object": "dishsponge",
-        "cause": "Repeated navigation to the already occupied sinkbasin 1 is rejected after both basins were inspected empty.",
-        "blocked": "Advance dishsponge search beyond already inspected empty sinkbasins and obtain a dishsponge.",
-    },
-    "5d73883f9ecbe674": {
-        "object": "lettuce",
-        "cause": "Navigation to the already occupied shelf 1 is rejected; that shelf and the inspected fridge contain no lettuce.",
-        "blocked": "Search a new plausible lettuce source instead of repeating the empty shelf visit, then acquire lettuce.",
-    },
-    "f3ef7b2925004393": {
-        "object": "spraybottle",
-        "cause": "Navigation to the already occupied empty sinkbasin 1 is rejected, stalling spraybottle collection.",
-        "blocked": "Search a new plausible spraybottle source and acquire a first spraybottle.",
-    },
-    "eb59088ea3791840": {
-        "object": "soapbar",
-        "cause": "Navigation to the already occupied sinkbasin 1 is rejected; visible soapbar 1 has not been collected.",
-        "blocked": "Advance soapbar collection by taking a visible soapbar or searching a new plausible source instead of revisiting the same basin.",
-    },
-}
-SPECIAL = {"1b418a8806708e30", "269f2e6f74e3c5a6"}
-
-
 def exact(action, **kwargs):
     return {"action_regex": re.escape(action), "require_state_change": True, **kwargs}
 
@@ -181,9 +146,17 @@ def build(run_dir):
             failed = cp["history"][-1]["action"]
             held_targets = [obj for agent, obj in pairs(current, "holds") if obj.startswith(target + " ")]
             if not held_targets and (failed.startswith("go to ") or failed.startswith("take ")):
-                spec = SEARCH.get(cp["checkpoint_id"], {"object": target,
-                    "cause": f"The command {failed!r} was explicitly rejected without changing state, stalling acquisition of {target}.",
-                    "blocked": f"Advance {target} collection using a valid source or a new plausible search location, then acquire the object."})
+                repeated = any(s["action"] == failed and s["observation"] != "Nothing happens." for s in cp["history"][:-1])
+                if ". " in failed or ";" in failed:
+                    cause = "The action concatenates multiple commands into one unsupported command string; the environment rejects the whole string without changing state."
+                elif failed.startswith("go to ") and repeated:
+                    cause = f"Navigation to the already occupied {failed[6:]} is rejected without new state or task clues; object collection is stalled."
+                elif failed.startswith("take "):
+                    cause = "The pickup command does not identify an available numbered target object at the stated source; the environment rejects it without changing state."
+                else:
+                    cause = f"The command {failed!r} is rejected without changing state, stalling acquisition of {target}."
+                spec = {"object": target, "cause": cause,
+                        "blocked": f"Advance {target} collection using a valid source or a new plausible search location, then acquire the object."}
                 rubric = search_rubric(cp, current, spec)
             elif "pick_cool_then_place_in_recep-Apple-None-Microwave-5/" in cp["game_id"] and held_targets == ["apple 1"]:
                 rubric = special_rubric(cp)
