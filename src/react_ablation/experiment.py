@@ -24,7 +24,22 @@ def protocol_identity():
     repo = Path(__file__).resolve().parents[2]
     manifest = json.loads((repo / "artifacts/setup/runtime_manifest.json").read_text())
     return {"runtime": manifest["identity"], "system_prompt_sha256": digest(SYSTEM),
+            "prompt_module_sha256": hashlib.sha256((repo / "src/react_ablation/prompting.py").read_bytes()).hexdigest(),
             "grammar_sha256": digest(GRAMMAR), "decoding": asdict(ModelConfig())}
+
+
+def verify_runtime():
+    repo = Path(__file__).resolve().parents[2]
+    manifest = json.loads((repo / "artifacts/setup/runtime_manifest.json").read_text())
+    weights = repo / ".runtime" / manifest["weights_filename"]
+    actual = hashlib.file_digest(weights.open("rb"), "sha256").hexdigest()
+    if actual != manifest["identity"]["weights_sha256"]:
+        raise RuntimeError("Weights changed from pinned hash")
+    binary = repo / ".runtime/llama.cpp/build/bin/llama-server"
+    if hashlib.file_digest(binary.open("rb"), "sha256").hexdigest() != manifest["server_binary_sha256"]:
+        raise RuntimeError("llama-server binary changed")
+    observed = LocalModel().verify_identity(manifest["identity"])
+    return {"verified_utc": now(), "weights_sha256": actual, "live_server": observed}
 
 
 def failure_evidence(history):
@@ -211,6 +226,14 @@ def freeze(run_dir, rubrics_file):
     if (root / "checkpoints.jsonl").exists():
         raise RuntimeError("Checkpoints already frozen; use a new run ID to change selection")
     candidates = read_jsonl(root / "candidates.jsonl")
+    runtime_check = verify_runtime()
+    for cp in candidates:
+        for index, step in enumerate(cp["history"]):
+            expected_prompt, _ = render_prompt(cp["initial"], cp["history"][:index], "A", 0)
+            if step["model"]["config"] != asdict(ModelConfig()) or step["model"]["prompt_sha256"] != digest(expected_prompt):
+                raise RuntimeError("Collection model config or prompt differs from frozen protocol")
+            if step["model"]["truncated"] or not step["parse_ok"]:
+                raise RuntimeError("Invalid collected model response")
     rubrics = json.loads(Path(rubrics_file).read_text())
     frozen = []
     for cp in candidates:
@@ -245,7 +268,8 @@ def freeze(run_dir, rubrics_file):
     temp.replace(path)
     write_json(root / "freeze_manifest.json", {"frozen_utc": now(), "counts": counts,
                "checkpoints_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
-               "model_config": asdict(ModelConfig()), "protocol_identity": protocol_identity()})
+               "model_config": asdict(ModelConfig()), "protocol_identity": protocol_identity(),
+               "runtime_verification": runtime_check, "collection_prompt_fidelity_verified": True})
     return frozen
 
 
@@ -261,6 +285,7 @@ def run_pairs(run_dir, seed=20261127, limit=20):
         raise RuntimeError("Model decoding config changed")
     if freeze_manifest["protocol_identity"] != protocol_identity():
         raise RuntimeError("Frozen model/runtime/prompt protocol changed")
+    write_json(root / "last_runtime_verification.json", verify_runtime())
     order_file = root / "allocation.json"
     if not order_file.exists():
         rng = random.Random(seed)
@@ -287,6 +312,7 @@ def run_pairs(run_dir, seed=20261127, limit=20):
             journal = root / "sessions" / f"{key[0]}_{condition}.json"
             env = replay_checkpoint(cp)
             try:
+                model.verify_identity(freeze_manifest["protocol_identity"]["runtime"])
                 cache_erasure = model.begin_session()
                 run = {"checkpoint_id": key[0], "condition": condition, "session_id": str(uuid.uuid4()),
                        "order": order_index + 1, "seed": info["seed"], "steps": [], "status": "running",
@@ -295,7 +321,13 @@ def run_pairs(run_dir, seed=20261127, limit=20):
                        "independent_environment_replay": True, "cache_prompt": True,
                        "cache_erasure": cache_erasure}
                 if journal.exists():
-                    run = json.loads(journal.read_text())
+                    saved = json.loads(journal.read_text())
+                    for field in ("checkpoint_id", "condition", "order", "seed", "model_config", "protocol_identity"):
+                        if saved[field] != run[field]:
+                            raise RuntimeError(f"Session journal changed {field}")
+                    if len(saved["steps"]) > limit:
+                        raise RuntimeError("Session exceeds registered action budget")
+                    run = saved
                     for previous in run["steps"]:
                         assert_snapshot(env.step(previous["action"]), previous)
                 for index in range(len(run["steps"]), limit):

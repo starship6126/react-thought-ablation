@@ -47,6 +47,19 @@ class LocalModel:
         self.first_request = True
         return result
 
+    def verify_identity(self, identity):
+        result = self.http.get(self.config.base_url + "/props", timeout=20)
+        result.raise_for_status()
+        props = result.json()
+        from pathlib import Path
+        assert Path(props["model_path"]).name == "qwen2.5-1.5b-instruct-q4_k_m.gguf"
+        assert props["total_slots"] == 1
+        assert props["default_generation_settings"]["n_ctx"] == self.config.context_size
+        assert identity["llama_commit"][:7] in props["build_info"]
+        assert "Q4_K" in props["model_ftype"]
+        assert not props["default_generation_settings"]["params"].get("lora")
+        return {key: props[key] for key in ("model_path", "model_ftype", "build_info", "total_slots")}
+
     def generate(self, prompt, seed):
         cfg = asdict(self.config)
         token_count = len(self.post("/tokenize", {"content": prompt, "add_special": True})["tokens"])

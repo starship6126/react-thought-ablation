@@ -1,5 +1,9 @@
 """Protocol regression fixtures are synthetic and are never benchmark outputs."""
 import json
+from contextlib import ExitStack, redirect_stdout
+from dataclasses import asdict
+import hashlib
+import io
 from pathlib import Path
 import sys
 import tempfile
@@ -7,7 +11,8 @@ import types
 import unittest
 from unittest.mock import patch
 
-from react_ablation.experiment import collect, failure_evidence
+from react_ablation.experiment import collect, failure_evidence, run_pairs
+from react_ablation.model import ModelConfig
 from react_ablation.prompting import assert_mask_invariance, digest, render_prompt
 from react_ablation.storage import append_jsonl, read_jsonl, write_json
 
@@ -157,6 +162,133 @@ class CollectionResumeTests(unittest.TestCase):
                  patch("react_ablation.experiment.LocalModel"), \
                  self.assertRaisesRegex(AssertionError, "state_hash"):
                 collect(root, errors=1, normals=0, max_steps=5)
+
+
+class PairedResumeTests(unittest.TestCase):
+    """Only synthetic fixtures: assert no hidden extra actions after restart."""
+
+    identity = {"runtime": {"llama_commit": "test-only-commit"}, "prompt_module_sha256": "test-only-template"}
+
+    def prepare(self, root, saved_count=7):
+        cp = {"checkpoint_id": "test-checkpoint", "game_id": "test/game", "kind": "normal",
+              "initial": snapshot(), "history": [step(action="go to table 1", state_hash="checkpoint-state")]}
+        append_jsonl(root / "checkpoints.jsonl", cp)
+        write_json(root / "freeze_manifest.json", {
+            "checkpoints_sha256": hashlib.sha256((root / "checkpoints.jsonl").read_bytes()).hexdigest(),
+            "model_config": asdict(ModelConfig()), "protocol_identity": self.identity})
+        write_json(root / "allocation.json", {"test-checkpoint": {"order": ["A", "B"], "seed": 333}})
+
+        def row(index):
+            return step(action=f"test action {index}", state_hash=f"state-{index}",
+                        model={"latency_seconds": 0, "seed": 333 + index})
+
+        saved = {"checkpoint_id": "test-checkpoint", "condition": "A", "session_id": "preserved-session",
+                 "order": 1, "seed": 333, "steps": [row(i) for i in range(saved_count)],
+                 "status": "running", "won": False, "model_config": asdict(ModelConfig()),
+                 "protocol_identity": self.identity, "cache_erasure": {"n_erased": 0}}
+        write_json(root / "sessions/test-checkpoint_A.json", saved)
+        other = {**saved, "condition": "B", "order": 2, "session_id": "already-completed",
+                 "steps": [row(i) for i in range(20)], "status": "completed"}
+        append_jsonl(root / "runs.jsonl", other)
+        return cp, saved, row
+
+    def mocks(self, saved, row, generated):
+        stack = ExitStack()
+        stack.enter_context(redirect_stdout(io.StringIO()))
+        stack.enter_context(patch("react_ablation.experiment.protocol_identity", return_value=self.identity))
+        stack.enter_context(patch("react_ablation.experiment.verify_runtime", return_value={"test_only": True}))
+        model = stack.enter_context(patch("react_ablation.experiment.LocalModel")).return_value
+        model.begin_session.return_value = {"id_slot": 0, "n_erased": 50}
+        environment = stack.enter_context(patch("react_ablation.experiment.replay_checkpoint")).return_value
+        environment.step.side_effect = [dict(s) for s in saved["steps"]]
+        stack.enter_context(patch("react_ablation.scoring.score_directory"))
+
+        def generate(env, local_model, initial, history, condition, checkpoint_length, seed):
+            index = len(history) - checkpoint_length
+            generated.append({"index": index, "condition": condition, "seed": seed})
+            return row(index)
+
+        stack.enter_context(patch("react_ablation.experiment.take_step", side_effect=generate))
+        return stack, model, environment
+
+    def test_resume_counts_saved_actions_in_twenty_action_budget(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cp, saved, row = self.prepare(root, saved_count=7)
+            generated = []
+            stack, model, environment = self.mocks(saved, row, generated)
+            with stack:
+                self.assertEqual(1, run_pairs(root))
+            self.assertEqual(list(range(7, 20)), [s["index"] for s in generated])
+            self.assertEqual(list(range(340, 353)), [s["seed"] for s in generated])
+            self.assertEqual({"A"}, {s["condition"] for s in generated})
+            self.assertEqual(7, environment.step.call_count)
+            model.begin_session.assert_called_once()
+            rows = read_jsonl(root / "runs.jsonl")
+            a = next(r for r in rows if r["condition"] == "A")
+            self.assertEqual("preserved-session", a["session_id"])
+            self.assertEqual(20, len(a["steps"]))
+            self.assertEqual("completed", a["status"])
+
+    def test_twenty_saved_actions_commit_without_extra_generation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cp, saved, row = self.prepare(root, saved_count=20)
+            generated = []
+            stack, model, environment = self.mocks(saved, row, generated)
+            with stack:
+                self.assertEqual(1, run_pairs(root))
+                self.assertEqual(1, run_pairs(root))
+            self.assertEqual([], generated)
+            self.assertEqual(2, len(read_jsonl(root / "runs.jsonl")))
+            self.assertEqual(20, environment.step.call_count)
+
+    def test_mismatched_journal_identity_is_rejected_before_action_replay(self):
+        replacements = {"checkpoint_id": "other-cp", "condition": "B", "order": 2,
+                        "seed": 999, "model_config": {}, "protocol_identity": {}}
+        for field, replacement in replacements.items():
+            with self.subTest(field=field), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                cp, saved, row = self.prepare(root)
+                saved[field] = replacement
+                write_json(root / "sessions/test-checkpoint_A.json", saved)
+                generated = []
+                stack, model, environment = self.mocks(saved, row, generated)
+                with stack, self.assertRaisesRegex(RuntimeError, "Session journal changed " + field):
+                    run_pairs(root)
+                environment.step.assert_not_called()
+                self.assertEqual([], generated)
+
+    def test_oversized_journal_is_rejected_before_action_replay(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cp, saved, row = self.prepare(root, saved_count=21)
+            generated = []
+            stack, model, environment = self.mocks(saved, row, generated)
+            with stack, self.assertRaisesRegex(RuntimeError, "action budget"):
+                run_pairs(root)
+            environment.step.assert_not_called()
+            self.assertEqual([], generated)
+
+    def test_incomplete_run_log_cannot_be_treated_as_finished(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cp, saved, row = self.prepare(root)
+            append_jsonl(root / "runs.jsonl", saved)
+            stack, model, environment = self.mocks(saved, row, [])
+            with stack, self.assertRaisesRegex(RuntimeError, "Only completed sessions"):
+                run_pairs(root)
+            environment.step.assert_not_called()
+
+    def test_duplicate_completed_runs_are_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            cp, saved, row = self.prepare(root)
+            append_jsonl(root / "runs.jsonl", read_jsonl(root / "runs.jsonl")[0])
+            stack, model, environment = self.mocks(saved, row, [])
+            with stack, self.assertRaisesRegex(RuntimeError, "Duplicate condition sessions"):
+                run_pairs(root)
+            environment.step.assert_not_called()
 
 
 if __name__ == "__main__":

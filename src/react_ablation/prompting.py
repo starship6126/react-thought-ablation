@@ -9,7 +9,7 @@ For each turn write exactly two lines:
 Thought: one short plan sentence, at most 20 words.
 Action: one environment command.
 Use exact numbered names from observations. Execute only one action per turn. The Action line must contain the command only, with no final period, quotes, or explanation.
-Commands include: go to RECEPTACLE; open RECEPTACLE; close RECEPTACLE; take OBJECT from RECEPTACLE; put OBJECT in/on RECEPTACLE; clean OBJECT with RECEPTACLE; heat OBJECT with RECEPTACLE; cool OBJECT with RECEPTACLE; use OBJECT; look; inventory; examine OBJECT.
+Commands include: go to RECEPTACLE; open RECEPTACLE; close RECEPTACLE; take OBJECT from RECEPTACLE; move OBJECT to RECEPTACLE; clean OBJECT with RECEPTACLE; heat OBJECT with RECEPTACLE; cool OBJECT with RECEPTACLE; use OBJECT; look; inventory; examine OBJECT.
 Example:
 Observation: You are at countertop 1. On it you see an apple 1.
 Thought: I will pick up the apple for the task.
