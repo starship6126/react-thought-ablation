@@ -70,6 +70,24 @@ class ScoringProtocolTests(unittest.TestCase):
         ]))
         self.assertEqual(scored["detection_3"]["score"], 1)
 
+    def test_action_line_specific_failure_acknowledgment_counts(self):
+        scored = score_checkpoint(error_checkpoint(), run([
+            step("I will check what happened.", "cannot take apple 1 from fridge 1 because it is closed")
+        ]))
+        self.assertEqual(scored["detection_3"]["score"], 1)
+
+    def test_generic_failed_thought_cannot_borrow_action_target(self):
+        row = step("That failed; I will try again.", "take apple 1 from fridge 1")
+        row["raw_response"] = "Thought: That failed; I will try again.\nAction: take apple 1 from fridge 1"
+        scored = score_checkpoint(error_checkpoint(), run([row]))
+        self.assertEqual(scored["detection_3"]["score"], 0)
+
+    def test_extra_response_line_specific_acknowledgment_counts(self):
+        row = step()
+        row["raw_response"] = "Thought: I will look around.\nAction: look\nThe fridge is blocked."
+        scored = score_checkpoint(error_checkpoint(), run([row]))
+        self.assertEqual(scored["detection_3"]["score"], 1)
+
     def test_plain_ordering_plan_is_not_error_detection(self):
         scored = score_checkpoint(error_checkpoint(), run([
             step("I will put the apple away before leaving.")

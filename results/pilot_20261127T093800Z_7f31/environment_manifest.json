@@ -1,0 +1,41 @@
+{
+  "recorded_utc": "2026-11-27T09:34:23.879801+00:00",
+  "python": "3.11.18",
+  "packages": {
+    "alfworld": "0.4.2",
+    "textworld": "1.7.0",
+    "fast-downward-textworld": "20.6.4",
+    "numpy": "2.4.6",
+    "requests": "2.34.2"
+  },
+  "archives": [
+    {
+      "url": "https://github.com/alfworld/alfworld/releases/download/0.2.2/json_2.1.1_json.zip",
+      "sha256": "25171f16e20ad7b048c47275c45b0babf3aa1cbab29cec97387922350a9844bc",
+      "bytes": 72018818
+    },
+    {
+      "url": "https://github.com/alfworld/alfworld/releases/download/0.4.2/json_2.1.3_tw-pddl.zip",
+      "sha256": "5df77ea759f2211a4106082839ddbbb790f1ba4e7d097ed732cf453f72aa36cf",
+      "bytes": 36507267
+    }
+  ],
+  "split_counts": {
+    "seen": 140,
+    "unseen": 134
+  },
+  "wrapper": "Official AlfredDemangler(shuffle=False), AlfredInfos",
+  "backend": "textworld.envs.pddl.PddlEnv via textworld.start",
+  "seed_semantics": "Fixed game + deterministic PDDL; Python and NumPy seeded; backend seed() is a no-op",
+  "success": "Official TextWorld state.won from PDDL check_goal()",
+  "model_observation_fields": [
+    "observation"
+  ],
+  "audit_only_fields": [
+    "facts",
+    "fact_records",
+    "entities",
+    "admissible_commands",
+    "state_hash"
+  ]
+}

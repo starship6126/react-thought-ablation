@@ -7,3 +7,5 @@ __pycache__/
 *.partial
 *.lock
 artifacts/setup/*.log
+artifacts/setup/*.pid
+artifacts/setup/server_argv.json

@@ -1,0 +1,10 @@
+{
+  "run_id": "pilot_20261127T093800Z_7f31",
+  "mode": "pilot",
+  "actual_environment": true,
+  "code_commit_before_pairs": "735bcd69c2a2927d316a9353eec990d36a0cffac",
+  "started_utc": "2026-11-27T09:47:14.098034+00:00",
+  "model_api": "127.0.0.1 only; no key; public weights",
+  "drive_status_file": "drive_status.json",
+  "discarded_preflight": "preflight_old_placement_syntax/status.json"
+}

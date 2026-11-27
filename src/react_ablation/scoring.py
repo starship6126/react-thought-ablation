@@ -41,11 +41,22 @@ def _specific_reference(text, checkpoint):
     return any(_normal(target) and _normal(target) in normalized for target in targets)
 
 
+def _response_lines(step):
+    """Yield independent model-written lines; never join generic failure and target."""
+    seen = set()
+    for source in ("thought", "action", "raw_response"):
+        for line in str(step.get(source, "")).splitlines():
+            line = re.sub(r"^(?:Thought|Action):\s*", "", line.strip(), flags=re.I)
+            if line and line not in seen:
+                seen.add(line)
+                yield source, line
+
+
 def _language_detection(checkpoint, steps):
     for index, step in enumerate(steps[:3], 1):
-        thought = step.get("thought", "")
-        if ERROR_LANGUAGE.search(thought) and _specific_reference(thought, checkpoint):
-            return _result(1, f"Turn {index} specifically acknowledges a blocked subgoal: {thought}", True)
+        for source, line in _response_lines(step):
+            if ERROR_LANGUAGE.search(line) and _specific_reference(line, checkpoint):
+                return _result(1, f"Turn {index} {source} specifically acknowledges a blocked subgoal: {line}", True)
     return _result(0, "No specific failure/subgoal acknowledgment within 3 actions; generic retry language does not count.", True)
 
 
@@ -90,18 +101,18 @@ def _normal_false_positive(checkpoint, steps):
     last_prior = checkpoint.get("history", [{}])[-1]
     prior_action = _normal(last_prior.get("action", ""))
     for index, step in enumerate(steps[:3]):
-        thought = step.get("thought", "")
-        if not ERROR_LANGUAGE.search(thought):
-            continue
         earlier = steps[:index]
         if any(FAILURE_OBSERVATION.search(row.get("observation", "")) for row in earlier):
             continue
         # Require a concrete past command or supplied normal-specific target,
         # not a prospective prerequisite such as "open the fridge before ...".
-        retrospective = re.search(r"failed|failure|unsuccessful|wrong|invalid|didn't|couldn't|nothing happened|stuck|blocked", thought, re.I)
-        specific = (prior_action and prior_action in _normal(thought)) or _specific_reference(thought, checkpoint)
-        if retrospective and specific:
-            return _result(1, f"Turn {index+1} alleges a specific pre-checkpoint failure without observed failure: {thought}", True)
+        for source, line in _response_lines(step):
+            if not ERROR_LANGUAGE.search(line):
+                continue
+            retrospective = re.search(r"failed|failure|unsuccessful|wrong|invalid|didn't|couldn't|nothing happened|stuck|blocked", line, re.I)
+            specific = (prior_action and prior_action in _normal(line)) or _specific_reference(line, checkpoint)
+            if retrospective and specific:
+                return _result(1, f"Turn {index+1} {source} alleges a specific pre-checkpoint failure without observed failure: {line}", True)
     return _result(0, "No specific false pre-checkpoint failure claim detected; new post-checkpoint failures are excluded.", True)
 
 
@@ -197,7 +208,8 @@ def score_directory(run_dir, bootstrap_samples=10000, seed=20261127):
             scores[key] = score
             prior = cp.get("history", [{}])[-1]
             transcript = [{"turn": i, "thought": _blind_text(step.get("thought", "")),
-                           "action": step.get("action", ""), "observation": step.get("observation", "")}
+                           "action": _blind_text(step.get("action", "")), "observation": step.get("observation", ""),
+                           "raw_response": _blind_text(step.get("raw_response", ""))}
                           for i, step in enumerate((run or {}).get("steps", [])[:3], 1)]
             row = {"review_id": review_id, "checkpoint_kind": cp["kind"],
                    "run_complete": bool(run and run.get("status") == "completed"),
@@ -276,7 +288,8 @@ def _write_report(root, rows, checkpoints, runs, completed_pairs, bootstrap_samp
                  f"and {preflight.get('benchmark_pairs_executed', 'unknown')} benchmark A/B pairs. "
                  "A recovery probe found an unsupported placement command in the shared prompt; it was corrected to the official `move OBJECT to RECEPTACLE` grammar. "
                  "All reported checkpoints were recollected with that corrected prompt before freezing and A/B execution. The model and decoding settings were unchanged."]
-    text += ["", "Detection requires a specific failed command or blocked subgoal within 3 actions. Generic retry language scores 0. "
+    text += ["", "Detection requires a specific failed command or blocked subgoal within 3 actions, acknowledged in a new thought or model response. "
+             "The provisional heuristic requires the failure acknowledgment and specific target in the same response line; generic failure language in one line cannot borrow a target from an ordinary action line. Generic retry language scores 0. "
              "Strategy correction is an actually executed action matching a frozen cause-specific rule within 5 actions, independent of verbal detection. "
              "Recovery uses frozen environment/action predicates within 10 actions. Task success uses the environment's official `won` flag within 20 actions. "
              "`success_20` includes all assigned checkpoints; `success_20_error` and `success_20_normal` report the two checkpoint strata separately. "
@@ -292,8 +305,11 @@ def _write_report(root, rows, checkpoints, runs, completed_pairs, bootstrap_samp
         latencies = [step["model"]["latency_seconds"] for step in steps if "model" in step]
         tokens = [step["model"]["prompt_tokens"] for step in steps if "model" in step]
         parsed = sum(bool(step.get("parse_ok")) for step in steps)
+        plan_words = [len(step.get("thought", "").split()) for step in steps]
         text += [f"Executed continuation actions: {len(steps)}. Parsed responses: {parsed}/{len(steps)}. "
-                 f"Reported prompt truncations: {sum(bool(step.get('model', {}).get('truncated')) for step in steps)}."]
+                 f"Reported prompt truncations: {sum(bool(step.get('model', {}).get('truncated')) for step in steps)}.",
+                 f"Public plan length: maximum {max(plan_words)} whitespace-delimited words; "
+                 f"{sum(count > 20 for count in plan_words)}/{len(plan_words)} exceed the 20-word instruction. These responses are retained without rewriting."]
         if latencies:
             text.append(f"Response latency: median {np.median(latencies):.2f}s, p95 {np.quantile(latencies, .95):.2f}s; prompt tokens maximum {max(tokens)}.")
     for name in ("runtime_manifest.json", "model_manifest.json"):
@@ -301,6 +317,10 @@ def _write_report(root, rows, checkpoints, runs, completed_pairs, bootstrap_samp
         if path.exists():
             text += ["", f"Pinned runtime metadata (`{name}`):", "```json", path.read_text().strip(), "```"]
             break
+    environment_path = root / "environment_manifest.json"
+    if environment_path.exists():
+        text += ["", "Environment versions, official data archive hashes, and split counts (`environment_manifest.json`):",
+                 "```json", environment_path.read_text().strip(), "```"]
     text += ["", "This is an exploratory pilot of Qwen2.5-1.5B-Instruct GGUF Q4_K_M on the official ALFWorld text environment. "
              "A small, selected set of recoverable checkpoints and normal controls does not establish effects for other models, environments, or the full unseen benchmark. "
              "Wide or degenerate bootstrap intervals with few games should not be interpreted as definitive evidence of equivalence or causality outside this intervention. "
