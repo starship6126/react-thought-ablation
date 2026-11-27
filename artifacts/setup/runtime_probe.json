@@ -1,0 +1,38 @@
+{
+  "thought": "I will go to countertop 1.",
+  "action": "go to countertop 1.",
+  "parse_ok": true,
+  "thought_word_count": 6,
+  "raw_response": "Thought: I will go to countertop 1.\nAction: go to countertop 1.  \n",
+  "model": {
+    "latency_seconds": 5.258453637999992,
+    "prompt_tokens": 271,
+    "prompt_sha256": "4940aac021d6d4899f958e12bd0498b0054e2bf737c8ec8b9cb511df7f82386b",
+    "seed": 1234,
+    "truncated": false,
+    "tokens_predicted": 22,
+    "tokens_evaluated": 271,
+    "stop_type": "eos",
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 271,
+      "prompt_ms": 3159.717,
+      "prompt_per_token_ms": 11.659472324723248,
+      "prompt_per_second": 85.76717471849535,
+      "predicted_n": 22,
+      "predicted_ms": 2094.892,
+      "predicted_per_token_ms": 99.7567619047619,
+      "predicted_per_second": 10.024383118556948
+    },
+    "config": {
+      "base_url": "http://127.0.0.1:18080",
+      "context_size": 16384,
+      "n_predict": 128,
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "top_k": 40,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0
+    }
+  }
+}

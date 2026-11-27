@@ -1,0 +1,68 @@
+{
+  "note": "Artificial interface probe only; not ALFWorld benchmark data.",
+  "first_erase": {
+    "id_slot": 0,
+    "n_erased": 0
+  },
+  "request_cache_prompt": true,
+  "first": {
+    "latency_seconds": 5.76751009399959,
+    "content": "Thought: I will go to countertop 1 to pick up the apple.\nAction: go to countertop 1. Take apple 1 from countertop 1. Put apple 1 in/on diningtable 1. Put apple 1 in/on diningtable 1. Go\n",
+    "truncated": false,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 290,
+      "prompt_ms": 2637.636,
+      "prompt_per_token_ms": 9.095296551724138,
+      "prompt_per_second": 109.94693733327874,
+      "predicted_n": 60,
+      "predicted_ms": 3125.31,
+      "predicted_per_token_ms": 52.97135593220339,
+      "predicted_per_second": 18.878127289772856
+    },
+    "tokens_evaluated": 290
+  },
+  "extended": {
+    "latency_seconds": 1.8789298920000874,
+    "content": "Thought: I will take the apple from countertop 1.\nAction: take apple 1 from countertop 1\n",
+    "truncated": false,
+    "timings": {
+      "cache_n": 275,
+      "prompt_n": 59,
+      "prompt_ms": 591.686,
+      "prompt_per_token_ms": 10.028576271186441,
+      "prompt_per_second": 99.71505156451225,
+      "predicted_n": 26,
+      "predicted_ms": 1284.12,
+      "predicted_per_token_ms": 51.364799999999995,
+      "predicted_per_second": 19.468585490452607
+    },
+    "tokens_evaluated": 334
+  },
+  "second_erase": {
+    "id_slot": 0,
+    "n_erased": 359
+  },
+  "fresh_repeat": {
+    "latency_seconds": 5.304035985000155,
+    "content": "Thought: I will go to countertop 1 to pick up the apple.\nAction: go to countertop 1. Take apple 1 from countertop 1. Put apple 1 in/on diningtable 1. Put apple 1 in/on diningtable 1. Go\n",
+    "truncated": false,
+    "timings": {
+      "cache_n": 0,
+      "prompt_n": 290,
+      "prompt_ms": 2240.803,
+      "prompt_per_token_ms": 7.726906896551724,
+      "prompt_per_second": 129.41789171114107,
+      "predicted_n": 60,
+      "predicted_ms": 3060.404,
+      "predicted_per_token_ms": 51.871254237288134,
+      "predicted_per_second": 19.27850048555681
+    },
+    "tokens_evaluated": 290
+  },
+  "final_erase": {
+    "id_slot": 0,
+    "n_erased": 349
+  },
+  "passed": true
+}

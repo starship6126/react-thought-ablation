@@ -1,0 +1,9 @@
+.venv/
+.runtime/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+*.partial
+*.lock
+artifacts/setup/*.log
